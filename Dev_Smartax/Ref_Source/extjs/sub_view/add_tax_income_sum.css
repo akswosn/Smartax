@@ -1,0 +1,37 @@
+body
+{
+	font-size: 13px;
+}
+
+.title_div
+{
+  border: 1px gray solid;
+  padding: 4px;
+  margin-bottom: 6px;
+}
+
+table 
+{
+	margin-left: 10px;
+	border-collapse : collapse;
+	border-spacing : 0;
+	width: 99%;
+}
+
+td 
+{
+	border : 1px solid gray; 
+	text-align: center;
+	padding : 3px;
+	background-color: #F0F7FC;
+}
+
+.col_val
+{
+	background-color: #F3F4F6;
+}
+
+.left_align 
+{
+	text-align: left;
+}

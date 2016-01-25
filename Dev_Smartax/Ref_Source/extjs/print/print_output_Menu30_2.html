@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>부가세</title>
+<meta name="keywords" content="태극 회계 온라인" />
+<meta name="description" content="태극 회계 온라인" />
+<script type="text/javascript" src="./jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="../lib/ext-all.js"></script>
+<style>
+.tbl1 caption {
+    overflow: hidden;
+    position: relative;
+    height: 70px;
+}
+.tbl1 caption h1 {
+    position: absolute;
+    top: 0;
+    left: 10px;
+    margin: 0;
+    width: 140px;
+    height: 34px;
+    border-bottom: 2px solid #000;
+}
+.tbl1 caption span {
+    position: absolute;
+    bottom: 5px;
+    left: 20px;
+    font-size: 14px;
+}
+.tbl1 .no {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    font-size: 14px;
+}
+.tbl1 {
+    width:100%;
+    border-collapse: collapse;
+    font-family: "Malgun Gothic", "Dotum";
+    font-size: 11px;
+}
+.tbl1 thead th {
+    padding: 5px 0;
+    border: 1px solid #333;
+    background: #ccc;
+    text-align: center;
+    color: #000;
+}
+.tbl1 tfoot td {
+    padding: 5px 0;
+    border: 1px solid #333;
+    background: #eee;
+    text-align: center;
+    color: #000;
+}
+.tbl1 tbody th {
+    padding: 5px 0;
+    border: 1px solid #333;
+    background: #ccc;
+    color: #000;
+}
+.tbl1 tbody td {
+    padding: 5px 0;
+    border: 1px solid #333;
+    background: #fff;
+    text-align: center;
+    color: #000;
+}
+.tbl1_item {
+    position: relative;
+    height: 30px;
+}
+.tbl1_item_nm {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+}
+.tbl1_customer_nm {
+    position: absolute;
+    bottom: 2px;
+    right: 2px;
+}
+
+#title-sub {
+    margin-top: 5px;
+    padding: 5px;
+    background: #eee;
+    font-weight: bold;
+    font-size: 12px;
+    text-align: right;
+}
+
+.info_area {
+    overflow: hidden;
+    margin-top: 5px;
+}
+.info_jp_no {
+    float: left;
+    font-size: 12px;
+}
+.info_co_nm {
+    float: right;
+    font-size: 12px;
+}
+
+div.print_btn_area {
+    margin-top: 11px;
+    text-align: center;
+}
+div.print_btn_area button {
+    margin: 0 10px;
+    width: 74px;
+    height: 22px;
+    cursor: pointer;
+}
+@media print {
+    div.print_btn_area {
+       display:none;
+    }
+}
+</style>
+</head>
+<body>
+    <div id="print_content_area">
+        <table class="tbl1">
+            <caption>
+                <h1>(대체) 전표</h1>
+                <span>2013년 03월 25일</span>
+            </caption>
+            <colgroup>
+                <col style="width:15%;">
+                <col style="width:40%;">
+                <col style="width:15%;">
+                <col style="width:15%;">
+                <col style="width:15%;">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th scope="col" rowspan="2">계정과목</th>
+                    <th scope="col" rowspan="2">품목</th>
+                    <th scope="col" colspan="2">금액</th>
+                </tr>
+                <tr>
+                    <th scope="col">차변</th>
+                    <th scope="col">대변</th>
+                </tr>
+            </thead>
+            <tfoot id="sum">
+                <tr>
+                    <td>합계</td>
+                    <td>&nbsp;</td>
+                    <td>110,000</td>
+                    <td>110,000</td>
+                </tr>
+            </tfoot>
+            <tbody id="grid">
+                <tr>
+                    <td>외상매입금</td>
+                    <td class="tbl1_item">
+                        <span class="tbl1_item_nm">단자 2.5SQ 10X10000</span>
+                        <span class="tbl1_customer_nm">충일전기</span>
+                    </td>
+                    <td>&nbsp;</td>
+                    <td>110,000</td>
+                </tr>
+                <tr>
+                    <td>부가세대급금</td>
+                    <td class="tbl1_item">
+                        <span class="tbl1_item_nm">단자 2.5SQ 10X10000</span>
+                        <span class="tbl1_customer_nm">충일전기</span>
+                    </td>
+                    <td>10,000</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>상 품</td>
+                    <td class="tbl1_item">
+                        <span class="tbl1_item_nm">단자 2.5SQ 10X10000</span>
+                        <span class="tbl1_customer_nm">충일전기</span>
+                    </td>
+                    <td>100,000</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="tbl1_item"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td class="tbl1_item"></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="info_area">
+            <span class="info_jp_no">No : 50001</span>
+            <span class="info_co_nm">회사명 : (주)포근한세상</span>
+        </div>
+        
+        <div class="print_btn_area">
+            <button class="print_btn" onclick="print()">
+                <span>출력하기</span>
+            </button>
+            <button class="close_btn" onclick="self.close();">
+                <span>창닫기</span>
+            </button>
+        </div>
+    </div>
+</body>
+<script>
+/*(function(){
+    //회사정보 데이터 가져옴
+    Ext.Ajax.request({
+        method: 'POST',
+        url: '../../proc/account/output/output_print_page.php',
+        param: { },
+        success: printRender,
+        failure: function(form, action) {
+            Ext.Msg.alert("", '회사정보 데이터를 가져오는데 실패했습니다.');
+        }
+    });
+    
+    function printRender(response, opts) {
+        var parent = window.opener
+        , temp = parent.Global.temp
+        , storeInfo = parent.StoreInfo
+        , json = Ext.JSON.decode(response.responseText)
+        , customer_id = Ext.String.leftPad(temp.record.get('atax_customer_id'), 5, '0')
+        , grid = Ext.get('grid')
+        , sum = Ext.get('sum')
+        , html = ''
+        , fn = {
+            getNum: function(v) {
+                return Ext.util.Format.number(v, '0,000');
+            }
+        };
+        
+        temp.provider = json.DATA;
+        temp.receiver = storeInfo.Menu09_Grid.findRecord('customer_id', customer_id, null, null, null, true);
+        
+        //타이틀 정보 셋팅
+        if (temp.record.get('atax_jp_flag') == 2) { //분개 플래그가 '2.외상'일 경우
+            Ext.get('title-sub').setHTML('(청구)');
+        }
+        else { //분개 플래그가 '2.외상'이 아닐 경우
+            Ext.get('title-sub').setHTML('(영수)');
+        }
+        
+        //공급자 정보 셋팅
+        Ext.get('provider_saup_no').setHTML(temp.provider.co_saup_no);
+        Ext.get('provider_nm').setHTML(temp.provider.co_nm);
+        Ext.get('provider_daepyo').setHTML(temp.provider.co_ceo_nm);
+        Ext.get('provider_addr').setHTML(temp.provider.co_addr);
+        Ext.get('provider_up').setHTML(temp.provider.co_up);
+        Ext.get('provider_jong').setHTML(temp.provider.co_jong);
+        
+        //공급받는자 정보 셋팅
+        Ext.get('receiver_saup_no').setHTML(temp.receiver.get('tr_saup_no'));
+        Ext.get('receiver_nm').setHTML(temp.receiver.get('tr_nm'));
+        Ext.get('receiver_daepyo').setHTML(temp.receiver.get('tr_daepyo'));
+        Ext.get('receiver_addr').setHTML(temp.receiver.get('tr_addr'));
+        Ext.get('receiver_up').setHTML(temp.receiver.get('tr_up'));
+        Ext.get('receiver_jong').setHTML(temp.receiver.get('tr_jong'));
+        
+        //합계금액 셋팅
+        Ext.get('atax_item_sum').setHTML('일금 ' + fn.getNum(temp.record.get('atax_item_sum')) + ' 원정');
+        
+        //합계 셋팅
+        html += '<tr>';
+        html += '<td>합계</td>';
+        html += '<td>' + temp.record.get('atax_item_cnt') + '</td>';
+        html += '<td>' + fn.getNum(temp.record.get('atax_item_danga')) + '</td>';
+        html += '<td>' + fn.getNum(temp.record.get('atax_supply_price')) + '</td>';
+        html += '<td>' + fn.getNum(temp.record.get('atax_tax')) + '</td>';
+        html += '<td>' + fn.getNum(temp.record.get('atax_item_sum')) + '</td>';
+        html += '</tr>';
+        
+        sum.setHTML(html);
+        
+        //그리드 데이터 셋팅
+        html = '';
+        for (var i = 0; i < 4; i++) {
+            if (i == 0) {
+                html += '<tr>';
+                html += '<td>' + temp.record.get('atax_item_nm') + '</td>';
+                html += '<td>' + temp.record.get('atax_item_cnt') + '</td>';
+                html += '<td>' + fn.getNum(temp.record.get('atax_item_danga')) + '</td>';
+                html += '<td>' + fn.getNum(temp.record.get('atax_supply_price')) + '</td>';
+                html += '<td>' + fn.getNum(temp.record.get('atax_tax')) + '</td>';
+                html += '<td>' + fn.getNum(temp.record.get('atax_item_sum')) + '</td>';
+                html += '</tr>';
+            }
+            else {
+                html += '<tr>';
+                html += '<td>&nbsp;</td>';
+                html += '<td>&nbsp;</td>';
+                html += '<td>&nbsp;</td>';
+                html += '<td>&nbsp;</td>';
+                html += '<td>&nbsp;</td>';
+                html += '<td>&nbsp;</td>';
+                html += '</tr>';
+            }
+            
+            grid.setHTML(html);
+        }
+    }
+}());*/
+</script>
+</html>

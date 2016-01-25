@@ -1,0 +1,48 @@
+<!-- 
+
+	########## iframe으로 여세요~~~~~~~~~~~~~~~~~~~~~
+	(post 데이터 전달 동기 방식)
+	Printer_Val : 부모 전역변수
+	{
+		action : 'string'
+		methos : 'string'
+		params : [array<Object(name, value)>]
+	}
+ -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+        <!-- stylesheets -->
+		<script type="text/javascript" src="./print/jquery-1.6.4.min.js"></script>
+        <!-- script -->
+        <script type="text/javascript">
+	        $(document).ready(function() {
+	        	
+	        	$('#commForm').attr('action', parent.Printer_Val.action);
+	        	$('#commForm').attr('method', parent.Printer_Val.method);
+	        	
+	        	if(parent.Printer_Val.params.length > 0){
+	        		for(var i=0; i < parent.Printer_Val.params.length; i++){
+	        			var param = parent.Printer_Val.params[i];
+	        			
+	        			$('#commForm').append(jQuery(
+	        					'<input type="text" name="'+param.name+'" value="'+param.value+'"/>'
+	        			));
+	        		}
+	        	}
+				
+	        	
+	        	$('#commForm').submit();
+	        });
+        </script>
+    </head>
+    <body>
+    	<div id="div_form" style="display: none;">
+    	<form id="commForm" ></form>
+    	</div>
+    
+    </body>
+</html>

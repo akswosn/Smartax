@@ -1,0 +1,57 @@
+body
+{
+	font-size: 13px;
+}
+
+.title_div
+{
+  border: 1px gray solid;
+  padding: 4px;
+  margin: 6px 4px;
+}
+
+table 
+{
+	line-height : 50px;
+	font-size: 16px;
+	margin-left: 10px;
+	/*border-collapse : collapse;
+	border-spacing : 0;
+	*/
+	width: 99%;
+	margin-bottom : 20px ;
+}
+
+th
+{
+	border : 1px solid gray; 
+	text-align: center;
+	padding : 3px;
+	background-color: #F0F7FC;
+	margin: 3px;
+}
+
+td
+{
+	border : 1px solid gray; 
+	text-align: center;
+	padding : 3px;
+	background-color: #F3F4F6;
+	margin: 3px;
+}
+
+td.white_clr
+{
+	background-color: white;
+}
+
+
+.col_val
+{
+	background-color: #F3F4F6;
+}
+
+.left_align 
+{
+	text-align: left;
+}

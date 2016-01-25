@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content="" />
+	<meta name="autdor" content="" />
+	
+	<link rel="stylesheet" type="text/css" href="./add_sales_sum.css" media="screen" />
+	<script src="./add_sales_sum.js"></script>
+</head>
+
+<body>
+	<div>
+		<div class="title_div">
+			<strong id="sum_title">■ 매출계산서 총합계</strong>
+		</div>
+		<table>
+			<colgroup>
+				<col width = "22%"/>
+				<col width = "22%"/>
+				<col width = "11%"/>
+				<col width = "10%"/>
+				<col width = "15%"/>
+				<col width = "15%"/>
+			</colgroup>
+			<tr>
+				<td colspan="2">구분 </td>
+				<td>매출처수</td>
+				<td>매수</td>
+				<td>공급가액</td>
+				<td>세액</td>
+			</tr>
+			<!-- 1 Row -->
+			<tr>
+				<td colspan="2">합계</td>
+				<td id="sum1" class="col_val"></td>
+				<td id="sum2" class="col_val"></td>
+				<td id="sum3" class="col_val"></td>
+				<td id="sum4" class="col_val"></td>
+			</tr>
+			
+			<!-- 2 Row -->
+			<tr>
+				<td rowspan="3">과세기간 종료일 다음달 11일까지 <br/> 전송된 전자계산서 발급분</td>
+				<td>사업자 번호 발급분</td>
+				<td id="val1_1" class="col_val"></td>
+				<td id="val1_2" class="col_val"></td>
+				<td id="val1_3" class="col_val"></td>
+				<td id="val1_4" class="col_val"></td>
+			</tr>
+			
+			<!-- 3 Row -->
+			<tr>
+				<td>주민등록번호발급분</td>
+				<td id="val2_1" class="col_val"></td>
+				<td id="val2_2" class="col_val"></td>
+				<td id="val2_3" class="col_val"></td>
+				<td id="val2_4" class="col_val"></td>
+			</tr>
+			
+			<!-- 3 Row -->
+			<tr>
+				<td>소계</td>
+				<td id="val3_1" class="col_val"></td>
+				<td id="val3_2" class="col_val"></td>
+				<td id="val3_3" class="col_val"></td>
+				<td id="val3_4" class="col_val"></td>
+			</tr>
+			
+			<!-- 4 Row -->
+			<tr>
+				<td rowspan="3">위 전자계산서 외 발급분 </td>
+				<td>사업자 번호 발급분</td>
+				<td id="val4_1" class="col_val"></td>
+				<td id="val4_2" class="col_val"></td>
+				<td id="val4_3" class="col_val"></td>
+				<td id="val4_4" class="col_val"></td>
+			</tr>
+			
+			<!-- 5 Row -->
+			<tr>
+				<td>주민등록번호발급분</td>
+				<td id="val5_1" class="col_val"></td>
+				<td id="val5_2" class="col_val"></td>
+				<td id="val5_3" class="col_val"></td>
+				<td id="val5_4" class="col_val"></td>
+			</tr>
+			
+			<!-- 6 Row -->
+			<tr>
+				<td>소계</td>
+				<td id="val6_1" class="col_val"></td>
+				<td id="val6_2" class="col_val"></td>
+				<td id="val6_3" class="col_val"></td>
+				<td id="val6_4" class="col_val"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

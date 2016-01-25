@@ -1,0 +1,376 @@
+
+ ______   ______   __   __   ______
+/\  == \ /\  __ \ /\ \_/\ \ /\  __ \ 
+\ \  __< \ \ \/\ \\ \  \_\ \\ \ \/\ \   __
+ \ \_____\\ \_____\\ \_\-\__\\ \_____\ /\_\
+  \/_____/ \/_____/ \/_/ /__/ \/_____/ \/_/
+
+
+
+
+
+
+@font-face{
+	font-family:"Daum_Regular";
+	src:url("font/Daum_Regular.ttf")format("truetype");
+	font-style:normal;
+	font-weight:normal;
+}
+
+body {
+	margin: 0;
+	A:link {font-family:"Franklin Gothic Heavy" color: white; text-decoration: none}
+	A:visited {text-decoration: none}
+	A:hover {color: #0099ff; text-decoration: none}
+}
+
+.bdwrap {
+	margin: auto;
+	text-align: center;
+}
+
+.menuwrap {
+	margin: auto;
+	text-align: center;
+
+}
+
+.menuwrap_board{
+	margin: auto;
+	text-align: center;
+	background-color:#afa89c;
+}
+
+.ftwrap{
+   margin: auto;
+   vertical-align: center;
+   border: 1px solid #ffffff;
+   width: 1100px;
+   min-height: 20%;
+
+}
+
+
+header{
+	background: #FFFFFF;
+	width: 1100px;
+	height: 70px;
+	color: white;
+	font-family: "Arial Black";
+	font-weight: bold;
+	clear: both;
+	margin: auto;
+	display: block;
+}
+
+
+
+nav{
+	position:relative;
+	/*display: block;*/
+	margin: auto;
+	top: 10px;
+
+}
+
+
+.logo{
+	margin: 13px 100px 0 15px;
+	width:170px;
+}
+
+
+nav ul{
+
+	width:1100px;
+	display: inline;
+	color:#2D343F;
+
+}
+
+nav ul li{
+	float:left;
+	width:150px;
+	/*height:65px;*/
+	margin: 16px 0px 5px 0;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	list-style-type:none;
+	padding: 0px 0px 0px 0;
+}
+
+
+.menu1:hover{
+	content: url("../images/menu/menu1_1.png");
+}
+
+.menu2:hover{
+	content: url("../images/menu/menu2_1.png");
+}
+
+.menu3:hover{
+	content: url("../images/menu/menu3_1.png");
+}
+
+.menu4:hover{
+	content: url("../images/menu/menu4_1.png");
+}
+
+.menu5:hover{
+	content: url("../images/menu/menu5_1.png");
+}
+
+
+/* 메뉴아래 사진 배경영역  */
+
+.mid {
+	
+	border-top: 2px solid #007ACC;
+	margin: auto;
+	height:96px;
+	background-color: #786B62;
+
+}
+/* 메뉴아래 사진 배경영역 끝 */
+
+
+
+
+
+
+
+
+
+
+/* 게시판 해당 제목 영역  */
+
+
+
+
+
+
+/* -------------------------- 포틀렛 영역 ----------------------------  */
+
+/*게시판 위치 중간잡기 영역*/
+
+
+
+/*게시판 중간 보이는 글 영역*/
+
+
+
+/*textarea{
+	resize:none;
+	border: 1px solid #888888;
+	width: 600px;
+	height: 300px;
+	min-width: 800px; 
+	max-width: 800px;
+}*/
+
+
+
+/*--------------------------기본정보 입력----------------------------*/
+
+.agrwrap1{
+	height:650px;
+	margin:0 auto;
+}
+
+.agr_table{
+	margin: 0 auto;
+	border: 1px soild #000000;
+} 
+
+.agr_title{
+	margin: 20px 700px 10px 0px;
+}
+
+
+
+
+table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    /*font-size: 100%;*/
+    vertical-align: baseline;
+    background: transparent;
+    text-align:center;
+    vertical-align: middle;
+}
+
+td {
+	width: 200px;
+    height: 35px;	
+}
+
+td:nth-child(1),td:nth-child(3) {
+	background-color:#CDC5B9;
+	font-weight:bold;
+	font-size:0.9em;
+
+}
+
+td:nth-child(2),td:nth-child(4){
+	background-color:  #f4f3f0;
+	font-size:0.8em;
+	width: 300px;
+}
+
+td:nth-child(2){
+	width:400px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+
+.regi_btn5{
+	cursor:pointer;
+	display:inline-block;
+	background-color:#007ACC;
+	color:#FFFFFF;
+	height:27px;
+	width:82px;
+	margin: 20px 0 0 0;
+	text-align:center;
+	padding-top: 5px;
+	font-weight:900;
+	font-size: 1em;
+}
+
+.regi_btn6{
+	cursor:pointer;
+	display:inline-block;
+	background-color:#CCCCCC;
+	color:#737373;
+	height:27px;
+	width:82px;
+	margin: 20px 0 0 0;
+	text-align:center;
+	padding-top: 5px;
+	font-weight:900;
+	font-size: 1em;	
+}
+
+
+/*----------- 추가*/
+.form-box-div{
+	margin:auto;
+	max-width: 1122px;
+	padding: 40px;
+	text-align: right;
+	border-top: 3px solid #CDC5B9;
+	border-bottom: 3px solid #CDC5B9;
+}
+
+.form-box-div label {
+	margin:1px;
+	display:inline-block;
+	background-color:#CDC5B9;
+	font-weight:bold;
+	font-size:0.9em;
+	height: 24px;
+	border: 2px;
+}
+.form-box-div input {
+	padding:0;
+	margin:0;
+	border: 2px solid #CDC5B9;
+	display:inline-block;
+	height: 20px;
+}
+
+/* ------------------------footer------------------------ 영역 */
+
+footer p{
+	margin: 0;
+	padding: 1px;
+	text-decoration: inherit;
+}
+
+footer{
+	font-family:"Daum_Regular";
+	top: 1320px;
+	width: 100%;
+	font-size:0.75em;
+	background-color: #2d343f;
+	height: 200px;
+	color: white;
+	margin: auto;
+	padding: 20px 0 0 0;
+	
+}
+
+.ftFrame {
+	display: inline-block;
+	margin: 0 0 0 -10%;
+
+}
+
+.logo2{
+}
+
+.ft1{
+    display: inline-block;
+	margin: 0px 50px 0 10px;
+	width:30%;
+	font-size: 1em;
+}
+
+.ft2{
+    display: inline-block;
+    width: 100%;
+	margin: 0px 0 0 0;
+	width:13%;
+	font-size: 1em;
+}
+
+.ft3{
+	display: inline-block;
+    width: 100%;
+	margin: 0 10px 0 70px;
+	width:13%;	
+}
+.Face{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Tweet{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Blog{
+	height: 35px;
+	margin: 5px 5px;
+}
+
+.Face:hover{
+	content: url("../images/main/face_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Tweet:hover{
+	content: url("../images/main/tweet_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Blog:hover{
+	content: url("../images/main/blog_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+
+
+.ftR{
+	margin: auto;
+	height: 100px;
+}
+.frlogo{
+    margin: -16px 0 0 15px;
+}
+

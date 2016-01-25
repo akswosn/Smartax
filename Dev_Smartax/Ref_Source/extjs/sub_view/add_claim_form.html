@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>pub</title>
+		<meta name="description" content="">
+		<meta name="author" content="Administrator">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="./add_claim_form.css">
+		<script type="text/javascript" src="../../js/vendor/jquery-1.11.1.min.js"></script>
+		<script src="./add_claim_form.js"></script>
+	</head>
+
+	<body>
+		<div class="tbl-wrap">
+			<table class="tbl-1 tbl-left">
+				<caption><!-- 테이블 제목 입력해주세요 --></caption>
+				<colgroup>
+					<col style="width: 10%;">
+					<col style="width: 15%;">
+					<col style="width: 30%;">
+					<col style="width: 5%;">
+					<col style="width: 15%;">
+					<col style="width: 10%;">
+					<col style="width: 15%;">
+				</colgroup>
+				<thead>
+					<tr>
+						<th scope="col" colspan="4">&nbsp;</th>
+						<th scope="col" colspan="3">정기신고금액</th>
+					</tr>
+					<tr>
+						<th scope="col" colspan="4">구분</th>
+						<th scope="col">금액</th>
+						<th scope="col">세율</th>
+						<th scope="col">세액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="bg-color-2 alignC" scope="row" rowspan="9">과<br>세<br>표<br>준<br>및<br>매<br>출<br>세<br>액</th>
+						<th scope="row" rowspan="4">과세</th>
+						<th scope="row">세금계산서발급분</th>
+						<th class="bg-color-2 alignC" scope="row">1</th>
+						<td id="price1" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">10/100</td>
+						<td id="tax1" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row">매입자발행세금계산서</th>
+						<th class="bg-color-2 alignC" scope="row">2</th>
+						<td id="price2" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">10/100</td>
+						<td id="tax2" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row">신용카드 현금영수증발행분</th>
+						<th class="bg-color-2 alignC" scope="row">3</th>
+						<td id="price3" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC" rowspan="2">10/100</td>
+						<td id="tax3" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row">기타(정규영수증외매출분)</th>
+						<th class="bg-color-2 alignC" scope="row">4</th>
+						<td id="price4" class="col_val sub_table1">&nbsp;</td>
+						<td id="tax4" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">영세</th>
+						<th scope="row">세금계산서발급분</th>
+						<th class="bg-color-2 alignC" scope="row">5</th>
+						<td id="price5" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">0/100</td>
+						<td id="tax5" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row">기타</th>
+						<th class="bg-color-2 alignC" scope="row">6</th>
+						<td id="price6" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">0/100</td>
+						<td id="tax6" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">예정신고누락분</th>
+						<th class="bg-color-2 alignC" scope="row">7</th>
+						<td id="price7" class="sub_table1"></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax7" class="sub_table1"></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">대손세액가감</th>
+						<th class="bg-color-2 alignC" scope="row">8</th>
+						<td id="price8" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax8" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">합계</th>
+						<th class="bg-color-2 alignC" scope="row">9</th>
+						<td id="price9" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉮</td>
+						<td id="tax9" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="bg-color-3 alignC" scope="row" rowspan="8">매<br>입<br>세<br>액</th>
+						<th scope="row" rowspan="2">세금계산서<br>수취분</th>
+						<th scope="row">일반매입</th>
+						<th class="bg-color-3 alignC" scope="row">10</th>
+						<td id="price10" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax10" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row">고정자산매입</th>
+						<th class="bg-color-3 alignC" scope="row">11</th>
+						<td id="price11" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax11"  class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">예정신고누락분</th>
+						<th class="bg-color-3 alignC" scope="row">12</th>
+						<td id="price12" class ="sub_table1"></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax12"  class ="sub_table1"></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">매입자발행세금계산서</th>
+						<th class="bg-color-3 alignC" scope="row">13</th>
+						<td id="price13" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax13" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">기타공제매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">14</th>
+						<td id="price14" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax14" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">합계(10+11+12+13+14)</th>
+						<th class="bg-color-3 alignC" scope="row">15</th>
+						<td id="price15" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax15" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">공제받지못할매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">16</th>
+						<td id="price16" class="col_val sub_table2">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax16" class="col_val sub_table2">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">차감계</th>
+						<th class="bg-color-3 alignC" scope="row">17</th>
+						<td id="price17" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉯</td>
+						<td id="tax17" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="bg-color-6" scope="row" colspan="5">납부(환급)세액(매출세액㉮-매입세액㉯)</th>
+						<td class="bg-color-7 alignC">㉰</td>
+						<td id="tax-sum1" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="bg-color-4 alignC" scope="row" rowspan="3">경감<br>공제<br>세액</th>
+						<th scope="row" colspan="2">기타경감 · 공제세액</th>
+						<th class="alignC" scope="row">18</th>
+						<td id="price18" class="col_val sub_table2">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax18" class="col_val sub_table2">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">신용카드매출전표등발행공제등</th>
+						<th class="alignC" scope="row">19</th>
+						<td id="price19" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax19" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">합계</th>
+						<th class="alignC" scope="row">20</th>
+						<td id="price20" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉱</td>
+						<td id="tax20" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">예정신고미환급세액</th>
+						<th class="alignC" scope="row">21</th>
+						<td id="price21" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉲</td>
+						<td id="tax21" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">예정고지세액</th>
+						<th class="alignC" scope="row">22</th>
+						<td id="price22" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉳</td>
+						<td id="tax22" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">사업양수자의 대리납부 기납부세액</th>
+						<th class="alignC" scope="row">23</th>
+						<td id="price23" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉴</td>
+						<td id="tax23" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">매입자 납부특례 기납부세액</th>
+						<th class="alignC" scope="row">24</th>
+						<td id="price24" class="col_val sub_table1">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉵</td>
+						<td id="tax24" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">가산세액계</th>
+						<th class="alignC" scope="row">25</th>
+						<td id="price25" class="col_val sub_table2">&nbsp;</td>
+						<td class="bg-color-7 alignC">㉶</td>
+						<td id="tax25" class="col_val sub_table2">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="5">차가감하여 납부할세액(환급받을세액)(㉰-㉱-㉲-㉳-㉴-㉵+㉶)</th>
+						<td class="bg-color-7 alignC">26</td>
+						<td id="tax-sum2" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="5">총괄납부사업자 납부할세액(환급받을 세액)</th>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-sum3" class="col_val sub_table1">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="tbl-1 tbl-right"  id="sub_table1">
+				<caption><!-- 테이블 제목 입력해주세요 --></caption>
+				<colgroup>
+					<col style="width: 10%;">
+					<col style="width: 15%;">
+					<col style="width: 30%;">
+					<col style="width: 5%;">
+					<col style="width: 15%;">
+					<col style="width: 10%;">
+					<col style="width: 15%;">
+				<thead>
+					<tr>
+						<th scope="col" colspan="4">구분</th>
+						<th scope="col">금액</th>
+						<th scope="col">세율</th>
+						<th scope="col">세액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="bg-color-1" scope="row" colspan="7">7.매출(예정신고누락분)</th>
+					</tr>
+					<tr>
+						<th class="bg-color-5 alignC" scope="row" rowspan="5">예<br>정<br>누<br>락<br>분</th>
+						<th scope="row" rowspan="2">과세</th>
+						<th scope="row">세금계산서</th>
+						<th class="bg-color-2 alignC" scope="row">32</th>
+						<td id="price32" class="col_val_sub1"><input type="text" id="price32_val"  value=""></td>
+						<td class="bg-color-7 alignC">10/100</td>
+						<td id="tax32" class="col_val_sub1"><input type="text" id="tax32_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">기타</th>
+						<th class="bg-color-2 alignC" scope="row">33</th>
+						<td id="price33" class="col_val_sub1"><input type="text" id="price33_val"  value=""></td>
+						<td class="bg-color-7 alignC">10/100</td>
+						<td id="tax33" class="col_val_sub1"><input type="text" id="tax33_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">영세</th>
+						<th scope="row">세금계산서</th>
+						<th class="bg-color-2 alignC" scope="row">34</th>
+						<td id="price34" class="col_val_sub1"><input type="text" id="price34_val"  value=""></td>
+						<td class="bg-color-7 alignC">0/100</td>
+						<td id="tax34" class="col_val_sub1"><input type="text" id="tax34_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">기타</th>
+						<th class="bg-color-2 alignC" scope="row">35</th>
+						<td id="price35" class="col_val_sub1"><input type="text" id="price35_val"  value=""></td>
+						<td class="bg-color-7 alignC">0/100</td>
+						<td id="tax35" class="col_val_sub1"><input type="text" id="tax35_val"  value=""></td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="2">합계</th>
+						<th class="bg-color-2 alignC" scope="row">36</th>
+						<td id="price36" class="col_val">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax36" class="col_val">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="bg-color-1" scope="row" colspan="7">12.매입(예정신고누락분)</th>
+					</tr>
+					<tr>
+						<th class="bg-color-5 alignC" scope="row" rowspan="12">예<br>정<br>누<br>락<br>분</th>
+						<th scope="row" colspan="2">세금계산서</th>
+						<th class="bg-color-3 alignC" scope="row">37</th>
+						<td id="price37" class="col_val_sub1"><input type="text" id="price37_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax37" class="col_val_sub1"><input type="text" id="tax37_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">기타공제매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">38</th>
+						<td id="price38" class="col_val_sub1"><input type="text" id="price38_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax38" class="col_val_sub1"><input type="text" id="tax38_val"  value=""></td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="2">합계</th>
+						<th class="bg-color-3 alignC" scope="row">39</th>
+						<td id="price39" class="col_val">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax39" class="col_val">&nbsp;</td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2">신용카드매출<br>수령금액합계</th>
+						<th scope="row">일반매입</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc1" class="col_val_sub1"><input type="text" id="price-etc1_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc1" class="col_val_sub1"><input type="text" id="tax-etc1_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">고정매입</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc2" class="col_val_sub1"><input type="text" id="price-etc2_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc2" class="col_val_sub1"><input type="text" id="tax-etc2_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">의제매입세액</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc3" class="col_val_sub1"><input type="text" id="price-etc3_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc3" class="col_val_sub1"><input type="text" id="tax-etc3_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">재활용폐자원등매입세액</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc4" class="col_val_sub1"><input type="text" id="price-etc4_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc4" class="col_val_sub1"><input type="text" id="tax-etc4_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">고금의제매입세액</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc5" class="col_val_sub1"><input type="text" id="price-etc5_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc5" class="col_val_sub1"><input type="text" id="tax-etc5_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">과세사업전환매입세액</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc6" class="col_val_sub1"><input type="text" id="price-etc6_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc6" class="col_val_sub1"><input type="text" id="tax-etc6_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">재고매입세액</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc7" class="col_val_sub1"><input type="text" id="price-etc7_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc7" class="col_val_sub1"><input type="text" id="tax-etc7_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="2">변제대손세액</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc8" class="col_val_sub1"><input type="text" id="price-etc8_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc8" class="col_val_sub1"><input type="text" id="tax-etc8_val"  value=""></td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="2">합계</th>
+						<th scope="row">&nbsp;</th>
+						<td id="price-etc9" class="col_val">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax-etc9" class="col_val">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="bg-color-1" scope="row" colspan="7">14.기타공제매입세액</th>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2" colspan="2">신용카드매출<br>수령금액합계표</th>
+						<th scope="row">일반매입</th>
+						<th class="bg-color-3 alignC" scope="row" >40</th>
+						<td id="price40" class="col_val_sub1"><input type="text" id="price40_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax40" class="col_val_sub1"><input type="text" id="tax40_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">고정매입</th>
+						<th class="bg-color-3 alignC" scope="row" >41</th>
+						<td id="price41" class="col_val_sub1"><input type="text" id="price41_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax41" class="col_val_sub1"><input type="text" id="tax41_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">의제매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">42</th>
+						<td id="price42" class="col_val_sub1"><input type="text" id="price42_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax42" class="col_val_sub1"><input type="text" id="tax42_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">재활용폐자원등매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">43</th>
+						<td id="price43" class="col_val_sub1"><input type="text" id="price43_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax43" class="col_val_sub1"><input type="text" id="tax43_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">고금의제매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">44</th>
+						<td id="price44" class="col_val_sub1"><input type="text" id="price44_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax44" class="col_val_sub1"><input type="text" id="tax44_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">과세사업전환매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">45</th>
+						<td id="price45" class="col_val_sub1"><input type="text" id="price45_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax45" class="col_val_sub1"><input type="text" id="tax45_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">재고매입세액</th>
+						<th class="bg-color-3 alignC" scope="row">46</th>
+						<td id="price46" class="col_val_sub1"><input type="text" id="price46_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax46" class="col_val_sub1"><input type="text" id="tax46_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">변제대손세액</th>
+						<th class="bg-color-3 alignC" scope="row">47</th>
+						<td id="price47" class="col_val_sub1"><input type="text" id="price47_val"  value=""></td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax47" class="col_val_sub1"><input type="text" id="tax47_val"  value=""></td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="3">합계</th>
+						<th class="bg-color-3 alignC" scope="row">48</th>
+						<td id="price48" class="col_val">&nbsp;</td>
+						<td class="bg-color-7">&nbsp;</td>
+						<td id="tax48" class="col_val">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+			
+			<table class="tbl-1 tbl-right" id="sub_table2">
+				<caption><!-- 테이블 제목 입력해주세요 --></caption>
+				<colgroup>
+					<col style="width: 10%;">
+					<col style="width: 15%;">
+					<col style="width: 30%;">
+					<col style="width: 5%;">
+					<col style="width: 15%;">
+					<col style="width: 10%;">
+					<col style="width: 15%;">
+				<thead>
+					<tr>
+						<th scope="col" colspan="4">구분</th>
+						<th scope="col">금액</th>
+						<th scope="col">세율</th>
+						<th scope="col">세액</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th class="bg-color-1" scope="row" colspan="7">16.공제받지못할매입세액</th>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">공제받지못할 매입세액</th>
+						<th class="alignC" scope="row">49</th>
+						<td id="price49" class="col_val_sub2"><input type="text" id="price49_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax49" class="col_val_sub2"><input type="text" id="tax49_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">공통매입세액면세사업분</th>
+						<th class="alignC" scope="row">50</th>
+						<td id="price50" class="col_val_sub2"><input type="text" id="price509_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax50" class="col_val_sub2"><input type="text" id="tax50_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">대손처분받을세액</th>
+						<th class="alignC" scope="row">51</th>
+						<td id="price51" class="col_val_sub2"><input type="text" id="price51_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax51" class="col_val_sub2"><input type="text" id="tax51_val"  value=""></td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="3">합계</th>
+						<th class="alignC" scope="row">52</th>
+						<td id="price52" class="col_val">&nbsp;</td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax52" class="col_val">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="bg-color-1" scope="row" colspan="7">18.기타경감공제세액</th>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">전자신고세액공제</th>
+						<th class="alignC" scope="row">53</th>
+						<td id="price53" class="col_val_sub2"><input type="text" id="price53_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax53" class="col_val_sub2"><input type="text" id="tax53_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">전자세금계산서발급세액공제</th>
+						<th class="alignC" scope="row">54</th>
+						<td id="price54" class="col_val_sub2"><input type="text" id="price54_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax54" class="col_val_sub2"><input type="text" id="tax54_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">택시운전사업자경감세액</th>
+						<th class="alignC" scope="row">55</th>
+						<td id="price55" class="col_val_sub2"><input type="text" id="price55_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax55" class="col_val_sub2"><input type="text" id="tax55_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">현금영수증사업자세액공제</th>
+						<th class="alignC" scope="row">56</th>
+						<td id="price56" class="col_val_sub2"><input type="text" id="price56_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax56" class="col_val_sub2"><input type="text" id="tax56_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">기타</th>
+						<th class="alignC" scope="row">57</th>
+						<td id="price57" class="col_val_sub2"><input type="text" id="price57_val"  value=""></td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax57" class="col_val_sub2"><input type="text" id="tax57_val"  value=""></td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="3">합계</th>
+						<th class="alignC" scope="row">58</th>
+						<td id="price58" class="col_val">&nbsp;</td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax58" class="col_val">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="bg-color-1" scope="row" colspan="7">24.가산세명세</th>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">사업자미등록등</th>
+						<th class="alignC" scope="row">59</th>
+						<td id="price59" class="col_val_sub2"><input type="text" id="price59_val"  value=""></td>
+						<td class="bg-color-7 alignC">1/100</td>
+						<td id="tax59" class="col_val_sub2"><input type="text" id="tax59_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="3" colspan="2">세금<br>계산서</th>
+						<th scope="row">지연발급 등</th>
+						<th class="alignC" scope="row">60</th>
+						<td id="price60" class="col_val_sub2"><input type="text" id="price60_val"  value=""></td>
+						<td class="bg-color-7 alignC">1/100</td>
+						<td id="tax60" class="col_val_sub2"><input type="text" id="tax60_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">지연수취</th>
+						<th class="alignC" scope="row">61</th>
+						<td id="price61" class="col_val_sub2"><input type="text" id="price61_val"  value=""></td>
+						<td class="bg-color-7 alignC">2/100</td>
+						<td id="tax61" class="col_val_sub2"><input type="text" id="tax61_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">미발급 등</th>
+						<th class="alignC" scope="row">62</th>
+						<td id="price62" class="col_val_sub2"><input type="text" id="price62_val"  value=""></td>
+						<td class="bg-color-7 alignC">2/100</td>
+						<td id="tax62" class="col_val_sub2"><input type="text" id="tax62_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" rowspan="2" colspan="2">전자세금세금계산서<br>발급명세 전송</th>
+						<th scope="row">지연전송</th>
+						<th class="alignC" scope="row">63</th>
+						<td id="price63" class="col_val_sub2"><input type="text" id="price63_val"  value=""></td>
+						<td class="bg-color-7 alignC">1/1,000</td>
+						<td id="tax63" class="col_val_sub2"><input type="text" id="tax63_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">미전송</th>
+						<th class="alignC" scope="row">64</th>
+						<td id="price64" class="col_val_sub2"><input type="text" id="price64_val"  value=""></td>
+						<td class="bg-color-7 alignC">3/1,000</td>
+						<td id="tax64" class="col_val_sub2"><input type="text" id="tax64_val"  value=""></td>
+					</tr>
+					
+					<tr>
+						<th scope="row" rowspan="2" colspan="2">세금계산서<br>합계표</th>
+						<th scope="row">제출 불성실</th>
+						<th class="alignC" scope="row">65</th>
+						<td id="price65" class="col_val_sub2"><input type="text" id="price65_val"  value=""></td>
+						<td class="bg-color-7 alignC">1/100</td>
+						<td id="tax65" class="col_val_sub2"><input type="text" id="tax65_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">지연제출</th>
+						<th class="alignC" scope="row">66</th>
+						<td id="price66" class="col_val_sub2"><input type="text" id="price66_val"  value=""></td>
+						<td class="bg-color-7 alignC">5/1,000</td>
+						<td id="tax66" class="col_val_sub2"><input type="text" id="tax66_val"  value=""></td>
+					</tr>
+					<!-- 
+					<tr>
+						<th class="alignC" scope="row" colspan="3">미제출</th>
+						<th class="alignC" scope="row">&nbsp;</th>
+						<td id="price-etc1" class="col_val_sub2">&nbsp;</td>
+						<td class="bg-color-7 alignC">1</td>
+						<td id="tax-etc1" class="col_val_sub2">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="3">부실기재</th>
+						<th class="alignC" scope="row">&nbsp;</th>
+						<td id="price-etc2" class="col_val_sub2">&nbsp;</td>
+						<td class="bg-color-7 alignC">1</td>
+						<td id="tax-etc2" class="col_val_sub2">&nbsp;</td>
+					</tr>
+					<tr>
+						<th class="alignC" scope="row" colspan="3">지연제출</th>
+						<th class="alignC" scope="row">&nbsp;</th>
+						<td id="price-etc3" class="col_val_sub2">&nbsp;</td>
+						<td class="bg-color-7 alignC">0.5</td>
+						<td id="tax-etc3" class="col_val_sub2">&nbsp;</td>
+					</tr>
+					 -->
+					 
+					<tr>
+						<th scope="row" rowspan="4" colspan="2">신고 불성실</th>
+						<th scope="row">무신고(일반)</th>
+						<th class="alignC" scope="row">67</th>
+						<td id="price67" class="col_val_sub2"><input type="text" id="price67_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax67" class="col_val_sub2"><input type="text" id="tax67_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">무신고(부당)</th>
+						<th class="alignC" scope="row">68</th>
+						<td id="price68" class="col_val_sub2"><input type="text" id="price68_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax68" class="col_val_sub2"><input type="text" id="tax68_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">과소.초과환급신고(일반)</th>
+						<th class="alignC" scope="row">69</th>
+						<td id="price69" class="col_val_sub2"><input type="text" id="price69_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax69" class="col_val_sub2"><input type="text" id="tax69_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">과소.초과환급신고(부당)</th>
+						<th class="alignC" scope="row">70</th>
+						<td id="price70" class="col_val_sub2"><input type="text" id="price70_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax70" class="col_val_sub2"><input type="text" id="tax70_val"  value=""></td>
+					</tr>
+					
+					<tr>
+						<th scope="row" colspan="3">납부불성실</th>
+						<th class="alignC" scope="row">71</th>
+						<td id="price71" class="col_val_sub2"><input type="text" id="price71_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax71" class="col_val_sub2"><input type="text" id="tax71_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">영세율 과세표준신고 불성실</th>
+						<th class="alignC" scope="row">72</th>
+						<td id="price72" class="col_val_sub2"><input type="text" id="price72_val"  value=""></td>
+						<td class="bg-color-7 alignC">5/1,000</td>
+						<td id="tax72" class="col_val_sub2"><input type="text" id="tax72_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row" colspan="3">현금매출명세서 불성실</th>
+						<th class="alignC" scope="row">73</th>
+						<td id="price73" class="col_val_sub2"><input type="text" id="price73_val"  value=""></td>
+						<td class="bg-color-7 alignC">1/100</td>
+						<td id="tax73" class="col_val_sub2"><input type="text" id="tax73_val"  value=""></td>
+					</tr>
+					
+					<tr>
+						<th scope="row" colspan="3">부동산임대공급가액명세서 불성실</th>
+						<th class="alignC" scope="row">74</th>
+						<td id="price73" class="col_val_sub2"><input type="text" id="price73_val"  value=""></td>
+						<td class="bg-color-7 alignC">1/100</td>
+						<td id="tax73" class="col_val_sub2"><input type="text" id="tax73_val"  value=""></td>
+					</tr>
+					
+					<tr>
+						<th scope="row" rowspan="2" colspan="2">매입자<br>납부특례</th>
+						<th scope="row">거래계좌 미사용</th>
+						<th class="alignC" scope="row">75</th>
+						<td id="price75" class="col_val_sub2"><input type="text" id="price75_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax75" class="col_val_sub2"><input type="text" id="tax75_val"  value=""></td>
+					</tr>
+					<tr>
+						<th scope="row">거래계좌 지연입금</th>
+						<th class="alignC" scope="row">76</th>
+						<td id="price76" class="col_val_sub2"><input type="text" id="price76_val"  value=""></td>
+						<td class="bg-color-7 alignC">뒤쪽</td>
+						<td id="tax76" class="col_val_sub2"><input type="text" id="tax76_val"  value=""></td>
+					</tr>
+					
+					
+					<tr>
+						<th class="alignC" scope="row" colspan="3">합계</th>
+						<th class="alignC" scope="row">77</th>
+						<td id="price77" class="col_val">&nbsp;</td>
+						<td class="bg-color-7 alignC">&nbsp;</td>
+						<td id="tax77" class="col_val">&nbsp;</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>

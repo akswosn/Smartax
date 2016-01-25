@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>:::거래 명세서:::</title>
+ 
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="./print_out_type1_output.css?ver=1" />
+ 		<script type="text/javascript" src="../jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="./print_out_type1_output.js"></script>
+        <!-- script -->
+        <script>
+        
+        </script>
+
+    </head>
+
+    <body>
+		<div class="print_btn_area">
+	         <button class="print_btn" onclick="print()">
+	             <span>출력하기</span>
+	         </button>
+	         <button class="close_btn" onclick="self.close();">
+	             <span>창닫기</span>
+	         </button>
+	     </div>
+	<!--content 시작-->
+		<div class="content">
+			<div id="top_div">
+				<div id="title_div"><span id="title">&nbsp;&nbsp;거래명세서&nbsp;&nbsp;</span></div>
+				<br/>
+				<div id="top_left_div">
+					<div id="div_io_tr_cd"><span id="io_tr_cd">테스트</span>&nbsp;貴下.</div>
+					<br/>
+					<p>아래와 같이 출하합니다.</p>
+					<br/>
+					<p>출하일자 : <span id="io_dt">2010-03-10</span></p>
+					<p>합계금액 : ￦<span id="total_amt">7,000</span>원</p>
+				</div>
+				<div id="top_right_div">
+					<table>
+						<colgroup>
+							<col width="25%"/>
+							<col width="25%"/>
+							<col width="25%"/>
+							<col width="25%"/>
+						</colgroup>
+						<tr>
+							<th>등록 번호</th>
+							<td colspan="3" id="co_saup_no">123-45-67890</td>
+						</tr>
+						<tr>
+							<th>상&nbsp;&nbsp;호</th>
+							<td id="co_nm"></td>
+							<td>성&nbsp;&nbsp;명</td>
+							<td id="co_ceo_nm"></td>
+						</tr>
+						<tr>
+							<th>주&nbsp;&nbsp;소</th>
+							<td colspan="3" id="co_addr"></td>
+						</tr>
+						<tr>
+							<th>업&nbsp;&nbsp;태</th>
+							<td id="co_up"></td>
+							<td>종&nbsp;&nbsp;목</td>
+							<td id="co_jong"></td>
+						</tr>
+					</table>
+				</div>
+			</div>
+	
+			<div id="bottom_div">
+			  <table>
+			  	<colgroup>
+					<col width="17%"/>
+					<col width="17%"/>
+					<col width="17%"/>
+					<col width="17%"/>
+					<col width="17%"/>
+					<col width="15%"/>
+				</colgroup>
+			  	<thead>
+			  		<tr>
+			  			<th>품&nbsp;&nbsp;명</th>
+			  			<th>규&nbsp;&nbsp;격</th>
+			  			<th>수&nbsp;&nbsp;량</th>
+			  			<th>다&nbsp;&nbsp;가</th>
+			  			<th>금&nbsp;&nbsp;액</th>
+			  			<th>비&nbsp;&nbsp;고</th>
+			  		</tr>
+			  	</thead>
+			  	<tbody id="item_list"></tbody>
+			  	<tbody>
+			  		
+			  		
+			  	</tbody>
+			  </table>
+				
+			</div>
+		</div>		
+	<!--content 끝-->
+    </body>
+</html>

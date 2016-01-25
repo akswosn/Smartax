@@ -1,0 +1,137 @@
+body {padding : 25px 5px;}
+
+.alignL {text-align: left!important;}
+.alignR {text-align: right!important;}
+.alignC {text-align: center!important;}
+
+.wrap {
+	position: relative;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #000;
+	font-family: "돋움", "Dotum";
+	font-size: 12px;
+}
+.wrap-last {
+	border-bottom: 0;
+	margin-bottom: 0;
+}
+
+.title {
+	position: relative;
+	height: 20px;
+	text-align: center;
+}
+.title-text1 {
+	font-size: 14px;
+	text-decoration: underline;
+}
+.title-text2 {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.title-text3 {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.tbl-1 {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+}
+.tbl-1 caption {
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
+.tbl-1 thead th {
+	border: 1px solid #000;
+	font-weight: normal;
+}
+.tbl-1 tbody th {
+	border: 1px solid #000;
+	font-weight: normal;
+}
+.tbl-1 tbody td {
+	border: 1px solid #000;
+	text-align: left;
+}
+
+.inner {
+	overflow: hidden;
+	margin-top: 10px;
+}
+
+.floatL {
+	float: left;
+	width: 50%;
+}
+.floatR {
+	float: right;
+	width: 50%;
+}
+.floatR-box1 {
+	margin-left: 10px;
+	padding: 6px;
+	border: 1px solid #000;
+}
+.floatR-box1 p {
+	margin: 0;
+}
+.floatR-line1 {
+	margin-top: 4px;
+	padding-left: 10px;
+	text-align: center;
+}
+.floatR-line1 span {
+	margin-right: 20px;
+}
+.floatR-line2 {
+	margin-top: 4px;
+	padding-left: 100px;
+}
+.floatR-line2 span {
+	margin-right: 20px;
+}
+.floatR-line3 {
+	margin-top: 4px;
+	padding-left: 100px;
+}
+
+.wrap-img {
+	position: absolute;
+	right: 10px;
+  	bottom: 20px;
+}
+
+.wrap-last img.wrap-img {
+	position: absolute;
+	right: 10px;
+  	bottom: 10px;
+}
+
+.print_btn_area {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    padding: 5px;
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    text-align: center;
+}
+.print_btn_area button {
+    width: 66px;
+    font-family: 'Malgun Gothic', 'Dotum';
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+@media print {
+    .print_btn_area {
+       display:none;
+    }
+}

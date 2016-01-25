@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>부가세</title>
+<meta name="keywords" content="태극 회계 온라인" />
+<meta name="description" content="태극 회계 온라인" />
+<script type="text/javascript" src="./jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="../lib/ext-all.js"></script>
+<style>
+#print_content_area {
+    /*display: none;*/
+    position: relative;
+    font-family: "Malgun Gothic", "Dotum";
+    font-size: 11px;
+}
+.content1,
+.content1 div,
+.content1 th,
+.content1 td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: blue;
+    color: blue;
+}
+.content2,
+.content2 div,
+.content2 th,
+.content2 td {
+    border-style: solid;
+    border-width: 1px;
+    border-color: red;
+    color: red;
+}
+
+.header {
+    position: relative;
+    height: 40px;
+    border: 1px solid #333;
+}
+.header .title {
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    margin: 0;
+    font-size: 18px;
+    text-align: center;
+}
+.header .no {
+    position: absolute;
+    top: 18px;
+    right: 10px;
+    font-size: 14px;
+}
+
+.tbl1 {
+    width:100%;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+.tbl1 th,
+.tbl1 td {
+    padding: 5px 0;
+    text-align: center;
+}
+
+.dash-line {
+    margin: 20px 0;
+    height: 0;
+    border-top: 1px dashed #000;
+}
+
+.print_btn_area {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    padding: 5px;
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    text-align: center;
+}
+.print_btn_area button {
+    width: 66px;
+    font-family: 'Malgun Gothic', 'Dotum';
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+@media print {
+    .print_btn_area {
+       display:none;
+    }
+}
+</style>
+</head>
+<body>
+    <div id="print_content_area">
+        <!-- 공급자받는자 보관용 -->
+        <div class="content1">
+            <div class="header">
+                <h1 class="title">
+                    <span>세 금 계 산 서</span>
+                    <small>( 공급자받는자 보관용 )</small>
+                </h1>
+                <span class="no">
+                    <span>No : </span>
+                    <strong id="jp_no1">&nbsp;</strong>
+                </span>
+            </div>
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:3%;">
+                    <col style="width:8%;">
+                    <col style="width:18%;">
+                    <col style="width:3%;">
+                    <col style="width:18%;">
+                    <col style="width:3%;">
+                    <col style="width:8%;">
+                    <col style="width:18%;">
+                    <col style="width:3%;">
+                    <col style="width:18%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <!-- TODO 회사, 거래처 정보 셋팅 -->
+                        <!-- 공급자 -->
+                        <th scope="row" rowspan="4">공<br>급<br>자</th>
+                        <th scope="row">등 록<br>번 호</th>
+                        <td colspan="3" id="provider_saup_no1">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row" rowspan="4">공<br>급<br>받<br>는<br>자</th>
+                        <th scope="row">등 록<br>번 호</th>
+                        <td colspan="3" id="receiver_saup_no1">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <!-- 공급자 -->
+                        <th scope="row">상 호<br>(법인명)</th>
+                        <td id="provider_nm1">&nbsp;</td>
+                        <th scope="row" >성<br>명</th>
+                        <td id="provider_daepyo1">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row">상 호<br>(법인명)</th>
+                        <td id="receiver_nm1">&nbsp;</td>
+                        <th scope="row" >성<br>명</th>
+                        <td id="receiver_daepyo1">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <!-- 공급자 -->
+                        <th scope="row">사업장<br>주 소</th>
+                        <td colspan="3" id="provider_addr1">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row">사업장<br>주 소</th>
+                        <td colspan="3" id="receiver_addr1">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <!-- 공급자 -->
+                        <th scope="row">업 태</th>
+                        <td id="provider_up1">&nbsp;</td>
+                        <th scope="row">종<br>목</th>
+                        <td id="provider_jong1">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row">업 태</th>
+                        <td id="receiver_up1">&nbsp;</td>
+                        <th scope="row">종<br>목</th>
+                        <td id="receiver_jong1">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- TODO 작성일자, 공급가액 셋팅 -->
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:11%;">
+                    <col style="width:40%;">
+                    <col style="width:31%;">
+                    <col style="width:18%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col">작성일자</th>
+                        <th scope="col">공급가액</th>
+                        <th scope="col">세액</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                    <tr>
+                        <td id="date1">&nbsp;</td>
+                        <td id="price1">&nbsp;</td>
+                        <td id="atax1">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- TODO 테이터 셋팅 (로우 최소 4줄) -->
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:3%;">
+                    <col style="width:3%;">
+                    <col style="width:30%;">
+                    <col style="width:14%;">
+                    <col style="width:14%;">
+                    <col style="width:14%;">
+                    <col style="width:14%;">
+                    <col style="width:8%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">월</th>
+                        <th scope="col">일</th>
+                        <th scope="col">품목</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">단가</th>
+                        <th scope="col">공급가액</th>
+                        <th scope="col">세액</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                </thead>
+                <tbody id="grid1">
+                    <tr>
+                        <td scope="col" id="atax_date_m1">&nbsp;</td>
+                        <td scope="col" id="atax_date_d1">&nbsp;</td>
+                        <td scope="col" id="atax_item_nm1">&nbsp;</td>
+                        <td scope="col" id="atax_item_cnt1">&nbsp;</td>
+                        <td scope="col" id="atax_item_danga1">&nbsp;</td>
+                        <td scope="col" id="atax_supply_price1">&nbsp;</td>
+                        <td scope="col" id="atax_tax1">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- TODO 합계금액, (청구/영수)셋팅 -->
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:25%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col">합계금액</th>
+                        <th scope="col">현금</th>
+                        <th scope="col">수표</th>
+                        <th scope="col">어음</th>
+                        <th scope="col">외상미수금</th>
+                        <td rowspan="2">이 금액을 <strong id="atax_type_text1">&nbsp;</strong> 함</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" id="sum1">&nbsp;</td>
+                        <td scope="col" id="sum_cash1">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col" id="sum_trauma1">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <!-- //공급자받는자 보관용 -->
+        <div class="dash-line">&nbsp;</div>
+        
+        <!-- 공급자 보관용 -->
+        <div class="content2">
+            <div class="header">
+                <h1 class="title">
+                    <span>세 금 계 산 서</span>
+                    <small>( 공급자 보관용 )</small>
+                </h1>
+                <span class="no">
+                    <span>No : </span>
+                    <strong id="jp_no2">&nbsp;</strong>
+                </span>
+            </div>
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:3%;">
+                    <col style="width:8%;">
+                    <col style="width:18%;">
+                    <col style="width:3%;">
+                    <col style="width:18%;">
+                    <col style="width:3%;">
+                    <col style="width:8%;">
+                    <col style="width:18%;">
+                    <col style="width:3%;">
+                    <col style="width:18%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <!-- TODO 회사, 거래처 정보 셋팅 -->
+                        <!-- 공급자 -->
+                        <th scope="row" rowspan="4">공<br>급<br>자</th>
+                        <th scope="row">등 록<br>번 호</th>
+                        <td colspan="3" id="provider_saup_no2">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row" rowspan="4">공<br>급<br>받<br>는<br>자</th>
+                        <th scope="row">등 록<br>번 호</th>
+                        <td colspan="3" id="receiver_saup_no2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <!-- 공급자 -->
+                        <th scope="row">상 호<br>(법인명)</th>
+                        <td id="provider_nm2">&nbsp;</td>
+                        <th scope="row" >성<br>명</th>
+                        <td id="provider_daepyo2">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row">상 호<br>(법인명)</th>
+                        <td id="receiver_nm2">&nbsp;</td>
+                        <th scope="row" >성<br>명</th>
+                        <td id="receiver_daepyo2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <!-- 공급자 -->
+                        <th scope="row">사업장<br>주 소</th>
+                        <td colspan="3" id="provider_addr2">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row">사업장<br>주 소</th>
+                        <td colspan="3" id="receiver_addr2">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <!-- 공급자 -->
+                        <th scope="row">업 태</th>
+                        <td id="provider_up2">&nbsp;</td>
+                        <th scope="row">종<br>목</th>
+                        <td id="provider_jong2">&nbsp;</td>
+                        <!-- 공급 받는자 -->
+                        <th scope="row">업 태</th>
+                        <td id="receiver_up2">&nbsp;</td>
+                        <th scope="row">종<br>목</th>
+                        <td id="receiver_jong2">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- TODO 작성일자, 공급가액 셋팅 -->
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:11%;">
+                    <col style="width:40%;">
+                    <col style="width:31%;">
+                    <col style="width:18%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col">작성일자</th>
+                        <th scope="col">공급가액</th>
+                        <th scope="col">세액</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                    <tr>
+                        <td id="date2">&nbsp;</td>
+                        <td id="price2">&nbsp;</td>
+                        <td id="atax2">&nbsp;</td>
+                        <td>&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- TODO 테이터 셋팅 (로우 최소 4줄) -->
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:3%;">
+                    <col style="width:3%;">
+                    <col style="width:30%;">
+                    <col style="width:14%;">
+                    <col style="width:14%;">
+                    <col style="width:14%;">
+                    <col style="width:14%;">
+                    <col style="width:8%;">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th scope="col">월</th>
+                        <th scope="col">일</th>
+                        <th scope="col">품목</th>
+                        <th scope="col">수량</th>
+                        <th scope="col">단가</th>
+                        <th scope="col">공급가액</th>
+                        <th scope="col">세액</th>
+                        <th scope="col">비고</th>
+                    </tr>
+                </thead>
+                <tbody id="grid2">
+                    <tr>
+                        <td scope="col" id="atax_date_m2">&nbsp;</td>
+                        <td scope="col" id="atax_date_d2">&nbsp;</td>
+                        <td scope="col" id="atax_item_nm2">&nbsp;</td>
+                        <td scope="col" id="atax_item_cnt2">&nbsp;</td>
+                        <td scope="col" id="atax_item_danga2">&nbsp;</td>
+                        <td scope="col" id="atax_supply_price2">&nbsp;</td>
+                        <td scope="col" id="atax_tax2">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!-- TODO 합계금액, (청구/영수)셋팅 -->
+            <table class="tbl1">
+                <colgroup>
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:15%;">
+                    <col style="width:25%;">
+                </colgroup>
+                <tbody>
+                    <tr>
+                        <th scope="col">합계금액</th>
+                        <th scope="col">현금</th>
+                        <th scope="col">수표</th>
+                        <th scope="col">어음</th>
+                        <th scope="col">외상미수금</th>
+                        <td rowspan="2">이 금액을 <strong id="atax_type_text2">&nbsp;</strong> 함</td>
+                    </tr>
+                    <tr>
+                        <td scope="col" id="sum2">&nbsp;</td>
+                        <td scope="col" id="sum_cash2">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col">&nbsp;</td>
+                        <td scope="col" id="sum_trauma2">&nbsp;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div class="print_btn_area">
+            <button class="print_btn" onclick="print()">
+                <span>출력하기</span>
+            </button>
+            <button class="close_btn" onclick="self.close();">
+                <span>창닫기</span>
+            </button>
+        </div>
+    </div>
+</body>
+<script>
+(function(){
+    //회사정보 데이터 가져옴
+    Ext.Ajax.request({
+        method: 'POST',
+        url: '../../proc/account/output/output_print_page.php',
+        param: { },
+        success: printRender,
+        failure: function(form, action) {
+            Ext.Msg.alert("", '회사정보 데이터를 가져오는데 실패했습니다.');
+        }
+    });
+    
+    function printRender(response, opts) {
+        var parent = window.opener
+        , temp = parent.Global.temp
+        , storeInfo = parent.StoreInfo
+        , json = Ext.JSON.decode(response.responseText)
+        , customer_id = Ext.String.leftPad(temp.record.get('atax_customer_id'), 5, '0')
+        , html = ''
+        , fn = {
+            getNum: function(v) {
+                return Ext.util.Format.number(v, '0,000');
+            }
+        };
+        
+        temp.provider = json.DATA;
+        temp.receiver = storeInfo.Menu09_Grid.findRecord('customer_id', customer_id, null, null, null, true);
+        
+        //전표번호 셋팅
+        Ext.get('jp_no1').setHTML(temp.record.get('atax_jp_no'));
+        Ext.get('jp_no2').setHTML(temp.record.get('atax_jp_no'));
+        
+        //공급받는자 정보 셋팅
+        Ext.get('provider_saup_no1').setHTML(temp.provider.co_saup_no);
+        Ext.get('provider_nm1').setHTML(temp.provider.co_nm);
+        Ext.get('provider_daepyo1').setHTML(temp.provider.co_ceo_nm);
+        Ext.get('provider_addr1').setHTML(temp.provider.co_addr);
+        Ext.get('provider_up1').setHTML(temp.provider.co_up);
+        Ext.get('provider_jong1').setHTML(temp.provider.co_jong);
+        Ext.get('receiver_saup_no1').setHTML(temp.receiver.get('tr_saup_no'));
+        Ext.get('receiver_nm1').setHTML(temp.receiver.get('tr_nm'));
+        Ext.get('receiver_daepyo1').setHTML(temp.receiver.get('tr_daepyo'));
+        Ext.get('receiver_addr1').setHTML(temp.receiver.get('tr_addr'));
+        Ext.get('receiver_up1').setHTML(temp.receiver.get('tr_up'));
+        Ext.get('receiver_jong1').setHTML(temp.receiver.get('tr_jong'));
+        
+        //공급자 정보 셋팅
+        Ext.get('provider_saup_no2').setHTML(temp.provider.co_saup_no);
+        Ext.get('provider_nm2').setHTML(temp.provider.co_nm);
+        Ext.get('provider_daepyo2').setHTML(temp.provider.co_ceo_nm);
+        Ext.get('provider_addr2').setHTML(temp.provider.co_addr);
+        Ext.get('provider_up2').setHTML(temp.provider.co_up);
+        Ext.get('provider_jong2').setHTML(temp.provider.co_jong);
+        Ext.get('receiver_saup_no2').setHTML(temp.receiver.get('tr_saup_no'));
+        Ext.get('receiver_nm2').setHTML(temp.receiver.get('tr_nm'));
+        Ext.get('receiver_daepyo2').setHTML(temp.receiver.get('tr_daepyo'));
+        Ext.get('receiver_addr2').setHTML(temp.receiver.get('tr_addr'));
+        Ext.get('receiver_up2').setHTML(temp.receiver.get('tr_up'));
+        Ext.get('receiver_jong2').setHTML(temp.receiver.get('tr_jong'));
+        
+        //합계금액 셋팅
+        var now = new Date();
+        var date = now.getFullYear() + '.' + Ext.String.leftPad(now.getMonth() + 1, 2, '0') + '.' + Ext.String.leftPad(now.getDate(), 2, '0');
+        Ext.get('date1').setHTML(date);
+        Ext.get('date2').setHTML(date);
+        Ext.get('price1').setHTML(fn.getNum(temp.record.get('atax_supply_price')));
+        Ext.get('price2').setHTML(fn.getNum(temp.record.get('atax_supply_price')));
+        Ext.get('atax1').setHTML(fn.getNum(temp.record.get('atax_tax')));
+        Ext.get('atax2').setHTML(fn.getNum(temp.record.get('atax_tax')));
+        
+        //공급받는자 데이터 셋팅
+        Ext.get('atax_date_m1').setHTML(temp.record.get('atax_date_m'));
+        Ext.get('atax_date_d1').setHTML(temp.record.get('atax_date_d'));
+        Ext.get('atax_item_nm1').setHTML(temp.record.get('atax_item_nm'));
+        Ext.get('atax_item_cnt1').setHTML(temp.record.get('atax_item_cnt'));
+        Ext.get('atax_item_danga1').setHTML(fn.getNum(temp.record.get('atax_item_danga')));
+        Ext.get('atax_supply_price1').setHTML(fn.getNum(temp.record.get('atax_supply_price')));
+        Ext.get('atax_tax1').setHTML(fn.getNum(temp.record.get('atax_tax')));
+        
+        //공급자 데이터 셋팅
+        Ext.get('atax_date_m2').setHTML(temp.record.get('atax_date_m'));
+        Ext.get('atax_date_d2').setHTML(temp.record.get('atax_date_d'));
+        Ext.get('atax_item_nm2').setHTML(temp.record.get('atax_item_nm'));
+        Ext.get('atax_item_cnt2').setHTML(temp.record.get('atax_item_cnt'));
+        Ext.get('atax_item_danga2').setHTML(fn.getNum(temp.record.get('atax_item_danga')));
+        Ext.get('atax_supply_price2').setHTML(fn.getNum(temp.record.get('atax_supply_price')));
+        Ext.get('atax_tax2').setHTML(fn.getNum(temp.record.get('atax_tax')));
+        
+        //공급받는자 합계금액 셋팅
+        Ext.get('sum1').setHTML(fn.getNum(temp.record.get('atax_item_sum')));
+        
+        //공급자 합계금액 셋팅
+        Ext.get('sum2').setHTML(fn.getNum(temp.record.get('atax_item_sum')));
+        
+        //분개플래그에 따라 현금, 예금 or 외상일 경우 분기
+        if (temp.record.get('atax_jp_flag') == 1 || temp.record.get('atax_jp_flag') == 4)
+        { //분개 플래그가 '1.현금 & 4.예금'일 경우
+        	Ext.get('sum_cash1').setHTML(fn.getNum(temp.record.get('atax_item_sum')));
+            Ext.get('atax_type_text1').setHTML('영수');
+            Ext.get('sum_cash2').setHTML(fn.getNum(temp.record.get('atax_item_sum')));
+            Ext.get('atax_type_text2').setHTML('영수');
+        }
+        else if (temp.record.get('atax_jp_flag') == 2)
+        { //분개 플래그가 '2.외상'일 경우
+            Ext.get('sum_trauma1').setHTML(fn.getNum(temp.record.get('atax_item_sum')));
+            Ext.get('atax_type_text1').setHTML('청구');
+            Ext.get('sum_trauma2').setHTML(fn.getNum(temp.record.get('atax_item_sum')));
+            Ext.get('atax_type_text2').setHTML('청구');
+        }
+        else {
+        	Ext.get('atax_type_text1').setHTML('영수');
+        	Ext.get('atax_type_text2').setHTML('영수');
+        }
+        
+        //데이터 셋팅이 완료된 후 감춰진 프린트 양식을 보여줌
+        Ext.get('print_content_area').setStyle('display', 'block');
+        
+        //프린트 이벤트를 발생
+        print();
+    }
+}());
+</script>
+</html>

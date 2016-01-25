@@ -1,0 +1,57 @@
+body {}
+
+#sub_table2 {
+	display:none;
+}
+
+
+th, td {padding : 4px 3px}
+
+.bg-color-1 {background-color: #eff6fc!important;}
+.bg-color-2 {background-color: #f0c8cf!important;}
+.bg-color-3 {background-color: #c9daf3!important;}
+.bg-color-4 {background-color: #e8eeb6!important;}
+.bg-color-5 {background-color: #ecd3b5!important;}
+.bg-color-6 {background-color: #fff!important;}
+.bg-color-7 {background-color: #f2f3f5!important;}
+.alignL {text-align: left!important;}
+.alignR {text-align: right!important;}
+.alignC {text-align: center!important;}
+
+.tbl-wrap {
+	overflow: hidden;
+	font-family: '돋움', 'Dotum';
+	font-size: 12px;
+}
+
+.tbl-1 {
+	table-layout: fixed;
+	width: 49%;
+	border-collapse: collapse;
+}
+.tbl-1 thead th {
+	border: 1px solid #c1c2c8;
+	background-color: #eff6fc;
+	font-weight: normal;
+}
+.tbl-1 tbody th {
+	border: 1px solid #c1c2c8;
+	background-color: #f2f3f5;
+	font-weight: normal;
+	text-align: left;
+}
+.tbl-1 tbody td {
+	border: 1px solid #c1c2c8;
+	text-align: right;
+}
+
+.tbl-left {float: left; line-height: 22px;}
+.tbl-right {float: right;}
+
+input 
+{ 
+	width : 90% ;
+	text-align : right;
+	height: 90%;
+}
+

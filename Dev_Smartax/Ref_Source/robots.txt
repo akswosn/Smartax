@@ -1,0 +1,7 @@
+# robotstxt.org/
+
+User-agent: *
+
+
+User-agent: *
+Disallow: /route.php

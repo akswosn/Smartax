@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>:::거래 명세서:::</title>
+ 
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="./print_out_type2_output.css?ver=1" />
+ 		<script type="text/javascript" src="../jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="./print_out_type2_output.js"></script>
+        <!-- script -->
+        <script>
+        
+        </script>
+
+    </head>
+
+    <body>
+		<div class="print_btn_area">
+	         <button class="print_btn" onclick="print()">
+	             <span>출력하기</span>
+	         </button>
+	         <button class="close_btn" onclick="self.close();">
+	             <span>창닫기</span>
+	         </button>
+	     </div>
+	<!-- content 시작 -->
+		<div class="content">
+			<div id="top_div">
+				<table>
+					<colgroup>
+						<col width="8%"/>
+						<col width="10%"/>
+						<col width="12%"/>
+						<col width="10%"/>
+						<col width="10%"/>
+						
+						<col width="8%"/>
+						<col width="10%"/>
+						<col width="12%"/>
+						<col width="10%"/>
+						<col width="10%"/>
+					</colgroup>
+					
+					<tr>
+						<th colspan="10" class="title">거 래 명 세 서(공급자 보관용)</th>
+					</tr>
+					
+					<tr>
+						<td rowspan="4"> 공<br/><br/>급<br/><br/>자 </td>
+						<td>등록<br/>번호</td>
+						<td colspan="3" class="val io_tr_cd1">123-45-67890</td>
+						
+						<td rowspan="4"> 공<br/>급<br/>받<br/>는<br/>자 </td>
+						<td>등록<br/>번호</td>
+						<td colspan="3" class="val io_tr_cd2">123-45-67890</td>
+				    </tr>
+					<tr>
+						<td>상호</td>
+						<td class="val co_nm1">회사이름</td>
+						<td>성명</td>
+						<td class="val co_ceo_nm1">샘플이</td>
+						
+						<td>상호</td>
+						<td class="val co_nm2">회사이름</td>
+						<td>성명</td>
+						<td class="val co_ceo_nm2">샘플이</td>
+					</tr>
+					<tr>
+						<td>주소</td>
+						<td colspan="3" class="val co_addr1">경기</td>
+						
+						<td>주소</td>
+						<td colspan="3" class="val co_addr2">경기</td>
+					</tr>
+					<tr>
+						<td>업태</td>
+						<td class="val co_up1">서비스,도.소매</td>
+						<td>종목</td>
+						<td class="val co_jung1">서비스</td>
+						
+						<td>업태</td>
+						<td class="val co_up2">서비스,도.소매</td>
+						<td>종목</td>
+						<td class="val co_jung2">서비스</td>
+					</tr>
+					<tr>
+						<td>월 일 </td>
+						<td colspan="2">품명</td>
+						<td>규격</td>
+						<td>수량</td>
+						<td colspan="2">단가</td>
+						<td colspan="2">공급가액</td>
+						<td>비고</td>
+					</tr>
+					<tr style="height : 220px;    vertical-align: top;">
+						<td id="sheet1_col1" class="val"></td>
+						<td colspan="2" id="sheet1_col2" class="val"></td>
+						<td id="sheet1_col3" class="val"></td>
+						<td id="sheet1_col4" class="val"></td>
+						<td colspan="2" id="sheet1_col5" class="val"></td>
+						<td colspan="2" id="sheet1_col6" class="val"></td>
+						<td id="sheet1_col7" class="val"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">합계</td>
+						<td rowspan="2"  colspan="2" class="val total_amt"></td>
+						<td>이전 잔액</td>
+						<td colspan="3" class="val"></td>
+						<td rowspan="2">인수자</td>
+						<td colspan="2" class="val"></td>
+					</tr>
+					<tr>
+						<td>미수 잔액</td>
+						<td colspan="3" class="val"></td>
+						<td colspan="2" class="val"></td>
+					</tr>
+				</table>
+			</div>
+	
+			<div id="bottom_div">
+				<table>
+					<colgroup>
+						<col width="8%"/>
+						<col width="10%"/>
+						<col width="12%"/>
+						<col width="10%"/>
+						<col width="10%"/>
+						
+						<col width="8%"/>
+						<col width="10%"/>
+						<col width="12%"/>
+						<col width="10%"/>
+						<col width="10%"/>
+					</colgroup>
+					
+					<tr>
+						<th colspan="10" class="title">거 래 명 세 서(공급 받는자 보관용)</th>
+					</tr>
+					
+					<tr>
+						<td rowspan="4"> 공<br/><br/>급<br/><br/>자 </td>
+						<td>등록<br/>번호</td>
+						<td colspan="3" class="val io_tr_cd1">123-45-67890</td>
+						
+						<td rowspan="4"> 공<br/>급<br/>받<br/>는<br/>자 </td>
+						<td>등록<br/>번호</td>
+						<td colspan="3" class="val io_tr_cd2">123-45-67890</td>
+				    </tr>
+					<tr>
+						<td>상호</td>
+						<td class="val co_nm1">회사이름</td>
+						<td>성명</td>
+						<td class="val co_ceo_nm1">샘플이</td>
+						
+						<td>상호</td>
+						<td class="val co_nm2">회사이름</td>
+						<td>성명</td>
+						<td class="val co_ceo_nm2">샘플이</td>
+					</tr>
+					<tr>
+						<td>주소</td>
+						<td colspan="3" class="val co_addr1">경기</td>
+						
+						<td>주소</td>
+						<td colspan="3" class="val co_addr2">경기</td>
+					</tr>
+					<tr>
+						<td>업태</td>
+						<td class="val co_up1">서비스,도.소매</td>
+						<td>종목</td>
+						<td class="val co_jung1">서비스</td>
+						
+						<td>업태</td>
+						<td class="val co_up2">서비스,도.소매</td>
+						<td>종목</td>
+						<td class="val co_jung2">서비스</td>
+					</tr>
+					<tr>
+						<td>월 일 </td>
+						<td colspan="2">품명</td>
+						<td>규격</td>
+						<td>수량</td>
+						<td colspan="2">단가</td>
+						<td colspan="2">공급가액</td>
+						<td>비고</td>
+					</tr>
+					<tr style="height : 220px;    vertical-align: top;">
+						<td id="sheet2_col1" class="val"></td>
+						<td colspan="2" id="sheet2_col2" class="val"></td>
+						<td id="sheet2_col3" class="val"></td>
+						<td id="sheet2_col4" class="val"></td>
+						<td colspan="2" id="sheet2_col5" class="val"></td>
+						<td colspan="2" id="sheet2_col6" class="val"></td>
+						<td id="sheet2_col7" class="val"></td>
+					</tr>
+					<tr>
+						<td rowspan="2">합계</td>
+						<td rowspan="2"  colspan="2" class="val total_amt"></td>
+						<td>이전 잔액</td>
+						<td colspan="3" class="val"></td>
+						<td rowspan="2">인수자</td>
+						<td colspan="2" class="val"></td>
+					</tr>
+					<tr>
+						<td>미수 잔액</td>
+						<td colspan="3" class="val"></td>
+						<td colspan="2" class="val"></td>
+					</tr>
+				</table>
+			</div>
+		</div>		
+	<!--content 끝-->
+    </body>
+</html>

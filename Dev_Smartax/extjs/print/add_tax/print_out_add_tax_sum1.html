@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>세금계산서</title>
+ 
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="./print_out_add_tax_sum1.css?ver=1" />
+ 		<script type="text/javascript" src="../jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="./print_out_add_tax_sum1.js"></script>
+        <!-- script -->
+        <script>
+        
+        </script>
+
+    </head>
+
+    <body>
+	<div class="print_btn_area">
+         <button class="print_btn" onclick="print()">
+             <span>출력하기</span>
+         </button>
+         <button class="close_btn" onclick="self.close();">
+             <span>창닫기</span>
+         </button>
+     </div>
+	<!--content 시작-->
+	<div class="content">
+	
+
+<!--++++++++++++++++++++++++++++++++-->
+<!-- jQuery로 값이 채워질 부분은 span으로 감싸고 id를 추가할 수 있게 했습니다. -->
+<!--++++++++++++++++++++++++++++++++-->
+
+	
+	<!--=============================-->
+	<!--상단 타이틀 시작-->
+	<!--=============================-->
+		<div class="overf">
+			<p>
+				<span class="pdr5">■</span>부가가치세법 시행규칙 [별지 제 20호의2서식(1)] &lt;개정 2011.6.23&gt;
+				<span class="sub floatR">홈텍스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+			</p>
+		</div>	
+				
+		<div class="title">
+			<h1 class="bold">매출처별세금계산서합계표(갑)</h1>
+			<p>
+				(<span id="yyyy">2011</span> 년 <span id="gi">1</span> 기)<span class="floatR">(앞 쪽)</span>
+			</p>
+		</div>		
+	<!--=============================-->
+	<!--상단 타이틀 끝-->
+	<!--=============================-->	
+	
+	
+	
+	
+	
+	
+	<!--=============================-->
+	<!--1번 테이블 - 제출자 인적사항 시작-->
+	<!--=============================-->
+		<table class="table01">
+			<colgroup>
+				<col width="190px">
+				<col width="450px">
+				<col width="190px">
+				<col width="450px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="4" class="thTitle"><span>1. 제출자 인적사항</span></th>
+				</tr>
+			</thead>
+			<tbody>
+			
+<!-- 테이블 제목 균등분할 제목-->
+<!-- 균등분할의 CSS(class=letter1~letter10)는 글자수에 따라서 각각 수치가 다르므로 필요시마다 조정해서 추가해야 합니다.-->
+
+				<tr>
+					<td><span class="hidden">1</span><span class="num">&#9312;</span><span class="">사업자등록번호</span></td>
+					<!-- 
+					<td id="co_num"><span id="">140</span>-<span id="">81</span>-<span id="">06261</span></td>
+					 -->
+					<td id="co_num" class="col_val">140-81-06261</span></td>
+					<td><span class="hidden">2</span><span class="num">&#9313;</span><span class="letter1">상   호(법인명)</span></td>
+					<td><span id="co_nm" class="col_val">(주) 포근한세상</span></td>
+				</tr>
+
+				<tr>
+					<td><span class="hidden">3</span><span class="num">&#9314;</span><span class="letter2">성 명(대표자)</span></td>
+					<td><span id="co_deapyo" class="col_val">박흥서</span></td>
+					<td><span class="hidden">4</span><span class="num">&#9315;</span><span class="letter2">사업장소재지</span></td>
+					<td><span id="co_address" class="col_val">충청북도 괴산군 청안면 칠보로 368-69</span></td>
+				</tr>
+
+				<tr>
+					<td><span class="hidden">5</span><span class="num">&#9316;</span><span class="letter11">거래기간</span></td>
+					<td><span id="s_from_yyyy">2011</span>년<span id="s_from_mm"> 01</span>월<span id="s_from_dd"> 01</span>일 ~ <span id="s_to_yyyy">2011</span>년<span id="s_to_mm">06</span>월 <span id="s_to_dd">30</span>일</td>
+					<td><span class="hidden">6</span><span class="num">&#9317;</span><span class="letter11">작성일자</span></td>
+					<td><span id="reg_yyyy">2011</span>년 <span id="reg_mm">07</span>월 <span id="reg_dd">25</span>일</td>
+				</tr>
+			</tbody>
+			
+		
+		</table>
+		
+	<!--=============================-->		
+	<!--1번 테이블 - 제출자 인적사항 끝-->
+	<!--=============================-->	
+	
+	
+	
+	
+	<!--=============================-->
+	<!--2번 테이블 - 매출세금계산서 총합계 시작-->
+	<!--=============================-->
+		<table class="table02">
+			<colgroup>
+				<col width="100px">
+				<col width="100px">
+				<col width="50px">
+				<col width="50px">
+				<col width="330px">
+				<col width="330px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="6" class="thTitle01"><span>2. 매출세금계산서 총합계</span></th>
+				</tr>
+			</thead>
+			<tbody>
+			
+				<tr class="txtCenter">
+					<td colspan="2" class="letter20">구분</td>
+					<td><span class="hidden">7</span><span class="num">&#9318;</span><span>매출처수</span></td>
+					<td><span class="hidden">8</span><span class="num">&#9319;</span><span>매수</span></td>
+					<td><span class="hidden">9</span><span class="num">&#9320;</span><span class="letter10">공급가액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td><span class="hidden">10</span><span class="num">&#9321;</span><span class="letter20">세액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+				</tr>
+
+
+	<!--=============================-->
+	<!--2번 테이블 - 합계-->
+	<!--=============================-->			
+				<tr class="txtRight">
+					<td colspan="2" class="txtCenter letter20">합계</td>
+					<td><span id="sum1" class="num col_val">32</span></td>
+					<td><span id="sum2" class="num col_val">117</span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum3_5" class="col_val"></span></td>
+								<td><span id="sum3_4" class="col_val"></span></td>
+								<td><span id="sum3_3" class="col_val">131</span></td>
+								<td><span id="sum3_2" class="col_val">730</span></td>
+								<td><span id="sum3_1" class="col_val">001</span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum4_5" class="col_val"></span></td>
+								<td><span id="sum4_4" class="col_val"></span></td>
+								<td><span id="sum4_3" class="col_val">13</span></td>
+								<td><span id="sum4_2" class="col_val">173</span></td>
+								<td><span id="sum4_1" class="col_val">000</span></td>
+							</th>
+						</table>
+					</td>
+				</tr>
+
+	<!--=============================-->
+	<!--2번 테이블 - 과세기간종료일 이후 발급분-->
+	<!--=============================-->
+				<tr class="txtRight">
+					<td rowspan="3" class="txtCenter">과세기간</br>종료일 다음달</br>15일까지</br>전송된 전자</br>세금계산서</br>발급분</td>
+					<td class="txtCenter">사업자 등록<br/>번호 발급분</td>
+					<td><span id="val1_1" class="num col_val">32</span></td>
+					<td><span id="val1_2" class="num col_val">117</span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val1_3_5" class="col_val"></span></td>
+								<td><span id="val1_3_4" class="col_val"></span></td>
+								<td><span id="val1_3_3" class="col_val">131</span></td>
+								<td><span id="val1_3_2" class="col_val">730</span></td>
+								<td><span id="val1_3_1" class="col_val">001</span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val1_4_5" class="col_val"></span></td>
+								<td><span id="val1_4_4" class="col_val"></span></td>
+								<td><span id="val1_4_3" class="col_val">13</span></td>
+								<td><span id="val1_4_2" class="col_val">173</span></td>
+								<td><span id="val1_4_1" class="col_val">000</span></td>
+							</th>
+						</table>
+					</td>
+				</tr>
+				
+				<tr class="txtRight">
+					<td class=" txtCenter">주민등록번호<br/><span class="pdr15">발</span><span class="pdr15">급</span>분</td>
+					<td><span id="val2_1" class="num col_val">0</span></td>
+					<td><span id="val2_2" class="num col_val">0</span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val2_3_5" class="col_val"></span></td>
+								<td><span id="val2_3_4" class="col_val"></span></td>
+								<td><span id="val2_3_3" class="col_val"></span></td>
+								<td><span id="val2_3_2" class="col_val"></span></td>
+								<td><span id="val2_3_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val2_4_5" class="col_val"></span></td>
+								<td><span id="val2_4_4" class="col_val"></span></td>
+								<td><span id="val2_4_3" class="col_val"></span></td>
+								<td><span id="val2_4_2" class="col_val"></span></td>
+								<td><span id="val2_4_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+				</tr>
+				
+				<tr class="txtRight">
+					<td class="txtCenter"><span class="pdr15">소</span>계</td>
+					<td><span id="val3_1" class="num col_val">32</span></td>
+					<td><span id="val3_2" class="num col_val">117</span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val3_3_5" class="col_val"></span></td>
+								<td><span id="val3_3_4" class="col_val"></span></td>
+								<td><span id="val3_3_3" class="col_val">131</span></td>
+								<td><span id="val3_3_2" class="col_val">730</span></td>
+								<td><span id="val3_3_1" class="col_val">001</span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val3_4_5" class="col_val"></span></td>
+								<td><span id="val3_4_4" class="col_val"></span></td>
+								<td><span id="val3_4_3" class="col_val">13</span></td>
+								<td><span id="val3_4_2" class="col_val">173</span></td>
+								<td><span id="val3_4_1" class="col_val">000</span></td>
+							</th>
+						</table>
+					</td>
+				</tr>
+				
+	<!--=============================-->
+	<!--2번 테이블 - 위 전자 세금계산서 외의 발급분-->
+	<!--=============================-->		
+
+				<tr class="txtRight">
+					<td rowspan="3" class="txtCenter">위 전자</br>세금계산서</br>외의</br>발급분</td>
+					<td class="txtCenter">사업자 등록<br/>번호 발급분</td>
+					<td><span id="val4_1" class="num col_val">0</span></td>
+					<td><span id="val4_2" class="num col_val">0</span></td>
+					<td class="tableN01">
+						<table>							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val4_3_5" class="col_val"></span></td>
+								<td><span id="val4_3_4" class="col_val"></span></td>
+								<td><span id="val4_3_3" class="col_val"></span></td>
+								<td><span id="val4_3_2" class="col_val"></span></td>
+								<td><span id="val4_3_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val4_4_5" class="col_val"></span></td>
+								<td><span id="val4_4_4" class="col_val"></span></td>
+								<td><span id="val4_4_3" class="col_val"></span></td>
+								<td><span id="val4_4_2" class="col_val"></span></td>
+								<td><span id="val4_4_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+				</tr>
+				
+				<tr class="txtRight">
+					<td class=" txtCenter">주민등록번호<br/><span class="pdr15">발</span><span class="pdr15">급</span>분</td>
+					<td><span id="val5_1" class="num col_val">0</span></td>
+					<td><span id="val5_2" class="num col_val">0</span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val5_3_5" class="col_val"></span></td>
+								<td><span id="val5_3_4" class="col_val"></span></td>
+								<td><span id="val5_3_3" class="col_val"></span></td>
+								<td><span id="val5_3_2" class="col_val"></span></td>
+								<td><span id="val5_3_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val5_4_5" class="col_val"></span></td>
+								<td><span id="val5_4_4" class="col_val"></span></td>
+								<td><span id="val5_4_3" class="col_val"></span></td>
+								<td><span id="val5_4_2" class="col_val"></span></td>
+								<td><span id="val5_4_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+				</tr>
+				
+				<tr class="txtRight">
+					<td class="txtCenter"><span class="pdr15">소</span>계</td>
+					<td><span id="val6_1" class="num col_val">0</span></td>
+					<td><span id="val6_2" class="num col_val">0</span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val6_3_5" class="col_val"></span></td>
+								<td><span id="val6_3_4" class="col_val"></span></td>
+								<td><span id="val6_3_3" class="col_val"></span></td>
+								<td><span id="val6_3_2" class="col_val"></span></td>
+								<td><span id="val6_3_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="val6_4_5" class="col_val"></span></td>
+								<td><span id="val6_4_4" class="col_val"></span></td>
+								<td><span id="val6_4_3" class="col_val"></span></td>
+								<td><span id="val6_4_2" class="col_val"></span></td>
+								<td><span id="val6_4_1" class="col_val">0</span></td>
+							</th>
+						</table>
+					</td>
+				</tr>	
+			
+			</tbody>
+		</table>
+
+	<!--=============================-->
+	<!--2번 테이블 - 매출세금계산서 총합계 끝-->
+	<!--=============================-->
+
+	
+	<!--=============================-->
+	<!--3번 테이블 - 과세기간 종료일 다음달 15일까지 전송된 전자세금계산서 외 발급분 매출처별 명세 시작-->
+	<!--=============================-->
+		<table>
+			<colgroup>
+				<col width="50px">
+				<col width="250px">
+				<col width="250px">
+				<col width="80px">
+				<col width="330px">
+				<col width="330px">
+				<col width="80px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="7" class="thTitle01"><span class="letterM1">3. 과세기간 종료일 다음달 15일까지 전송된 전자세금계산서 외 발급분 매출처별 명세 (합계금액으로 적음)</span></th>
+				</tr>
+			</thead>
+			<tbody>
+			
+	<!--=============================-->
+	<!--3번 테이블 - 제목-->
+	<!--=============================-->			
+				<tr class="txtCenter">
+					<td><span class="hidden">11</span><span class="num">&#9322;</span><br/><span>일련번호</span></td>
+					<td><span class="hidden">12</span><span class="num">&#9323;</span><span>사업자등록번호</span></td>
+					<td><span class="hidden">13</span><span class="num">&#9324;</span><span>상호 (법인명)</span></td>
+					<td><span class="hidden">14</span><span class="num">&#9325;</span><span>매수</span></td>
+					<td><span class="hidden">15</span><span class="num">&#9326;</span><span class="letter10">공급가액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td><span class="hidden">16</span><span class="num">&#9327;</span><span class="letter20">세액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td><span class="letter10">비고</span>					
+				</tr>
+
+	<!--=============================-->
+	<!--3번 테이블 - 1번째 줄-->
+	<!--=============================-->		
+				<tr class="txtRight">
+					<td  class="txtCenter"><span id="sum_amt1_no" class="col_val">1</span></td>
+					<td class="txtCenter col_val" id="sum_amt1_co_no">140-81-06261</td>
+					<td  class="txtCenter col_val"><span id="sum_amt1_1" >(주) 포근한 세상</span></td>
+					<td><span id="sum_amt1_2" class="num col_val">32</span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt1_3_5" class="col_val"></span></td>
+								<td><span id="sum_amt1_3_4" class="col_val"></span></td>
+								<td><span id="sum_amt1_3_3" class="col_val"></span></td>
+								<td><span id="sum_amt1_3_2" class="col_val"></span></td>
+								<td><span id="sum_amt1_3_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01 txtRight">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt1_4_5" class="col_val"></span></td>
+								<td><span id="sum_amt1_4_4" class="col_val"></span></td>
+								<td><span id="sum_amt1_4_3" class="col_val"></span></td>
+								<td><span id="sum_amt1_4_2" class="col_val"></span></td>
+								<td><span id="sum_amt1_4_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>
+
+	<!--=============================-->
+	<!--3번 테이블 - 2번째 줄-->
+	<!--=============================-->					
+				<tr class="txtRight">
+					<td  class="txtCenter col_val"><span id="sum_amt2_no"></span></td>
+					<td class="txtCenter col_val" id="sum_amt2_co_no"><span id=""></span> <span id=""></span> <span id=""></span></td>
+					<td  class="txtCenter col_val"><span id="sum_amt2_1" ></span></td>
+					<td><span id="sum_amt2_2" class="num col_val"></span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt2_3_5" class="col_val"></span></td>
+								<td><span id="sum_amt2_3_4" class="col_val"></span></td>
+								<td><span id="sum_amt2_3_3" class="col_val"></span></td>
+								<td><span id="sum_amt2_3_2" class="col_val"></span></td>
+								<td><span id="sum_amt2_3_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01 txtRight">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt2_4_5" class="col_val"></span></td>
+								<td><span id="sum_amt2_4_4" class="col_val"></span></td>
+								<td><span id="sum_amt2_4_3" class="col_val"></span></td>
+								<td><span id="sum_amt2_4_2" class="col_val"></span></td>
+								<td><span id="sum_amt2_4_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>
+
+	<!--=============================-->
+	<!--3번 테이블 - 3번째 줄-->
+	<!--=============================-->	
+				<tr class="txtRight">
+					<td  class="txtCenter col_val"><span id="sum_amt3_no"></span></td>
+					<td class="txtCenter col_val" id="sum_amt3_co_no"><span id=""></span> <span id=""></span> <span id=""></span></td>
+					<td  class="txtCenter col_val"><span id="sum_amt3_1" ></span></td>
+					<td><span id="sum_amt3_2" class="num col_val"></span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt3_3_5" class="col_val"></span></td>
+								<td><span id="sum_amt3_3_4" class="col_val"></span></td>
+								<td><span id="sum_amt3_3_3" class="col_val"></span></td>
+								<td><span id="sum_amt3_3_2" class="col_val"></span></td>
+								<td><span id="sum_amt3_3_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01 txtRight">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt3_4_5" class="col_val"></span></td>
+								<td><span id="sum_amt3_4_4" class="col_val"></span></td>
+								<td><span id="sum_amt3_4_3" class="col_val"></span></td>
+								<td><span id="sum_amt3_4_2" class="col_val"></span></td>
+								<td><span id="sum_amt3_4_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>				
+
+	<!--=============================-->
+	<!--3번 테이블 - 4번째 줄-->
+	<!--=============================-->	
+				<tr class="txtRight">
+					<td  class="txtCenter col_val"><span id="sum_amt4_no"></span></td>
+					<td class="txtCenter col_val" id="sum_amt4_co_no"><span id=""></span> <span id=""></span> <span id=""></span></td>
+					<td  class="txtCenter col_val"><span id="sum_amt4_1" ></span></td>
+					<td><span id="sum_amt4_2" class="num col_val"></span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt4_3_5" class="col_val"></span></td>
+								<td><span id="sum_amt4_3_4" class="col_val"></span></td>
+								<td><span id="sum_amt4_3_3" class="col_val"></span></td>
+								<td><span id="sum_amt4_3_2" class="col_val"></span></td>
+								<td><span id="sum_amt4_3_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01 txtRight">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt4_4_5" class="col_val"></span></td>
+								<td><span id="sum_amt4_4_4" class="col_val"></span></td>
+								<td><span id="sum_amt4_4_3" class="col_val"></span></td>
+								<td><span id="sum_amt4_4_2" class="col_val"></span></td>
+								<td><span id="sum_amt4_4_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>
+
+	<!--=============================-->
+	<!--3번 테이블 - 5번째 줄-->
+	<!--=============================-->	
+				<tr class="txtRight">
+					<td  class="txtCenter col_val"><span id="sum_amt5_no"></span></td>
+					<td class="txtCenter col_val" id="sum_amt5_co_no"><span id=""></span> <span id=""></span> <span id=""></span></td>
+					<td  class="txtCenter col_val"><span id="sum_amt5_1" ></span></td>
+					<td><span id="sum_amt5_2" class="num col_val"></span></td>
+					<td class="tableN01">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt5_3_5" class="col_val"></span></td>
+								<td><span id="sum_amt5_3_4" class="col_val"></span></td>
+								<td><span id="sum_amt5_3_3" class="col_val"></span></td>
+								<td><span id="sum_amt5_3_2" class="col_val"></span></td>
+								<td><span id="sum_amt5_3_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+
+					<td class="tableN01 txtRight">
+						<table>
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td><span id="sum_amt5_4_5" class="col_val"></span></td>
+								<td><span id="sum_amt5_4_4" class="col_val"></span></td>
+								<td><span id="sum_amt5_4_3" class="col_val"></span></td>
+								<td><span id="sum_amt5_4_2" class="col_val"></span></td>
+								<td><span id="sum_amt5_4_1" class="col_val"></span></td>
+							</th>
+						</table>
+					</td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>									
+			
+			</tbody>
+		</table>
+	<!--=============================-->
+	<!--3번 테이블 - 과세기간 종료일 다음달 15일까지 전송된 전자세금계산서 외 발급분 매출처별 명세 끝-->
+	<!--=============================-->
+
+
+	
+	
+	
+	
+	<!--=============================-->
+	<!--4번 테이블 - 관리번호(매출) 시작-->
+	<!--=============================-->
+		<table class="table01">
+			<colgroup>
+				<col width="250px">
+				<col width="900px">
+			</colgroup>
+			<thead>
+				<tr class="viewNon">
+					<th colspan="2" ><span>관리번호(매출)</span></th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><span class="hidden">17</span><span class="num">&#9328;</span><span class="bold">관리번호 (매출)</span></td>
+					<td class="txtCenter"><span id="mgr_no1"  class="col_val"></span> - <span id="mgr_no2"  class="col_val"></span></td>
+				</tr>
+ 
+			</tbody>
+			
+		
+		</table>
+	<!--=============================-->
+	<!--4번 테이블 - 관리번호(매출) 끝-->
+	<!--=============================-->
+
+		<div>
+			<p class="txtRight mgt10">
+				<span>210mm x 297mm [일반용지 60g/m<sup>2</sup> ( 재활용품)]</span>
+			</p>
+		</div>	
+				
+
+
+
+
+	</div>		
+	<!--content 끝-->
+    </body>
+</html>

@@ -1,0 +1,456 @@
+/*이 페이지에서 필요한 부분만 리셋합니다.*/
+
+@page a4sheet { size: 21.0cm 29.7cm }
+.a4 { page: a4sheet; page-break-after: always }
+
+* {
+	margin:0; 
+	padding:0;
+	font:13px "돋움",Dotum,sans-serif;
+    line-height: 1.428571429;
+    color: #333333;
+     
+	}
+
+h1 {
+	margin:.67em 0;
+	font-size:2em
+	}
+
+
+sup {
+	top:-.5em
+	}
+
+sub {
+	bottom:-.25em
+	}
+ 
+
+table {
+	border-spacing:0 ;
+	border-collapse:collapse;
+	}
+
+td,th {
+	padding:0;
+	}
+
+.breakPack td,.breakPack th{ 	word-break:break-all;} 
+
+tfoot td {border-right : none;}
+
+/*custom style*/
+
+
+
+.content0  {
+	width:920px;
+	margin:0px auto;
+	}
+.content1  {
+	width:920px;
+	margin: 0px auto;
+	display : none;
+	}
+
+.content1 .pad2e {
+  padding-bottom: 0;
+  padding: 11px;
+}
+.title {
+	overflow : hidden;
+	margin-bottom : 10px;
+	text-align:center;
+	}
+
+.title h1{
+	margin-bottom:5px;
+	letter-spacing : 3px; 
+	}
+
+.title01 {	overflow : hidden; margin-left : 70px;}
+.title01 ul { float : left; list-style : none; width : 250px; height :100px; }
+.title01 li {   font-size : 21px; font-weight : bold;}
+
+.title02 {	overflow : hidden;}
+.title02 li { float : left; list-style : none; }
+.title02 ul li{height : 26px; line-height:26px;}
+.title02 ul.box li { width:5px; height:13px; padding : 5px;  line-height:13px; }
+.title02 ul.box li.dash { border : none;}
+.box li {  border:1px solid #808080; border-right : none;  }
+.box li.borderWrg {  border-right:1px solid #808080;}
+
+
+.bgG { background : #BBBBBB;} 
+
+
+.floatR {
+	float : right;
+	padding-right : 30px;
+	} 
+
+.floatL {
+	float : left;
+	} 
+
+.sub {
+	display : inline-block;
+	width : 200px;
+	text-align :left;
+	}
+.overf { 	overflow : hidden; }
+
+.num { margin-right: 7px;}
+
+.bold {font-weight : bold;} 
+
+.hidden {	display : none; }
+.disblo { display : block;} 
+.disinb { display : inline-block;} 
+
+.viewNon {visibility: hidden;} 
+.none1 {visibility :hidden; }
+
+.borderWa { border: 1px solid #fff;}
+.borderW { border-bottom : 1px solid #fff;}
+.borderWt { border-top : 1px solid #fff;}
+.borderWl { border-left : 1px solid #fff;}
+.borderWrno { border-right:none;}
+.borderWbno { border-bottom:none;}
+.borderWtno { border-top:none;}
+.borderWr { border-right : 1px solid #fff;}
+.borderWrg { border-right : 1px solid #808080;}
+.borderN { border-bottom : 1px solid #fff;}
+
+
+.line { border-bottom : 1px solid #000; }
+.lineT{ border-top: 1px solid #000; }
+.lineL { border-left : 1px solid #000; }
+.lineR { border-right : 1px solid #000; }
+
+.borderR { border-right : 1px solid #808080; }
+
+.paperBorder { border : 3px solid #000; padding : 10px;}
+.paperBorder01 { border : 3px solid #000; padding : 0;}
+
+
+.lineHt5 { line-height : 5px;} 
+.lineHt11 { line-height : 11px;} 
+.lineHt12 { line-height : 12px;} 
+.lineHt13 { line-height : 15px;} 
+.lineHt28 { line-height : 32px;} 
+ 
+.colorB {color : #0092FF;}
+ 
+.wid10 { width : 10px; }
+.wid20 { width : 20px; }
+.wid25 { width : 25px; }
+.wid30 { width : 30px; }
+.wid40 { width : 40px; }
+.wid50 { width : 50px; }
+.wid60 { width : 60px; }
+.wid70 { width : 70px; }
+.wid80 { width : 80px; }
+.wid90 { width : 90px; }
+.wid100 { width : 100px; }
+.wid110 { width : 110px; }
+.wid120 { width : 120px; }
+.wid130 { width : 130px; }
+.wid140 { width : 140px; }
+.wid150 { width : 150px; }
+.wid300 { width : 300px; }
+
+.wid100p { width : 100%; }
+
+.het10 { height : 10px; }
+.het20 { height : 20px; }
+.het30 { height : 30px; }
+.het40 { height : 40px; }
+.het50 { height : 50px; }
+
+.mgt3 { margin-top : 3px;}
+.mgt5 { margin-top : 5px;}
+.mgt10 { margin-top : 10px;}
+.mgt20 { margin-top : 20px;}
+.mgt30 { margin-top : 30px;}
+.mgt40 { margin-top : 40px;}
+.mgt50 { margin-top : 50px;}
+.mgt60 { margin-top : 60px;}
+.mgt70 { margin-top : 70px;}
+.mgt80 { margin-top : 80px;}
+.mgt90 { margin-top : 90px;}
+.mgt100 { margin-top : 100px;}
+.mgt110 { margin-top : 110px;}
+.mgt120 { margin-top : 120px;}
+.mgt130 { margin-top : 130px;}
+.mgt140 { margin-top : 140px;}
+.mgt150 { margin-top : 150px;}
+
+.mgt5m { margin-top : -5px;}
+.mgt10m { margin-top : -10px;}
+.mgt15m { margin-top : -15px;}
+.mgt20m { margin-top : -20px;}
+
+.mgl7 { margin-left : 7px;}
+.mgl10 { margin-left : 10px;}
+.mgl20 { margin-left : 20px;}
+.mgl30 { margin-left : 30px;}
+.mgl40 { margin-left : 40px;}
+.mgl50 { margin-left : 50px;}
+.mgl60 { margin-left : 60px;}
+.mgl70 { margin-left : 70px;}
+.mgl80 { margin-left : 80px;}
+.mgl90 { margin-left : 90px;}
+.mgl100 { margin-left : 100px;}
+
+.pdt10 {padding-top : 10px; } 
+.pdt20 {padding-top : 20px; } 
+.pdt30 {padding-top : 30px; } 
+.pdt40 {padding-top : 40px; } 
+.pdt50 {padding-top : 50px; } 
+.pdt60 {padding-top : 60px; } 
+.pdt70 {padding-top : 70px; } 
+.pdt80 {padding-top : 80px; } 
+.pdt90 {padding-top : 90px; } 
+.pdt100 {padding-top : 100px; } 
+
+.pdb10 {padding-bottom : 10px; } 
+.pdb20 {padding-bottom : 20px; } 
+.pdb30 {padding-bottom : 30px; } 
+.pdb40 {padding-bottom : 40px; } 
+.pdb50 {padding-bottom : 50px; } 
+.pdb60 {padding-bottom : 60px; } 
+.pdb70 {padding-bottom : 70px; } 
+.pdb80 {padding-bottom : 80px; } 
+.pdb90 {padding-bottom : 90px; } 
+.pdb100 {padding-bottom : 100px; } 
+
+.pdl10 {padding-left : 10px; } 
+.pdl20 {padding-left : 20px; } 
+.pdl30 {padding-left : 30px; } 
+.pdl35 {padding-left : 35px; } 
+.pdl40 {padding-left : 40px; } 
+.pdl50 {padding-left : 50px; } 
+.pdl60 {padding-left : 60px; } 
+.pdl70 {padding-left : 70px; } 
+.pdl80 {padding-left : 80px; } 
+.pdl90 {padding-left : 90px; } 
+.pdl100 {padding-left : 100px; } 
+
+.letter3m { letter-spacing : -3px; }
+.letter2m { letter-spacing : -2px; }
+.letter1m { letter-spacing : -1px; }
+
+.letter1 { letter-spacing : 1px; }
+.letter2 {	letter-spacing : 2px; }
+.letter3 {	letter-spacing : 3px; }
+.letter4 { letter-spacing : 4px; }
+.letter5 {	letter-spacing : 5px; }
+.letter6 {	letter-spacing : 6px; }
+.letter7 {	letter-spacing : 7px; }
+.letter8 {	letter-spacing : 8px; }
+.letter9 {	letter-spacing : 9px; }
+.letter10 { letter-spacing : 10px; }
+.letter11 { letter-spacing : 11px; }
+.letter12 { letter-spacing : 12px; }
+.letter13 { letter-spacing : 13px; }
+.letter14 { letter-spacing : 14px; }
+.letter15 { letter-spacing : 15px; }
+.letter20 { letter-spacing : 20px; }
+.letter25 { letter-spacing : 25px; }
+.letter50 { letter-spacing : 50px; }
+.letter60 { letter-spacing : 60px; }
+.letter70 { letter-spacing : 70px; }
+.letter80 { letter-spacing : 80px; }
+.letter90 { letter-spacing : 90px; }
+.letter100 { letter-spacing : 100px; }
+
+.letterM1 { letter-spacing :-1px; }
+
+.pdr15 { padding-right:15px;}
+.pdr5 { padding-right:5px;}
+
+
+.txtCenter {text-align : center;} 
+.txtRight {text-align : right;} 
+.txtLeft {text-align : left;} 
+.txtJusti {text-align : justify;} 
+
+.font10 { font-size : 10px; } 
+.font11 { font-size : 11px; } 
+.font12 { font-size : 12px; } 
+.font13 { font-size : 13px; } 
+.font14 { font-size : 14px; } 
+.font15 { font-size : 15px; } 
+.font16 { font-size : 16px; } 
+
+/*테이블 */
+th { 
+	padding : 8px 0; 
+	text-align : left;
+	}
+ 
+th  span {
+	padding-left : 10px;
+	font-size : 18px;
+	font-weight : bold;
+	}
+
+tr { 
+	border-top : 1px solid #000;
+	}
+
+td {
+	 border-right : 1px solid #000; 
+	padding : 10px 0;
+	}
+
+td:last-child{ border-right :none; }
+.borderR1 td:last-child{ border-right :1px solid #808080; }
+
+.table01 td {
+	padding : 10px 0;
+	}
+
+.thTitle {
+	border-top  : 2px solid #000; 
+	border-bottom  : 2px solid #000;
+	 } 
+
+.thTitle01 {
+	border-top  : 1px solid #000; 
+	border-bottom  : 2px solid #000;
+	 } 
+
+.thTitle02 {
+	border-top  : none; 
+	border-bottom  : none;
+	 } 
+
+.tbnont { border-top : none;}
+
+.tableN tr{border : none;}
+.tableN td{ 
+	padding : 10px 5px 0 0; 
+	text-align : right;
+	border : none; 
+	}
+
+.tableN01 { padding-bottom:0; }
+.tableN01 tr{ border : none; }
+.tableN01 td{ padding : 12px 7px; }
+
+/*첫번째 테이블의 소제목*/
+.table01 td:nth-child(odd) { padding-left : 15px; }
+
+/*첫번째 테이블의 내용*/
+.table01 td:nth-child(even) { padding-left : 10px; }
+
+ 
+.tableWrap {}
+.tableWrap th { padding : 25px 0 8px; }
+.tableWrap thead tr{ border-top : none;}
+
+.signBox span{font-size : 11px; line-height : 10px;} 
+.signBox p{} 
+
+
+
+
+
+.tableWrap01 td{ margin : 0; padding : 2px 0; border-color: #808080; line-height : 12px;}
+.tableWrap01 .pd0 td{padding : 1px 0; border-color: #808080; line-height : 12px;}
+.tableWrap01 tr{ border-color: #808080;}
+.tableWrap01 .title02 td{ padding-left: 7px;}
+.tableWrap01 .title02 tr{ border : none; }
+.tableWrap01 .tdTitle {font-size : 14px; line-height : 18px; font-weight : bold;} 
+.tableWrap01 td.txtLeft10{padding-left:10px; text-align:left;}
+.tableWrap01 td.txtLeft25{padding-left:25px; text-align:left;}
+
+
+
+
+
+
+
+
+
+/* 제출자 인적사항 타입 */
+.tablePack01 { }
+.tablePack01 thead tr { border-top : 1px solid #000; }
+.tablePack01 td:nth-child(odd) { padding-left : 15px; }
+.tablePack01 td:nth-child(even) { padding-left : 10px; }
+
+/* 매출계산서 총합계 타입 */
+.tablePack02 {
+
+	}
+.tablePack02 { } 
+
+/* 매출처별 명세 타입 */
+.tablePack03 { }
+.tablePack03 tfoot td{  border-bottom : 1px solid #828282;}
+
+.pad2e  {padding: 25px;}
+
+/* 관리번호(상단) 타입 - 1줄 */
+.tablePack04 { margin-top : 10px;}
+.tablePack04 td { padding-left : 10px; }
+.tablePack04 td:nth-child(odd) { border-bottom : 1px solid #000; border-right : 1px solid #828282;}
+.tablePack04 td:nth-child(even) { border-bottom : 1px solid #fff; }
+
+/* 관리번호(하단) 타입 - 1줄 */
+
+.tablePack41 { margin-top : 10px;}
+.tablePack41 tr { border-bottom : 1px solid #000;}
+.tablePack41 td { border-right: 1px solid #000;}
+.tablePack41 td.borderWa { border-right: 1px solid #fff;}
+.tablePack41 td.none1 { border-top : 1px solid #fff; border-bottom : 1px solid #fff; border-right: 1px solid #fff;}
+
+
+
+/* 사업자등록번호 (상단) 타입 - 1줄 */
+.tablePack05 tr { border-bottom : 1px solid #000;}
+.tablePack05 td { border-right : 1px solid #000;}
+.tablePack05 td.none1 { border-top : 1px solid #fff; border-bottom : 1px solid #fff; border-left : 2px solid #fff;}
+
+
+
+
+
+
+.tableN02 { padding-bottom:0;}
+.tableN02 tr{ border : none; }
+.tableN02 td{padding-top : 0;   padding-right : 7px;margin-top:120px;  }
+
+
+.width100 {width : 100%;}
+
+
+
+.print_btn_area {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    padding: 5px;
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    text-align: center;
+}
+.print_btn_area button {
+    width: 66px;
+    font-family: 'Malgun Gothic', 'Dotum';
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+@media print {
+    .print_btn_area {
+       display:none;
+    }
+}
+
+
+

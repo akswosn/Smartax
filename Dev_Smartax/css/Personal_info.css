@@ -1,0 +1,775 @@
+
+ ______   ______   __   __   ______
+/\  == \ /\  __ \ /\ \_/\ \ /\  __ \ 
+\ \  __< \ \ \/\ \\ \  \_\ \\ \ \/\ \   __
+ \ \_____\\ \_____\\ \_\-\__\\ \_____\ /\_\
+  \/_____/ \/_____/ \/_/ /__/ \/_____/ \/_/
+
+
+
+
+
+
+@font-face{
+	font-family:"Daum_Regular";
+	src:url("font/Daum_Regular.ttf")format("truetype");
+	font-style:normal;
+	font-weight:normal;
+}
+
+body {
+	margin: 0;
+	A:link {font-family:"Franklin Gothic Heavy" color: white; text-decoration: none}
+	A:visited {text-decoration: none}
+	A:hover {color: #0099ff; text-decoration: none}
+}
+
+.bdwrap {
+	margin: auto;
+	text-align: center;
+}
+
+.menuwrap {
+	margin: auto;
+	text-align: center;
+
+}
+
+.menuwrap_board{
+	margin: auto;
+	text-align: center;
+	background-color:#afa89c;
+}
+
+.ftwrap{
+   margin: auto;
+   vertical-align: center;
+   border: 1px solid #ffffff;
+   width: 1100px;
+   min-height: 20%;
+
+}
+
+
+header{
+	background: #FFFFFF;
+	width: 1100px;
+	height: 70px;
+	color: white;
+	font-family: "Arial Black";
+	font-weight: bold;
+	clear: both;
+	margin: auto;
+	display: block;
+}
+
+
+
+nav{
+	position:relative;
+	/*display: block;*/
+	margin: auto;
+	top: 10px;
+
+}
+
+
+.logo{
+	margin: 13px 100px 0 15px;
+	width:170px;
+}
+
+
+nav ul{
+
+	width:1100px;
+	display: inline;
+	color:#2D343F;
+
+}
+
+nav ul li{
+	float:left;
+	width:150px;
+	/*height:65px;*/
+	margin: 16px 0px 5px 0;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	list-style-type:none;
+	padding: 0px 0px 0px 0;
+}
+
+
+.menu1:hover{
+	content: url("../images/menu/menu1_1.png");
+}
+
+.menu2:hover{
+	content: url("../images/menu/menu2_1.png");
+}
+
+.menu3:hover{
+	content: url("../images/menu/menu3_1.png");
+}
+
+.menu4:hover{
+	content: url("../images/menu/menu4_1.png");
+}
+
+.menu5:hover{
+	content: url("../images/menu/menu5_1.png");
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-----------------------Personal_info 영역 시작---------------------*/
+
+
+
+
+
+
+
+
+
+/* 메뉴아래 사진 배경영역  */
+
+.mid_for_personal {
+	
+	border-top: 2px solid #007ACC;
+	margin: auto;
+	height:96px;
+	background-color: #D3DDE8;
+
+}
+/* 메뉴아래 사진 배경영역 끝 */
+
+
+
+/*Personal information 전체 배경 영역*/ 
+.P_info_bg{
+	margin: auto;
+	height: 100%;
+	/*background-color: #E6E6E6;*/
+}
+
+
+.Person_bd{   /*전체배경 가운데 컨텐츠 영역*/
+	margin: 10px auto;
+	width: 1100px;
+	height: 100%;
+	background-color: #D7D9DB;
+}
+
+
+
+/*----------개인정보 시작 --------------*/
+
+/*스팬요소 비었을때 파란색 바 표현*/
+.p_info_title:empty{
+	display:inline-block;
+	font-size: 2em;
+	width: 8px;
+	height: 28px;
+	background:#007ACC;
+}
+.p_info_title{    /*타이틀 글씨 지정*/
+	vertical-align: text-bottom;
+	font-size: 1.5em;
+	width: 8px;
+	height: 30px;
+}
+
+
+.p_info_revise_btn{     /*정보수정버튼*/
+	border-radius: 3px;
+	cursor:pointer;
+	text-align: center;
+	float: right;
+	width:55px;
+	margin-top: 10px;
+	margin-right: 10px;
+	height: 20px;
+	font-size: 0.8em;
+	background-color:#3E3A39;
+	color:#FFFFFF;
+	padding: 2px 5px;
+}
+.p_info_revise_btn:hover{
+	background-color:#0099FF;
+}
+
+
+
+
+.Person_info_1_bg{    /*개인정보현황 백그라운드*/
+	display: inline-block;
+	width: 1080px;
+	height: 250px;
+	margin: 10px;
+	background-color: #F2F2F2;
+}
+
+.Person_info_1{   /*개인정보현황 상단 제목*/
+	width: 1050px;
+	margin: 10px auto;
+}
+
+
+.Person_info_1_pic{    /*개인정보현황 사진배경영역*/
+	display:inline-block;
+	margin-left: 20px;
+	width:160px;
+	height:188px;
+	background-color:#BFBFBF;
+}
+
+.Person_info_1_pic img{  /*개인정보현황 사진영역*/
+	margin: 5px 5px 0px 5px;
+}
+.Person_info_1_pic_revise_btn1{    /*개인정보현황 사진 수정버튼*/
+	border-radius: 3px;
+	cursor:pointer;
+	margin-left: 40px;
+	margin-bottom: 3px;
+	text-align:center;
+	display:inline-block;
+	font-size: 0.8em;
+	height: 20px;
+	width: 35px;
+	background-color:#3E3A39;
+	color:#FFFFFF;
+}
+.Person_info_1_pic_delete_btn2{  /*개인정보현황 사진 삭제버튼*/
+	border-radius: 3px;
+	cursor:pointer;
+	margin-left: 10px;
+	text-align:center;
+	display:inline-block;
+	font-size: 0.8em;
+	height: 20px;
+	width: 35px;
+	background-color:#3E3A39;
+	color:#FFFFFF;
+}
+
+.Person_info_1_pic_revise_btn1:hover ,.Person_info_1_pic_delete_btn2:hover{
+	background-color:#0099FF;
+}
+
+
+ 
+.Person_info_1_con1{      /*개인정보 세부내용배경*/
+	display:inline-block;
+	vertical-align:top;
+	margin-left: 0px;
+	width:700px;
+	height:188px;
+	background-color:#FFFFFF;
+}
+
+.Person_info_1_con1 table{        /*개인정보 세부내용 테이블*/
+	height: 170px;
+	border-collapse: collapse;
+	border: 1px solid #FFFFFF;
+}
+
+.Person_info_1_tb td {              /*개인정보 세부내용 라인스타일*/
+	border: 1px solid #FFFFFF;
+}
+
+
+.Person_info_1_tb{        /*개인정보 세부내용 테이블 위치, 바탕색*/
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size:0.9em;
+	background-color:#F3F2F2;
+}
+
+.Person_info_1_tb tr td:nth-child(1){   /*개인정보 세부내용 테이블 세로 첫째줄 크기 및 스타일*/
+	width: 100px;
+	text-align:center;
+}
+
+.Person_info_1_tb tr td:nth-child(2){    /*개인정보 세부내용 테이블 세로 둘째줄 크기 및 스타일*/
+	width: 570px;
+	text-align:left;
+}
+
+
+.Person_info_1_con2{           /*회원등급 배경*/
+	display:inline-block;
+	vertical-align:top;
+	margin-left: 0px;
+	width:175px;
+	height:188px;
+	background-color:#FFFFFF;
+}
+
+.Person_info_1_con2_lv{    /*회원등급 타이틀*/
+	font-size: 0.9em;
+	margin-top:5px;
+	text-align:center;
+}
+
+
+/*----------------개인정보  끝 --------------*/
+
+
+
+
+
+
+
+/*----------------회사정보 시작 --------------*/
+
+.Person_info_2_bg{      
+	display: inline-block;
+	width: 527px;
+	height: 260px;
+	margin: 10px;
+	background-color: #F2F2F2;
+}
+
+.Person_info_2{
+	margin: 10px;
+	width: 515px;
+}
+
+.Person_info_2_con1{
+	vertical-align:middle;
+	display:inline-block;
+	background-color:#FFFFFF;
+	width: 500px;
+	margin-left:15px;
+	height:180px;
+	
+}
+
+
+
+.Person_info_2_con1 table{
+	height: 160px;
+	border-collapse: collapse;
+	border: 1px solid #FFFFFF;
+	background-color:#F3F2F2;
+}
+
+.Person_info_2_tb{	
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size:0.9em;
+	background-color:#F3F2F2;
+}
+
+
+.Person_info_2_tb td {
+	border: 1px solid #FFFFFF;
+}
+
+
+.Person_info_2_tb tr td:nth-child(1){
+	width: 100px;
+	text-align:center;
+}
+
+
+.Person_info_2_tb tr td:nth-child(2){
+	width: 380px;
+	text-align:left;
+}
+
+
+/*----------------회사정보 끝 --------------*/
+
+
+
+
+
+/*----------------납부할 세액 시작 --------------*/
+
+.Person_info_2_con1 select{       /*세무신고 기수선택*/
+	height:22px;
+	font-size:1em;
+}
+
+.kisu{                           /*세무신고 기수위치*/
+   margin-left:75px;
+   margin-top:10px;
+}
+
+.p_info_print_btn{               /*플린트 버튼 스타일*/
+	border-radius: 3px;
+	cursor:pointer;
+	text-align: center;
+	width:55px;
+	margin-top: 10px;
+	margin-right: 10px;
+	height: 20px;
+	font-size: 0.8em;
+	background-color:#0099FF;
+	color:#FFFFFF;
+	padding: 2px 5px;
+}
+.p_info_print_btn:hover{
+	background-color:#0099FF;
+}
+
+
+.Person_info_2_con2{              /*납부할 세액 내용배경*/
+	vertical-align:middle;
+	display:inline-block;
+	background-color:#FFFFFF;
+	width: 500px;
+	margin-left:15px;
+	height:180px;
+	
+}
+
+
+
+.Person_info_2_con2 table{          /*납부할 세액내역 테이블*/
+	border-collapse: collapse;
+	margin: 10px auto;
+	height: 100px;
+	width: 350px;
+	border : 2px solid #385D8A;
+	background-color:#FFFFFF;
+}
+
+.Person_info_2_con2 table tr td{     /*납부할 세액내역 테이블 라인 스타일*/
+	border: 2px solid #385D8A;
+}
+
+.Person_info_2_con2 table tr td:nth-child(1){   /*납부할 세액내역 테이블 라인 1번 세로줄 글씨위치 */
+	text-align:center;
+	
+}
+.Person_info_2_con2 table tr td:nth-child(2){    /*납부할 세액내역 테이블 라인 2번 세로줄 글씨위치 */
+	text-align:right;
+}
+
+
+
+/*----------------납부할 세액 끝--------------*/
+
+
+
+
+
+/*----------------1:1 문의 게시판 시작--------------*/
+
+.Person_info_3_bg{
+	margin:auto;
+	display: inline-block;
+	width: 1080px;
+	height: 780px;
+	margin: 10px;
+	background-color: #F2F2F2;
+}
+
+.Person_info_3{
+	width: 1050px;
+	margin: 10px auto;
+}
+
+
+
+.QNA_wr{
+	background-color:#F2F2F2;
+	height: 130px;
+	width: 800px;
+	margin: 0px auto 0px auto;
+	text-align:left;
+}
+
+
+.QNA_hdtext{
+	background-color:#FFFFFF;
+	padding: 20px;
+	margin: 0px auto;
+	vertical-align: middle;
+	text-align:left;
+	line-height: 150%;
+	font-size: 0.9em;
+}
+
+
+
+.QNA_wrSpace{
+	width: 676px;
+	max-width: 800px;
+	height: 160px;
+	/*max-height: 360px;*/
+	margin: 10px 0 0 0;
+	overflow-y: scroll;
+	font-size: 1.1em;
+	resize: none;
+}
+
+.neyong{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	text-align: center;
+	font-weight: bold;
+}
+
+.QNA_input .title{
+	display:inline;
+	text-align:left;
+	height: 40px;
+	width:100%;
+	font-size: 1em;
+}
+
+.Qt_title{
+	font-weight:bold;
+}
+
+.QNA1{
+	margin: auto;
+
+}
+
+.QNA_input{
+	border-top:1px solid #737373;
+	border-bottom:1px solid #737373;
+	height: 244px;
+	width:800px;
+	text-align:center;
+	margin: 30px auto 10px auto;
+	background-color:#FFFFFF;
+	
+}
+
+.input_1{
+	width:680px;
+	margin: 5px 0 0 0;
+	padding: px 0 0 0;
+}
+
+
+
+.QNA_entrbtn1{
+	border-radius: 3px;
+	margin: 0px 0 0 700px;
+	cursor:pointer;
+	/*display: inline;*/
+	width:70px;
+	background-color:#3E3A39;
+	color: #FFFFFF;
+	padding: 5px;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+
+.QNA_entrbtn1:hover{
+	background-color:#0099FF;
+}
+
+
+.QNA_contx{
+	background-color: #38342E;
+	color: #FFFFFF;
+}
+
+
+
+
+
+.QNA_line tr{
+	height:30px;
+	border-bottom:1px solid #8A8F94;
+	background-color: #FFFFFF;
+}
+
+.QNA_line tr:hover{
+		background-color: #F3F2F2;
+}
+
+
+.QNA_line table{
+	margin: auto;
+	border-collapse:collapse;
+	
+}
+
+
+
+.QNA_line tr td:nth-child(2){
+	text-align: left;
+	cursor:pointer;
+}
+
+
+
+
+.answer{
+	background-color: #F4F3F0;
+	height: 100px;
+
+}
+.QNA_list{
+	width: 900px;
+	margin: 30px auto;
+	text-align: left;
+	
+}
+
+.QNA_tb{
+	width: 800px;
+	margin: auto;
+	border-bottom: 1px solid #007ACC;
+	border-collapse:collapse;
+}
+
+
+
+.Q_btnwrap{
+	margin: 10px 0 0 780px;
+}
+.QNA_preBtn{
+	cursor:pointer;
+	border-radius: 10px 10px;
+    display:inline-block;	
+	height: 20px;
+	width: 20px;
+	background-color:#2D343F;
+	vertical-align: middle;
+	padding-top: 3px;
+	color:#FFFFFF;
+	margin-right: 2px;
+	font-size: 0.8em;
+	text-align: center;
+}
+.QNA_nextBtn{
+	cursor:pointer;
+	border-radius: 10px 10px;
+	display:inline-block;
+	height: 20px;
+	width: 20px;
+	background-color:#2D343F;
+	vertical-align: middle;
+	padding-top: 3px;
+	color:#FFFFFF;
+	margin-right: 2px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+
+/*----------------1:1 문의 게시판 끝--------------*/
+
+
+
+
+
+
+
+
+
+
+/* ------------------------footer------------------------ 영역 */
+
+footer p{
+	margin: 0;
+	padding: 1px;
+	text-decoration: inherit;
+}
+
+footer{
+	font-family:"Daum_Regular";
+	top: 1320px;
+	width: 100%;
+	font-size:0.75em;
+	background-color: #2d343f;
+	height: 200px;
+	color: white;
+	margin: auto;
+	padding: 20px 0 0 0;
+	
+}
+
+.ftFrame {
+	display: inline-block;
+	margin: 0 0 0 -10%;
+
+}
+
+.logo2{
+}
+
+.ft1{
+    display: inline-block;
+	margin: 0px 50px 0 10px;
+	width:30%;
+	font-size: 1em;
+}
+
+.ft2{
+    display: inline-block;
+    width: 100%;
+	margin: 0px 0 0 0;
+	width:13%;
+	font-size: 1em;
+}
+
+.ft3{
+	display: inline-block;
+    width: 100%;
+	margin: 0 10px 0 70px;
+	width:13%;	
+}
+.Face{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Tweet{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Blog{
+	height: 35px;
+	margin: 5px 5px;
+}
+
+.Face:hover{
+	content: url("../images/main/face_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Tweet:hover{
+	content: url("../images/main/tweet_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Blog:hover{
+	content: url("../images/main/blog_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+
+
+.ftR{
+	margin: auto;
+	height: 100px;
+}
+.frlogo{
+    margin: -16px 0 0 15px;
+}
+

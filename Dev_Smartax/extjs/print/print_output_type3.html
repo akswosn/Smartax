@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>계정별원장</title>
+<meta name="keywords" content="태극 회계 온라인" />
+<meta name="description" content="태극 회계 온라인" />
+<script type="text/javascript" src="./jquery-1.6.4.min.js"></script>
+<script type="text/javascript" src="../lib/ext-all.js"></script>
+<style>
+.tbl1 {
+    width:100%;
+    border-collapse: collapse;
+    border-bottom: 1px solid #333;
+    font-family: "Malgun Gothic";
+    font-size: 11px;
+}
+.tbl1 caption {
+    position: relative;
+    height: 100px;
+}
+.tbl1_title {
+    margin: 0;
+    padding: 0;
+}
+.tbl1_title span {
+    display: inline-block;
+    padding: 0 20px 5px 20px;
+    border-bottom: 2px solid #000;
+    font-weight: bold;
+    font-size: 22px;
+}
+.tbl1_date {
+    margin: 8px 0 0 0;
+    padding: 0;
+    font-size: 12px;
+}
+.tbl1_info1 {
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    font-size: 12px;
+}
+.tbl1_info2 {
+    position: absolute;
+    bottom: 5px;
+    right: 0;
+    font-size: 12px;
+}
+.tbl1 thead th {
+    border: 1px solid #333;
+    background: #ccc;
+    font-weight: normal;
+    color: #000;
+}
+.tbl1 tbody td {
+    border-top: 1px solid #ccc;
+    background: #fff;
+    text-align: center;
+    color: #000;
+}
+.tbl1 .tbl1_sum td {
+    background: #eee;
+    text-align: center;
+    color: #000;
+}
+.tbl1 tbody .tbl1_customer_nm {
+    text-align: left;
+}
+.tbl1 tbody .tbl1_amount {
+    text-align: right;
+}
+div.print_btn_area {
+    margin-top: 11px;
+    text-align: center;
+}
+div.print_btn_area button {
+    margin: 0 10px;
+    width: 74px;
+    height: 22px;
+    cursor: pointer;
+}
+@media print {
+    div.print_btn_area {
+       display:none;
+    }
+}
+</style>
+</head>
+<body>
+	<div id="print_content_area">
+		<table class="tbl1">
+		    <caption>
+    	        <p class="tbl1_title"><span>계 정 별 원 장</span></p>
+    	        <p id="term" class="tbl1_date">&nbsp;</p>
+    	        <span id="user_id" class="tbl1_info1">&nbsp;</span>
+                <span id="gycode" class="tbl1_info2">&nbsp;</span>
+		    </caption>
+		    <colgroup>
+                <col style="width:50px;">
+                <col style="width:auto;">
+                <col style="width:70px;">
+                <col style="width:120px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+                <col style="width:100px;">
+		    </colgroup>
+		    <thead>
+		        <tr>
+		            <th scope="col">일자</th>
+		            <th scope="col">적요</th>
+		            <th scope="col">거래처코드</th>
+		            <th scope="col">거래처명</th>
+		            <th scope="col">입금/대변</th>
+		            <th scope="col">출금/차변</th>
+		            <th scope="col">잔액</th>
+		        </tr>
+		    </thead>
+		    <tbody id="grid"></tbody>
+		</table>
+		<div class="print_btn_area">
+			<button class="print_btn" onclick="print()">
+				<span>출력하기</span>
+			</button>
+			<button class="close_btn" onclick="self.close();">
+				<span>창닫기</span>
+			</button>
+		</div>
+	</div>
+</body>
+<script>
+(function() {
+    var parent = window.opener
+    , info = parent.Global.temp
+    , storeInfo = parent.StoreInfo
+    , grid = Ext.get('grid')
+    , html = ''
+    , fn = {
+        chkValue: function(v) {
+            return (v == null || v == undefined || v == '' || v == -1) ? false : true;
+        },
+        getGyNm: function(v) {
+            var record = storeInfo.Menu08_Grid.findRecord('gycode', v, null, null, null, true);
+            return record ? record.get('gy_name') : '';
+        },
+        getDate: function(v) {
+            return this.chkValue(v) ? v.substr(4,2) + '-' + v.substr(6,2) : '';
+        },
+        getFullDate: function(v) {
+            return v.substr(0,4) + '.' + v.substr(4,2) + '.' + v.substr(6,2);
+        },
+        getCusId : function(v) {
+            var result = '';
+            if (this.chkValue(v)) result = Ext.util.Format.leftPad(v, 5, ['0']);
+            if (v == 0) result = '';
+            return result;
+        },
+        getCusNm: function(v) {
+            var record = storeInfo.Menu09_Grid.findRecord('customer_id', this.getCusId(v), null, null, null, true);
+            return record ? record.get('tr_nm') : '';
+        },
+        getNum: function(v) {
+            return Ext.util.Format.number(v, '0,000');
+        }
+    };
+    
+    //기본정보 셋팅
+    Ext.get('term').setHTML(fn.getFullDate(info.from_yyyymmdd) + ' ~ ' + fn.getFullDate(info.to_yyyymmdd));
+    Ext.get('user_id').setHTML('회사명 : ' + info.user_id);
+    Ext.get('gycode').setHTML('계정과목 : [' + info.gycode + '] ' + fn.getGyNm(info.gycode));
+    
+    //데이터 셋팅
+    storeInfo.Menu05_Grid2.each(function(record){
+        html += (fn.chkValue(record.get('customer_id')) ? '<tr>' : '<tr class="tbl1_sum">');
+        html += '<td>' + fn.getDate(record.get('jp_yyyymmdd')) + '</td>';
+        html += '<td>' + record.get('jp_rem') + '</td>';
+        html += '<td>' + fn.getCusId(record.get('customer_id')) + '</td>';
+        html += '<td class="tbl1_customer_nm">' + fn.getCusNm(record.get('customer_id')) + '</td>';
+        html += '<td class="tbl1_amount">' + fn.getNum(record.get('credit')) + '</td>';
+        html += '<td class="tbl1_amount">' + fn.getNum(record.get('debit')) + '</td>';
+        html += '<td class="tbl1_amount">' + fn.getNum(record.get('sum')) + '</td>';
+        html += '</tr>';
+        
+        grid.setHTML(html);
+    });
+}());
+</script>
+</html>

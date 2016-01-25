@@ -1,0 +1,74 @@
+<div id="zipcode_popup" class="popup_window_style">
+    <h2 id="pop_title" class="pop_title">우편번호 검색</h2>
+ 	<div id="zip_explain_area">
+ 	    <p>찾고자 하는 주소의 동(읍/면)명을 입력하신 후 검색을 누르세요.</p>
+ 		<p class="color-01">예) ‘둔촌2’ 혹은 ‘둔촌2동’으로 입력해 주세요.</p>
+	</div>
+	<div id="zip_search_area">
+	    <div class="zipcode-search-top">
+	        <label for="zip_dong_name">지역명</label>
+            <input type="text" id="zip_dong_name" class="zipcode-finder" name="dongName" style="width: 200px;">
+            <input type="button" class="zipcode-search btn-flow-black" value="검색">
+	    </div>
+	    <div class="zipcode-search-result">&nbsp;</div>
+	</div>
+	<input type="button" class="pop_close" value="닫기">
+</div>
+<script>
+var _zip_func = {
+    
+    result_id:'',
+    
+    startFindZip: function()
+    {
+        $('.zipcode-search-result').text("로딩중...");
+
+        $.get('./proc/member/zipsearch-action.php', {
+            query : $('#zip_dong_name').val()
+        }, function(data) {
+            $('.zipcode-search-result').html(data);
+            _zip_func.bindPutAddress();
+        });
+    },
+    
+    bindZipcodeFind: function(retid)
+    {
+        _zip_func.result_id=retid;
+        
+        $('.zipcode-search').click(function()
+        {
+            _zip_func.startFindZip();
+        });
+        
+        $('#zip_dong_name').keyup(function(e)
+        {
+            if(e.keyCode == 13) 
+                _zip_func.startFindZip();
+        });
+        
+        $('#zip_dong_name').focus();
+    }
+    
+    ,bindPutAddress: function(){
+        $('.zipcode-search-result a').click(function(){
+            $('#zipcode1').val($(this).parent().parent().find('.postcd1').text());
+            $('#zipcode2').val($(this).parent().parent().find('.postcd2').text());
+            $('#addr1').val(_zip_func.remove_useless_addr($(this).parent().parent().find('.address').text()));
+            _zip_func.hideZipcodeFinder();
+            $('#addr1').focus();
+            return false;
+        });
+    },
+    
+    remove_useless_addr: function(address){
+        if(address.indexOf('~') != -1){
+            address = address.split(' ').slice(0,-1).join(' ');
+        }
+        return address;
+    },
+    
+    hideZipcodeFinder: function(){
+        $asoo.windowClose('zipcode_popup');
+    }
+};
+</script>

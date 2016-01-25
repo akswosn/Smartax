@@ -1,0 +1,21 @@
+/*이 페이지에서 필요한 부분만 리셋합니다.*/
+
+@page a4sheet { size: 21.0cm 29.7cm }
+.a4 { page: a4sheet; page-break-after: always }
+
+body {
+display: block;
+margin: 0px;
+}
+
+* {
+	margin:0; 
+	padding:0;
+	font:15px "돋움",Dotum,sans-serif;
+	line-height: 1.302343;
+    /* 1.18
+        line-height: 1.1;
+    line-height: 1.428571429;
+    */
+    color: #333333;
+}

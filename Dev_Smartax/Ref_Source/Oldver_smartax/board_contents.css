@@ -1,0 +1,428 @@
+
+ ______   ______   __   __   ______
+/\  == \ /\  __ \ /\ \_/\ \ /\  __ \ 
+\ \  __< \ \ \/\ \\ \  \_\ \\ \ \/\ \   __
+ \ \_____\\ \_____\\ \_\-\__\\ \_____\ /\_\
+  \/_____/ \/_____/ \/_/ /__/ \/_____/ \/_/
+
+
+
+@font-face{
+	font-family:"Daum_Regular";
+	src:url("font/Daum_Regular.ttf")format("truetype");
+	font-style:normal;
+	font-weight:normal;
+}
+
+body {
+	margin: 0;
+	A:link {font-family:"Franklin Gothic Heavy" color: white; text-decoration: none}
+	A:visited {text-decoration: none}
+	A:hover {color: #0099ff; text-decoration: none}
+}
+
+.bdwrap {
+	margin: auto;
+	text-align: center;
+}
+
+.menuwrap {
+	margin: auto;
+	text-align: center;
+
+}
+
+.menuwrap_board{
+	margin: auto;
+	text-align: center;
+	background-color:#afa89c;
+}
+
+.ftwrap{
+   margin: auto;
+   vertical-align: center;
+   border: 1px solid #ffffff;
+   width: 1100px;
+   min-height: 20%;
+
+}
+
+
+header{
+	background: #FFFFFF;
+	width: 1100px;
+	height: 70px;
+	color: white;
+	font-family: "Arial Black";
+	font-weight: bold;
+	clear: both;
+	margin: auto;
+	display: block;
+}
+
+
+
+nav{
+	position:relative;
+	/*display: block;*/
+	margin: auto;
+	top: 10px;
+
+}
+
+
+.logo{
+	margin: 13px 100px 0 15px;
+	width:170px;
+}
+
+
+nav ul{
+
+	width:1100px;
+	display: inline;
+	color:#2D343F;
+
+}
+
+nav ul li{
+	float:left;
+	width:150px;
+	/*height:65px;*/
+	margin: 16px 0px 5px 0;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	list-style-type:none;
+	padding: 0px 0px 0px 0;
+}
+
+
+.menu1:hover{
+	content: url("../images/menu/menu1_1.png");
+}
+
+.menu2:hover{
+	content: url("../images/menu/menu2_1.png");
+}
+
+.menu3:hover{
+	content: url("../images/menu/menu3_1.png");
+}
+
+.menu4:hover{
+	content: url("../images/menu/menu4_1.png");
+}
+
+.menu5:hover{
+	content: url("../images/menu/menu5_1.png");
+}
+
+
+/* 메뉴아래 사진 배경영역  */
+
+.mid {
+	
+	border-top: 2px solid #007ACC;
+	height:96px;
+	background-color: #000000;
+	text-align : center;
+
+}
+/* 메뉴아래 사진 배경영역 끝 */
+
+
+
+
+
+
+
+
+
+
+/* 게시판 해당 제목 영역  */
+
+.mid_1{
+	margin: 30px 0 0 0;
+	height: 50px;
+	text-align: center;
+	background-color: #3E3A39;
+	
+}
+
+
+.mid_1 ul{
+	clear:both;
+	height: 40px;
+	margin: auto;
+	padding: 10px 0 0 100px;
+	width:900px;
+}
+
+
+/*게시판 상단 제목영역*/
+
+.board_title{
+	margin:15px 15px 15px -180px;
+	display:inline-block;
+	color:#ffffff;
+    font-size: 1em;
+    font-weight: bold; 
+    
+}
+
+.board_title1{
+	margin:15px 15px 15px 90px;
+	display:inline-block;
+	color:#ffffff;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+
+
+
+
+
+/* -------------------------- 포틀렛 영역 ----------------------------  */
+
+/*게시판 위치 중간잡기 영역*/
+.portlet{
+   height: 100%;
+   /*height: 360px;*/
+   width: 100%;
+   /*display: inline-block;*/
+   vertical-align: middle;
+   /*padding: 10px 0 20px 108px;*/
+   /*padding: 70px 0 0 0;*/
+   margin:  25px 0 20px 0;
+   background-color:#ffffff;
+   
+}
+
+.ptl{
+	vertical-align: middle;
+    display: inline-block;
+	margin: 0;
+}
+
+
+thead tr{
+	clear:both;
+	font-family:"Daum_Regular";
+	font-size:0.9em;
+	padding: 0px;
+	margin: 0 0 0 0px;
+	/*border-bottom: 2px solid #888;*/
+	background-color:#CDC5B9;	
+	color:#3E3A39;
+	width: 100%;
+    line-height: 30px;
+    
+}
+
+
+.title{
+	text-align:left;
+	height: 30px;
+}
+
+td.title{
+	text-align:left;
+	border-top: 1px solid #3E3A39;
+	/*padding-top: -20px;*/
+	font-size:1em;
+
+}
+
+
+
+
+
+
+/*게시판 중간 보이는 글 영역*/
+
+.title_con{
+	height: 330px;
+	background-color: #ffffff;	
+	text-align: left;
+}
+
+/*#f3f2f2;*/
+
+.title_con:hover{
+	text-align: left;
+	height: 330px;
+	background-color: #ffffff;
+}
+
+.portlet tbody tr{
+	font-family:"Daum_Regular";
+	font-size:0.9em;
+	list-style-type:none; 
+	border-bottom: 1px solid #e6e6e6;
+	width: 850px;
+    line-height: 25px;
+    background-color: #ffffff;
+}
+
+.portlet tbody tr:hover {
+	font-family:"Daum_Regular";
+	font-size:0.9em;
+	list-style-type:none; 
+	border-bottom: 1px solid #e6e6e6;
+    width: 850px;
+    line-height: 25px;
+    background-color: #f3f2f2;
+}
+
+
+.portlet tbody td a{
+	color:#000000;
+}
+
+
+
+.bottom_btn{
+	margin-top: 10px;
+	height:62%;
+	width:20px;
+}
+
+
+
+.contlist_btn {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  width:30px;
+  max-height: 1.3em;
+  font-family: Arial;
+  color: #FFFFFF;
+  font-size: 0.7em;
+  background: #38342e;
+  padding: 6px 15px 6px 16px;
+  /*margin: 0 10px 40px 60px;*/
+  margin-left : 5px;
+  text-decoration: none;
+  border-color: none;
+  float: right;
+  height:30px;
+}
+
+.contlist_btn:hover {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  width:30px;
+  max-height: 1.3em;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 0.7em;
+  background: #007ACC;
+  padding: 6px 15px 6px 16px;
+  /*margin: 0 10px 40px 60px;*/
+  text-decoration: none;
+  border-color: none;
+  float: right;
+  height:30px;
+
+	
+}
+
+
+
+
+
+/* ------------------------footer------------------------ 영역 */
+
+footer p{
+	margin: 0;
+	padding: 1px;
+	text-decoration: inherit;
+}
+
+footer{
+	font-family:"Daum_Regular";
+	top: 1320px;
+	width: 100%;
+	font-size:0.75em;
+	background-color: #2d343f;
+	height: 200px;
+	color: white;
+	margin: auto;
+	padding: 20px 0 0 0;
+	
+}
+
+.ftFrame {
+	display: inline-block;
+	margin: 0 0 0 -10%;
+
+}
+
+.logo2{
+}
+
+.ft1{
+    display: inline-block;
+	margin: 0px 50px 0 10px;
+	width:30%;
+	font-size: 1em;
+}
+
+.ft2{
+    display: inline-block;
+    width: 100%;
+	margin: 0px 0 0 0;
+	width:13%;
+	font-size: 1em;
+}
+
+.ft3{
+	display: inline-block;
+    width: 100%;
+	margin: 0 10px 0 70px;
+	width:13%;	
+}
+.Face{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Tweet{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Blog{
+	height: 35px;
+	margin: 5px 5px;
+}
+
+.Face:hover{
+	content: url("../images/main/face_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Tweet:hover{
+	content: url("../images/main/tweet_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Blog:hover{
+	content: url("../images/main/blog_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+
+
+.ftR{
+	margin: auto;
+	height: 100px;
+}
+.frlogo{
+    margin: -16px 0 0 15px;
+}
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+       
+       
+		<!-- ExtJS Common  -->
+		
+    </head>
+    <body>
+    		<script src="../js/pdfobject.js"></script>
+			<script type='text/javascript'>
+	
+			      function embedPDF(){
+	
+				    var myPDF = new PDFObject({ 
+				
+				      url: './hometax_enroll.pdf',
+				      pdfOpenParams: { view: 'FitH' }
+				
+				    }).embed('pdf_viewer');  
+				
+				  }
+			
+			  window.onload = embedPDF; //Feel free to replace window.onload if needed.
+			</script>
+    		<div id="pdf_viewer"  style="margin:auto;width:100%;height:1600px;"></div>	
+    		<!-- <div>비번 : 630115</div> -->
+    </body>
+</html>
+

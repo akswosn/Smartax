@@ -1,0 +1,87 @@
+/**
+ * @author kyun
+ */
+
+.root
+{
+	background:#e6e6e6;
+	-webkit-user-select: none;
+}
+
+.tab_page
+{
+	background: white;
+	padding:20px;
+	border-radius: 10px;
+	margin: 20px;
+}
+
+.searchBar
+{
+	border-bottom: 1px solid #99BCE8;
+	padding-bottom: 10px;
+}
+
+.searchChild
+{
+	color:#0000FF;
+	margin-left: 5px;
+}
+
+.bottomBar
+{
+	margin-top: 10px;
+}
+
+.bottomChild
+{
+	margin-left: 5px;
+}
+
+.grid
+{
+	margin-top: 5px;
+}
+
+.x-grid-table tr:nth-child(odd) .x-grid-cell{ 
+    background-color: #FAFAFA; 
+}
+
+.x-box-item{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.banner_lay
+{
+	background: white;
+	padding:20px;
+	border-radius: 10px;
+	margin: 0px 20px 20px 20px;
+}
+
+.x-panel-body-default
+{
+	background-color:#FAFAFA !important;
+}
+
+.x-btn-inner
+{
+    font-size: 12px !important;
+}
+.x-grid-cell-text
+{
+	font-size: 12px !important;
+}
+
+.x-grid-row .x-grid-cell{
+	font-size:12px !important;
+}
+
+.x-grid-cell-inner {
+}
+
+.x-column-header-inner{
+	font-size:12px !important;
+}

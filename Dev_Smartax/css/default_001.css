@@ -1,0 +1,2666 @@
+
+ ______   ______   __   __   ______
+/\  == \ /\  __ \ /\ \_/\ \ /\  __ \ 
+\ \  __< \ \ \/\ \\ \  \_\ \\ \ \/\ \   __
+ \ \_____\\ \_____\\ \_\-\__\\ \_____\ /\_\
+  \/_____/ \/_____/ \/_/ /__/ \/_____/ \/_/
+
+
+@font-face{
+	font-family:"Daum_Regular";
+	src:url("font/Daum_Regular.ttf")format("truetype");
+	font-style:normal;
+	font-weight:normal;
+}
+
+body {
+	margin: 0;
+	A:link {font-family:"Franklin Gothic Heavy" color: white; text-decoration: none}
+	A:visited {text-decoration: none}
+	A:hover {color: #0099ff; text-decoration: none}
+}
+
+
+.bdwrap {
+	margin: auto;
+	text-align: center;
+}
+
+#pdf_viewer{
+	margin:auto;
+}
+
+
+
+/* --------------------------------Common style--------------------------------*/
+/* Layouts -------------------------------------------------- */
+.block-nor-divide	{position:relative;}
+.block-nor-divide	> div{width:100%;}
+
+.block-2-divide	{position:relative;}
+.block-2-divide	> div	{float:left; width:48%;}
+.block-2-divide	> div:nth-of-type(2)	{width:4%;}
+.block-2-divide:after	{display:block; clear:both; content:"";}
+
+.block-3-divide	{position:relative;}
+.block-3-divide	> div	{float:left; width:30%;}
+.block-3-divide	> div:nth-of-type(2)	{width:5%;}
+.block-3-divide	> div:nth-of-type(4)	{width:5%;}
+.block-3-divide:after	{display:block; clear:both; content:"";}
+
+div.divider{margin:auto;line-height:26px;text-align: center;font-weight: bold;font-size: 11px;}
+.block-bg-white{background-color: white;}
+.block-align-right{text-align: right;}
+
+/*--------------------------------Common style--------------------------------*/
+
+
+
+.common_input_1{
+	min-height:20px;font-size:13px; line-height:18px; color:#666;width:100%;
+}
+
+.common_select_1{
+	min-height:24px;font-size:13px; line-height:18px; color:#666;width:100%;
+}
+
+/*--------------------------------------------------------------- */
+/*----------------------------footer 영역------------------------ */
+/*--------------------------------------------------------------- */
+
+
+
+/*푸터 위치지정*/
+
+.ftwrap{
+   margin: auto;
+   vertical-align: center;
+   border: 1px solid #ffffff;
+   max-width: 1100px;
+   height: 140px;
+   min-height: 50%;
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 300px){
+	.ft1{
+		width:30%;
+		font-size: 10px;
+	}
+	
+	.ft2{
+		width:13%;
+		font-size: 10px;
+	}
+	
+	.ft3{
+		width:13%;	
+		font-size: 10px;
+	}
+}
+
+
+footer a{
+	text-decoration:none;
+}
+
+
+.ft_link{
+	cursor:pointer;
+}
+
+
+
+
+a:link {text-decoration: none; color: #000000;}
+:visited {text-decoration: none; color: #000000;}
+a{text-decoration: none;}
+
+
+
+
+.footer p{
+	margin: 0;
+	padding: 1px;
+	text-decoration: inherit;
+}
+
+.footer{
+	font-family:"Daum_Regular";
+	top: 1320px;
+	width: 100%;
+	font-size:0.75em;
+	background-color: #2d343f;
+	height: 200px;
+	color: white;
+	margin: auto;
+	padding: 20px 0 0 0;
+	
+}
+
+.ftFrame {
+	display: inline-block;
+	margin: 0 0 0 -10%;
+
+}
+
+.logo2{
+}
+
+.ft1{
+    display: inline-block;
+	margin: 0px 50px 0 10px;
+	width:30%;
+	font-size: 1em;
+	color: white;
+}
+
+.ft2{
+    display: inline-block;
+    width: 100%;
+	margin: 0px 0 0 0;
+	width:13%;
+	font-size: 1em;
+	color: white;
+}
+
+.ft3{
+	display: inline-block;
+    width: 100%;
+    color: white;
+	margin: 0 10px 0 70px;
+	width:13%;	
+}
+.Face{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Tweet{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Blog{
+	height: 35px;
+	margin: 5px 5px;
+}
+
+.Face:hover{
+	content: url("../images/main/face_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Tweet:hover{
+	content: url("../images/main/tweet_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Blog:hover{
+	content: url("../images/main/blog_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+
+
+.ftR{
+	margin: auto;
+	height: 100px;
+}
+.frlogo{
+    margin: -16px 0 0 15px;
+}
+
+
+/*--------------------------------------------------------------- */
+/*----------------------------footer 영역 끝------------------------ */
+/*--------------------------------------------------------------- */
+
+
+/*상단 네비게이션 위치지정*/
+
+.menuwrap {
+	margin: auto;
+	text-align: center;
+}
+.menuwrap_app{
+	height: 100%;
+	text-align: center;
+	background-color:  #d9ecff; 
+}
+
+.menuwrap_board{
+	margin: auto;
+	text-align: center;
+	background-color:#afa89c;
+}
+
+
+.click_pt{
+	cursor:pointer;
+}
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------헤더 영역 시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+.header{
+	background: #FFFFFF;
+	width: 1100px;
+	height: 70px;
+	color: white;
+	font-family: "Arial Black";
+	font-weight: bold;
+	clear: both;
+	margin: auto;
+	display: block;
+}
+nav{
+	position:relative;
+	/*display: block;*/
+	margin: auto;
+	top: 10px;
+
+}
+
+.logo{
+	margin: 13px 100px 0 15px;
+	width:170px;
+}
+
+nav ul{
+	width:1100px;
+	display: inline;
+	color:#2D343F;
+
+}
+nav ul li{
+	cursor:pointer;
+	float:left;
+	width:150px;
+	margin: 16px 0px 5px 0;
+	padding: 0px;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	list-style-type:none;
+}
+
+
+.menu1:hover{
+	content: url("../images/menu/menu1_1.png");
+}
+
+.menu2:hover{
+	content: url("../images/menu/menu2_1.png");
+}
+
+.menu3:hover{
+	content: url("../images/menu/menu3_1.png");
+}
+
+.menu4:hover{
+	content: url("../images/menu/menu4_1.png");
+}
+
+.menu5:hover{
+	content: url("../images/menu/menu5_1.png");
+}
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------헤더 영역 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------ⓞ 서비스 소개 영역 시작--------------------------------- */
+/*----------------------------------------------------------------------- */
+
+
+
+/* 인트로 영역  */
+
+.intro_1{
+	margin: auto;
+	height: 900px;
+	height:3800px;
+	background-color: #E6E6E6;
+	
+}
+
+.intro_bd{
+	margin: 0 auto;
+	height:3800px;
+	background-color: #ffffff;
+	width: 1336px;
+	position: relative;
+}
+
+.intro_btn{
+	padding-top:10px;
+    position: fixed;
+    bottom: 60px;
+	margin: 0 0 0 1400px;
+	display:inline-block;
+	height: 80px;
+	width: 50px;
+	background-color:#38342E;
+	border-radius: 25px 25px;
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #FFFFFF;
+	text-align:center;
+	vertical-align:middle;
+}
+
+.intro_a{
+	display:block;
+}
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------ⓞ 서비스 소개 영역 끝--------------------------------- */
+/*----------------------------------------------------------------------- */
+/*완료*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------① 메인 페이지 헤더 아래사진-------------------------- */
+/*----------------------------------------------------------------------- */
+
+/* 중간 비즈니스맨 사진 영역  */
+
+._mid {
+	border-top: 2px solid #007ACC;
+	margin: auto;
+	height:420px;
+	background-image: url('../images/main/back2.png') no-repeat;
+	background-color: #8a8f94;
+	width:100%;
+}
+.midback{
+	margin: 0 0 0 0;
+	padding: 0;
+}
+.midpeople{
+	height: 420px;
+	float: left;
+}
+
+
+/*  로그인 영역  */
+
+._midpeople
+{
+    width: 1050px;
+    height: 420px;
+    margin: auto;
+	background: rgba(255,255,255,0.93);
+	background: -moz-radial-gradient(center, ellipse cover, rgba(255,255,255,0.93) 0%, rgba(255,255,255,0.47) 50%, rgba(246,246,246,0.39) 58%, rgba(237,237,237,0) 100%);
+	background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(0%, rgba(255,255,255,0.93)), color-stop(50%, rgba(255,255,255,0.47)), color-stop(58%, rgba(246,246,246,0.39)), color-stop(100%, rgba(237,237,237,0)));
+	background: -webkit-radial-gradient(center, ellipse cover, rgba(255,255,255,0.93) 0%, rgba(255,255,255,0.47) 50%, rgba(246,246,246,0.39) 58%, rgba(237,237,237,0) 100%);
+	background: -o-radial-gradient(center, ellipse cover, rgba(255,255,255,0.93) 0%, rgba(255,255,255,0.47) 50%, rgba(246,246,246,0.39) 58%, rgba(237,237,237,0) 100%);
+	background: -ms-radial-gradient(center, ellipse cover, rgba(255,255,255,0.93) 0%, rgba(255,255,255,0.47) 50%, rgba(246,246,246,0.39) 58%, rgba(237,237,237,0) 100%);
+	background: radial-gradient(ellipse at center, rgba(255,255,255,0.93) 0%, rgba(255,255,255,0.47) 50%, rgba(246,246,246,0.39) 58%, rgba(237,237,237,0) 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ededed', GradientType=1 );
+
+}
+
+.login {
+	border: 2px solid #FFFFFF;
+	height: 380px;
+	width: 228px;
+	padding: 10px;
+	font-weight: bold;
+	color: white;
+	float: left;
+	margin: 10px;
+	}
+
+.lgbtn{
+	color: white;
+    width:220px;
+    text-align: center;
+ 
+}
+.logintext{
+	clear: both;
+	text-align: left;
+	margin: 15px 10px;
+	font-size: 1.3em;
+}
+.consult{
+	height:200px;
+	width: 200px;
+	margin: 5px 0 0 0px;
+}
+.csloc{
+	cursor:pointer;
+	height: 35%;
+	width: 95%;
+	margin: 0 0 0 10px;
+}
+.csloc1{
+	width: 250px;
+	margin: 0 0 0 -10px;
+}
+
+
+.btn3, .btn4{
+	cursor:pointer;
+}
+
+.btn1{
+	height: 30px;
+	width: 100%;
+    background-color: #ffffff;
+    margin: 3px 0 0 4px;
+    border: 0px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.btn2{
+	height: 25px;
+	width: 200px;
+	margin: 0 0 0 0;
+}
+
+.btn3{
+	height: 30px;
+	width: 100%;	
+	background-color: #007acc;
+	margin: 5px 0 0 2px;
+	display: inline-block;
+	text-align: center;
+	padding: 5px 0 0 0;
+}
+
+.btn3:hover{
+	height: 30px;
+	width: 100%;	
+	background-color: #4db7ff;
+	margin: 5px 0 0 2px;
+	display: inline-block;
+	text-align: center;
+	padding: 5px 0 0 0;
+}
+
+.btn4{
+	font-size: 0.8em;;
+ 	display: inline-block;
+ 	margin: 10px 0 0 15px;
+}
+
+
+.btn4 a{
+	color:#FFFFFF;
+}
+
+
+/*nav ul{
+	clear: both;
+	width: 1080px;
+}*/
+
+/*
+nav ul li a{
+	color:#000000;
+	display: inline-block;
+	list-style-type:none;
+	padding: 5px 15px;
+}*/
+
+
+.logout_Btn{
+	float:right;
+	/*display:inline;*/
+	width: 60px;
+	margin-left: 10px;
+	background-color:#007ACC;
+	color:#FFFFFF;
+	font-size: 0.8em;
+	text-align:center;
+	padding: 2px;
+}
+
+.login_welcome{
+	font-size: 0.9em;
+}
+
+.login_welcome_event{
+	color: #CA3A3A;
+	font-size: 0.8em;
+}
+.login_baro_icon{
+	cursor:pointer;
+	margin-top: 10px;
+	height: 66px;
+}
+
+.login_baro_select{
+	margin-left: 3px;
+	width: 220px;
+ 	background-color: #FFFFFF; 
+}
+
+
+
+
+
+/*---------------------빠른메뉴 영역------------------------*/
+
+.row{
+	clear:both;
+	/*padding-top: 40px;*/
+	background-color: #f2f2f3;
+	width: 100%;
+	height: 100%;
+}
+
+.col{
+	width: 300px;
+}
+
+
+.row_center1{
+	display:inline;
+	width:50%;
+
+}
+.row_center2{
+	display:inline;
+	width:50%;
+}
+.col_image{
+   max-width: 75%;
+   max-height: 75%;
+}
+.row_loc{
+	display: inline-block;
+	/*padding-left: 1%;
+	padding-right: 1%;*/
+	margin: 30px 0 50px 0;
+}
+
+.row_loc1{
+	display: inline-block;
+	/*padding-left: 1%;
+	padding-right: 1%;*/
+	margin: 50px 0 55px 0;
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 1902px){
+	.row_center1{
+		display:inline-block;
+		width:100%;
+	}
+	.row_center2{
+		display:inline-block;
+		width:100%;
+	}
+	.col_image{
+    width: 120%;
+    min-width: 100%;
+    }
+	.row_loc{
+		display: inline-block;
+		width: 300px;
+		padding-left: 1%;
+		padding-right: 1%;
+		margin-top: 10px;
+	}
+	.row_loc1{
+		display: inline-block;
+		width: 300px;
+		padding-left: 1%;
+		padding-right: 1%;
+		margin-top: 10px;
+	}	
+}
+
+
+
+
+
+/*-앱 링크 영역-*/
+
+.app1{
+	height: 55px;    /*구글/애플 스토어 연결*/
+}
+.app2{
+	height: 55px;    /*구글/애플 스토어 연결*/
+}
+.app1:hover{
+	 content: url("../images/main/google1.png");
+}
+.app2:hover{
+	 content: url("../images/main/apple1.png");
+}
+.appWrap{
+	margin-bottom: 50px;
+}
+.apploc{
+	display: inline-block;
+	width: 430px;
+	color:#737373;
+	font-family:"Daum_Regular";
+	font-size:1.5em;
+	font-weight: bold;
+	line-height: 40px;
+	margin: 0 0 0 0;
+}
+
+.appPic{
+	height:250px;
+	margin: 60px 0 0 0;
+}
+.apptxt{
+	margin: 0;
+}
+
+
+
+
+
+
+
+
+/*    포틀렛 영역    */
+.M_portlet{
+   height: 100%;
+   width: 100%;
+   vertical-align: middle;
+   margin:  60px 0 50px 0;
+   background-color:#ffffff; 
+}
+
+.M_ptl{
+	vertical-align: middle;
+    display: inline-block;
+	margin: 0;
+}
+
+.M_ptl ul{
+	clear:both;
+	text-align:left;
+    color:#2D343F;
+    font-size: 15px;
+}
+
+.M_ptl ul li{
+	overflow:hidden; 
+    white-space:nowrap; 
+    text-overflow:ellipsis;
+    width:400px;
+}
+
+
+.M_ptl div{
+	text-align:left;
+	margin:10px 0 20px 30px;
+	font-size:1.3em;
+	font-weight: bold;
+}
+
+
+.M_portlet ul{
+	font-family:"Daum_Regular";
+	padding: 0px;
+	margin: 0 0 0 50px;
+	border-bottom: 2px solid #888;
+	width: 400px;
+    line-height: 30px;
+    
+
+}
+
+.M_portlet ul li{
+	font-family:"Daum_Regular";
+	list-style-type:none; 
+	border-bottom: 1px solid #e6e6e6;
+	padding: 7px 0 0 0;
+    line-height: 30px;
+    cursor: pointer;
+}
+
+.M_portlet ul li:hover {
+	font-family:"Daum_Regular";
+	list-style-type:none; 
+	border-bottom: 1px solid #e6e6e6;
+	padding: 7px 0 0 0;
+    line-height: 30px;
+    background-color: #f3f2f2;
+    cursor: pointer;
+
+}
+
+
+
+.M_ptl div > a{
+	float:right;
+	font-size:2px;
+	text-align: center;
+	background-color:#888888;
+	padding: 0px 1px 6px 1px;
+	height:10px;
+	width: 30px;
+	color: white;
+	border-radius:3px 3px;
+	vertical-align: middle;
+}
+
+.M_ptl div > a:hover{
+	background-color:#007ACC;
+
+}
+
+.M_ptl li > a {
+	color: #2D343F;
+}
+
+/*.M_ptl li a {
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis; 
+}
+
+.line_cut{
+	overflow:hidden; 
+	white-space:nowrap; 
+	text-overflow:ellipsis;
+} */
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------① 메인페이지 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+/*완료*/
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------② 게시판(board List)시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+/* 메뉴아래 사진영역  */
+
+.mid {                /* mid는 페이지의 헤더 바로 아래 해당 페이지 설명 사진 막대를 넣는 영역*/
+	border-top: 2px solid #007ACC;
+	margin: auto;
+	height:96px;
+	background-color: #000000;
+}
+
+
+
+/* 검색창 영역  */
+
+.mid_1{                      /*검색조건 영역 위치*/
+	margin: 30px 0 0 0;
+	text-align: center;
+}
+
+.mid_1 ul{
+	clear:both;
+	height: 40px;
+	margin: auto;
+	padding: 10px 0 0 0px;
+	width:900px;
+}
+
+.selectStyle{                         /*콜그룹에 아래로 내리기 버튼*/
+   font-family:"Daum_Regular";
+   width: 120px;
+   height: 25px;
+   margin: auto;
+   background: url(../images/board/selectbtn.png) no-repeat right #FFFFFF;
+   border: 1px solid #ccc;	
+   -webkit-appearance: none;
+}
+
+.mid_1 .writePlace{
+   font-family:"Daum_Regular";
+   width: 400px;
+   height: 26px;
+   margin: 0 60px 0 60px;
+   
+}
+
+/*.input_btn {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  width:120px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 0.8em;
+  background: #38342e;
+  padding: 6px 15px 6px 16px;
+  margin: 0 10px 0 60px;
+  text-decoration: none;
+  border-color: none;
+}*/
+
+.input_btn {                          /* 검색하기 버튼 */
+	font-family:"Daum_Regular";
+	outline-style:none;
+	box-shadow:none;
+	border-color:transparent;
+	color: #ffffff;
+	background: #38342e;
+	width:100px;
+	font-size: 0.8em;
+	padding: 3px 15px 3px 16px;
+	font-weight: bold;
+}
+
+.input_btn:hover {
+  background-color:#007ACC;
+  /*text-decoration: none;*/
+}
+
+
+
+
+/* 글쓰기 버튼 */
+
+.btn-flow-black{   /* 글쓰기 버튼 a Tag  */
+	color: #FFFFFF;
+	width: 10px;
+	position: relative;
+}
+
+
+
+.list_write_btn{  /* 글쓰기 버튼모양 */
+  width:100px;
+  max-height: 1.4em;
+  font-family: "Daum_Regular";
+  color: #ffffff;
+  font-size: 0.8em;
+  background-color: #38342e;
+  text-decoration: none;
+  text-align: center;
+  height:30px;
+  padding: 2px 0 2px 0;
+}
+
+
+.list_write_btn:hover {  /* 마우스 오버시 글쓰기 버튼모양 */
+  background-color:#007ACC;
+}
+
+
+
+.infoWrite{
+  cursor:pointer;
+  position: relative;
+  left: 970px;
+  width:85px;
+  max-height: 1.8em;
+  font-family: "Daum_Regular";
+  color: #ffffff;
+  font-size: 0.8em;
+  background-color: #38342e;
+  text-decoration: none;
+  text-align: center;
+  height:32px;
+  padding: 2px 0 3px 0;
+
+}
+
+.infoWrite:hover {
+  background-color:#007ACC;
+}
+
+
+.board_list_header{  /* 테이블 해드 목차 스타일 지정 */
+	clear:both;
+	font-family:"Daum_Regular";
+	font-size:0.9em;
+	padding: 0px;
+	margin: 0 0 0 0px;
+	background-color:#3E3A39;
+	color:#FFFFFF;
+	width: 100%;
+    line-height: 30px;	
+}
+
+.board_tb_centering{  /* 테이블에서 1,3,4,5 세로줄 텍스트 가운데 정렬 */
+	text-align: center;
+	color: #000000;
+}
+
+
+.board_tb_title{   /* 테이블에서 제목부분은 왼쪽으로 정렬*/
+	text-align: left;
+}
+
+
+.board_list_mouseOver{ /* 테이블에서 타이틀을 제외한 가로줄에 마우스 오버 전 스타일 */
+	height: 30px;
+	background-color: #ffffff;
+}
+
+.board_list_mouseOver:hover{ /* 테이블에서 타이틀을 제외한 가로줄에 마우스 오버  후 스타일 */
+	background-color: #F3F2F2;
+}
+
+
+
+
+/* 게시판 영역 */
+
+.list_up{          /*게시판 리스트 뒷배경 전체 영역*/
+   height: 100%;
+   width: 100%;
+   vertical-align: middle;
+   margin:  5px 0 60px 0;
+   background-color:#ffffff;
+}
+
+.B_ptl{             /*게시판 리스트 블럭 배경영역*/
+	vertical-align: middle;
+    display: inline-block;
+	margin: auto;
+	min-height: 480px;
+}
+
+
+.list_write_btn{     /*리스트 글쓰기 버튼*/
+	font-family:"Daum_Regular";
+	text-align:center;
+	width:100px;
+	margin: 5px 0 5px 2px;
+	padding-bottom: 8px;
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+
+
+
+
+/*게시판 페이징영역*/
+
+.paging tbody tr:hover{
+	clear:both;
+	margin:auto;
+	background-color:#FFFFFF;
+}
+
+.paging {
+	clear:both;
+	margin: 30px auto;
+	background-color:#FFFFFF;
+}
+
+/*.paging tbody tr td li{
+	cursor:pointer;
+	text-align: center;
+	display:inline-block;
+	margin-top: 10px;
+	margin-left: 3px;
+	border: 1px solid #222222;
+	height: 24px;
+	width: 24px;	
+}*/
+
+.paging tbody tr td li{
+	display:inline-block;
+	margin-top: 10px;
+	margin-left: 3px;
+	height: 24px;
+	width: 24px;	
+}
+
+.board-button, .board-button-selected{
+	cursor:pointer;
+	text-align: center;
+	display:inline-block;
+	margin-top: 10px;
+	margin-left: 3px;
+	border: 1px solid #999999;
+	height: 24px;
+	width: 24px;	
+}
+
+.bottom_btn{
+	height: 26px;
+	margin-top: 31px;
+}
+
+.board-button-selected{
+	background-color: #E6E6E6;
+}
+
+.title_bottom_btn{     /*게시판 읽기시 pre, next 버튼*/
+	height: 20px;
+	width: 20px;
+	margin-top: 10px;
+}
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------② 게시판(board List) 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------②게시판(board), ⑥FAQ 계시판(board) 글쓰기 시작---- */
+/*----------------------------------------------------------------------- */
+
+/*게시판 상단 제목영역*/
+
+
+.menuwrap_board_write{
+	margin: auto;
+	text-align: center;
+	background-color:#261300;
+}
+
+
+
+.title{
+	height: 34px;
+	background-color:#2D343F;
+	text-align:left;
+	color:#FFFFFF;
+}
+
+
+.title_pre_next{
+	cursor:pointer;
+	height: 34px;
+	background-color:#FFFFFF;
+	text-align:left;
+	border-bottom: 1px solid #222222;
+}
+
+
+.input_1{
+	margin-top: 7px;
+	vertical-align: middle;
+	width: 700px;
+	height: 22px;
+	
+}
+
+.portlet{
+   height: 100%;
+   width: 100%;
+   vertical-align: middle;
+   margin:  60px 0 50px 0;
+   background-color:#ffffff; 
+}
+
+.ptl{             /*게시판 리스트 블럭 배경영역*/
+	vertical-align: middle;
+    display: inline-block;
+	margin: auto;
+	min-height: 431px;
+}
+
+.board_title {
+	margin: 15px 15px 15px -180px;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+.board_title1 {
+	margin: 15px 15px 15px 90px;
+	display: inline-block;
+	color: #ffffff;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+
+.save_btn {                          /* 검색하기 버튼 */
+	margin-top: 15px;
+	font-family:"Daum_Regular";
+	outline-style:none;
+	box-shadow:none;
+	border-color:transparent;
+	color: #ffffff;
+	background: #38342e;
+	width:100px;
+	font-size: 0.8em;
+	padding: 3px 15px 3px 16px;
+	font-weight: bold;
+}
+
+.save_btn:hover {
+  background-color:#007ACC;
+  /*text-decoration: none;*/
+}
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑥FAQ 계시판(board) List 시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+.FAQ_brd_wrap{      /*FAQ 게시판 보드 상단 탭 영역*/
+	margin: 0 0 0 -50px;
+	width: 900px;
+}
+
+
+
+.FAQ_board_tab{                /*탭모양*/
+	border-radius: 5px 5px 0px 0px;
+	font-size:0.8em;
+	display:inline-block;
+	background-color: #F2F2F2;
+	width:80px;
+	height:20px;
+	text-align:center;
+	font-weight: bold;
+	padding-top:5px;
+	margin: 0 0 0 0;
+	
+}
+
+.FAQ_board_tab:hover{       /*마우스 오버시 탭모양*/
+	background-color: #3E3A39;
+}
+
+.FAQ_board_tab:hover > a{       /*마우스 오버시 탭모양*/
+	color: #ffffff;
+}
+
+
+
+.FAQ_board_tab_sel {       /*마우스 오버시 탭모양*/
+	background-color: #3E3A39;
+}
+
+.FAQ_board_tab_sel > a {       /*마우스 오버시 탭모양*/
+	color: #ffffff;
+}
+
+
+
+
+.FAQ_board_write_btn{   /*글쓰기 버튼*/
+	font-size:0.8em;
+	background-color:#38342E;
+	display:inline-block;
+	color: #ffffff;
+	width:80px;
+	height:20px;
+	text-align:center;
+	font-weight: bold;
+	padding:3px 0;
+	margin: 0 0 0 270px;
+}
+
+
+.FAQ_board_write_btn:hover{
+	background-color: #007ACC;
+
+}
+
+
+.FAQ_board_tabwrap{
+	margin: auto;
+}
+
+
+.FAQ_board{
+	margin: auto;
+}
+
+.FAQ_tb{
+	margin: auto;
+}
+.FAQ_col{
+	background-color:#3E3A39;
+	color: #ffffff;
+	height: 32px;
+}
+
+.FAQ_col tr th{
+	height: 32px;
+}
+
+
+/*
+.FAQ_board tbody tr{
+	font-family:"Daum_Regular";
+	list-style-type:none; 
+	border-bottom: 1px solid #e6e6e6;
+	padding: 7px 0 0 0;
+	width: 800px;
+    line-height: 25px;
+    background-color: #ffffff;
+}
+
+.FAQ_board tbody tr:hover {
+    background-color: #f3f2f2;
+
+}*/
+
+
+.FAQ_btnWrap{
+	text-align : right;
+	/*margin: 250px 0 0 700px;*/
+}
+
+/*.FAQ_Write_btn{
+	cursor:pointer;
+	display:inline-block;
+	background-color: #404040;
+	height:25px;
+	width:100px;
+	color:#FFFFFF;
+	font-weight:bold;
+	font-size: 0.9em;
+	margin-left: 500px;
+}*/
+
+.FAQ_Write_btn{  /* 글쓰기 버튼모양 */
+  display:inline-block;
+  width:80px;
+  max-height: 1.4em;
+  font-family: "Daum_Regular";
+  color: #ffffff;
+  font-size: 0.8em;
+  background-color: #38342e;
+  text-decoration: none;
+  text-align: center;
+  height:30px;
+  padding: 2px 0 4px 0;
+  margin-left: 276px;
+}
+
+.FAQ_Write_btn a{  /* 글쓰기 버튼 글씨색 */
+  color: #FFFFFF;
+}
+
+
+.FAQ_Write_btn:hover{
+	background-color: #007ACC;
+}
+
+
+
+.FAQ_toggle{
+	background-color:#F4F4F4;
+}
+
+
+.FAQ_toggle_revise_del{
+	cursor:pointer;
+	display:inline-block;
+	background-color:#222222;
+	width: 50px;
+	margin-left:5px;
+	margin-bottom: 10px;
+	margin-top : 10px;
+	margin-right : 5px;
+	color:#FFFFFF;
+	font-size:0.8em;
+	padding: 3px 0;
+	text-align : center;
+}
+
+.FAQ_toggle_revise_del:hover{
+	background-color:#007ACC;
+}
+
+
+
+
+.contlist_btn {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  width:30px;
+  max-height: 1.3em;
+  font-family: Arial;
+  color: #FFFFFF;
+  font-size: 0.7em;
+  background: #38342e;
+  padding: 6px 15px 6px 16px;
+  /*margin: 0 10px 40px 60px;*/
+  margin-left : 5px;
+  text-decoration: none;
+  border-color: none;
+  float: right;
+  height:30px;
+}
+
+.contlist_btn:hover {
+  -webkit-border-radius: 3;
+  -moz-border-radius: 3;
+  border-radius: 3px;
+  width:30px;
+  max-height: 1.3em;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 0.7em;
+  background: #007ACC;
+  padding: 6px 15px 6px 16px;
+  /*margin: 0 10px 40px 60px;*/
+  text-decoration: none;
+  border-color: none;
+  float: right;
+  height:30px;
+
+	
+}
+
+
+.title_con p{
+	text-align: left;	
+}
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑥FAQ 계시판(board) List끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_0번 사전점검 화면 시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+.regi_process_ex_img{       /*사전체크리스트 사진*/
+	margin: 30px auto;
+}
+
+.pc_bottom_loc{       /*사전체크리스트 체크박스 및 검색 전체 영역*/
+	margin: 0px auto 30px auto;
+	width:940px;
+	height: 120px;
+	background-color:#F2F2F2;
+}
+
+.process_chk1{         /*홈텍스 가입 유무 , 메뉴얼*/
+	margin-top: 10px;
+	vertical-align: middle;
+	text-align: left;
+	display:inline-block;
+	width: 300px;
+	height: 200px;
+}
+
+.pc_chk{               /*홈텍스 가입 유무 - 질문들 */
+   margin-top: 5px;
+   font-size:0.9em;
+   
+}
+
+
+
+.process_chk2{          /*영업코드 발급, 확인*/
+	margin-top: 10px;
+	vertical-align: middle;
+	text-align: left;
+	display:inline-block;
+	width: 300px;
+	height: 200px;
+}
+
+ 
+.process_chk3{          /*영업코드 검색 확인*/
+	margin-top: 10px;
+	vertical-align: middle;
+	text-align: left;
+	display:inline-block;
+	width: 300px;
+	height: 200px;
+}
+
+
+.pc_search{               /*서치 박스 인풋 덥는 div*/
+   display: inline-block;
+   font-size:0.9em;
+
+}
+
+.search_box{              /*서치 박스 인풋박스*/
+	width: 210px;
+	height:19px;
+	display: inline-block;
+	font-size:0.8em;
+}
+
+.s_btn{                  /*서치 박스 확인버튼*/
+	cursor:pointer;
+	display: inline-block;
+	margin-top: 2px;
+	text-align:center;
+	color:#FFFFFF;
+	padding: 3px 0;
+	background-color:#007ACC;
+	width:40px;
+	height:18.5px;
+	font-size:0.8em;
+}
+
+.pc_search_box{          /*서치 박스 결과 영역*/
+	background-color:#FFFFFF;
+	height:60px;
+	width:252px;
+	margin-left: 14px;
+	border: 1px solid #CDC5B9;
+    font-size:0.8em;
+    color:#888888;
+}
+
+.next_btn{                /*다음 버튼*/
+	clear:both;
+	margin: 20px auto;
+	padding: 5px;
+	text-align: center;
+	cursor:pointer;
+	width:60px;
+	height:25px;
+	background-color: #007ACC;
+	color: #FFFFFF;
+	font-size: 1em;
+	font-weight: bold;
+}
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_0번 사전점검 화면 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_1번 약관동의 화면 시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+/*-약관동의 및 개인정보 수집 이용동의-*/
+
+.agr_img{         /*등록 프로세스 바 위치 영역*/
+	margin: auto;
+	width: 1200px;
+	
+}
+
+.agr_title{        /*약관동의 <- 타이틀 영역*/
+	width: 350px;
+	margin-top: 50px;
+}
+
+
+
+
+.agr1_1, .agr2_1 {      /*이용약관 1, 2 내용 박스*/
+	display:block;
+	margin: 20px auto;
+	resize:none;
+	border: 1px solid #888888;
+	width: 1000px;
+	height: 200px;
+	min-width: 800px; 
+	max-width: 1200px;
+	overflow: scroll;
+	background-color:#F2F2F3;
+}
+
+
+.agrwrap{
+	margin: 0 auto 0px auto;
+	width:100%;
+}
+
+ /*각 조항 관련*/
+.clause {       
+	text-align:left;
+	margin: 0 10px 0 10px;
+}
+
+.clause h2{
+	color:#007ACC;
+	font-weight:bold;
+}
+
+.legalToc{
+	text-align:left;
+}
+
+.legalToc a:link{
+	text-decoration: none;
+	color: black;
+}
+
+.legalToc :visited{
+	text-decoration: none;
+	color: black;
+}
+
+
+.regi_btn1{          /* 동의 버튼 */
+	cursor:pointer;
+	display:inline-block;
+	background-color:#007ACC;
+	color:#FFFFFF;
+	height:27px;
+	width:82px;
+	margin: 20px auto;
+	text-align:center;
+	padding: 5px;
+	font-weight:900;
+	font-size: 1em;
+}
+
+.regi_btn2{          /* 동의 안함 버튼 */
+	cursor:pointer;
+	display:inline-block;
+	background-color:#CCCCCC;
+	color:#737373;
+	height:27px;
+	width:82px;
+	margin: 20px auto;
+	text-align:center;
+	padding: 5px;
+	font-weight:900;
+	font-size: 1em;	
+}
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_1번 약관동의 화면 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_2번 기본정보 입력 화면 시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+/*--기본정보 입력---*/
+
+.agrwrap1{
+	height:650px;
+}
+
+.agr_table{
+	margin:auto;
+	border: 1px soild #000000;
+}
+
+.agr_title{
+	margin: 20px 700px 10px 0px;
+}
+
+table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    text-align:center;
+    vertical-align: middle;
+}
+
+
+
+.agr_table tr td {
+	width: 200px;
+	min-width:200px;
+    height: 35px;	
+}
+
+.agr_table tr td:nth-child(1), .agr_table td:nth-child(3) {
+	background-color:#CDC5B9;
+	font-weight:bold;
+	font-size:0.9em;
+
+}
+
+.agr_table tr td:nth-child(2), .agr_table td:nth-child(4){
+	background-color:  #f4f3f0;
+	font-size:0.8em;
+}
+
+.agr_table tr td:nth-child(2){
+	width:300px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+/*
+.time{
+	width:25px;
+}
+.time1{
+	width:60px;
+}*/
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_2번 기본정보 입력 화면 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_3번 추가정보1 입력 화면 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+.agr_info_input_table{
+	margin:auto;
+	border: 1px soild #000000;
+}
+
+
+table, tr, th, td {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+    text-align:center;
+    vertical-align: middle;
+}
+
+
+
+.agr_info_input_table tr td {
+	width: 200px;
+	min-width:200px;
+    height: 35px;	
+}
+
+.agr_info_input_table tr td:nth-child(1), .agr_info_input_table td:nth-child(3) {
+	background-color:#CDC5B9;
+	font-weight:bold;
+	font-size:0.9em;
+
+}
+
+.agr_info_input_table tr td:nth-child(2), .agr_info_input_table td:nth-child(4){
+	background-color:  #f4f3f0;
+	font-size:0.8em;
+	width: 300px;
+	min-width:300px;
+	text-align: left;
+	padding-left: 10px;
+}
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_3번 추가정보1 입력 화면 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_4번 가입완료 화면 시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+/*
+.null{
+	margin: 100px auto;
+}*/
+
+.comp_register{
+	margin: auto;
+	width:750px;
+	border: 2px solid #007ACC;
+}
+.comp_img{
+	margin: 0 0 5px 0;
+}
+
+.com_id{
+	display: inline-block;
+	margin-bottom: 30px;
+	
+}
+
+.com_id_span1{
+	font-size:2.1em;
+	font-weight: bold;
+	color:#737373;
+	margin-left:40px;
+}
+
+
+.com_id_span2{
+	font-size:2em;
+	margin-left:40px;
+}
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------⑦  register_4번 가입완료 화면 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------세무 정보 게시판 가입완료 화면 시작------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+
+
+.TaxCal{
+	margin: auto;
+	background-color:#F2F2F2;
+	height: 200px;
+}
+
+
+
+.TaxInfo_title tr:nth-child(1){
+	height:30px;
+	background-color:#404040;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#FFFFFF;
+
+}
+
+
+.TaxInfo_title tr:nth-child(2) .TaxInfo_title td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+
+.TaxInfo_title tr:nth-child(3) .TaxInfo_title td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+.TaxInfo_title tr:nth-child(4) .TaxInfo_title td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+.TaxInfo_title tr:nth-child(5) .TaxInfo_title td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+.TaxInfo_title tr:nth-child(6) .TaxInfo_title td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+.Tax_1{
+	margin: auto;
+	background-color: #404040;
+	color:#FFFFFF;
+}
+
+
+
+.TaxCal2{
+	margin: auto;
+	background-color:#F2F2F2;
+	height: 200px;
+}
+
+
+.cal_4{
+	background-color: #C6D9F1;
+}
+
+
+
+
+
+
+
+
+.cal_1{
+	background-color: #F4E3E2;
+}
+
+.cal_2{
+	background-color: #CA3A3A;
+	color:#ffffff;		
+}
+.col_3{
+	clear:both;
+	background-color: #F4E3E2;
+}
+
+
+.info_wrap{
+	cursor:pointer;
+	background-color: #E8F3FE;	
+	width: 920px;
+	height: 240px;
+	margin: 20px auto;
+	box-shadow: 3px 3px 1px #888;
+	border: 1px soild #ffffff;
+}
+
+
+.TaxInfo_board1{
+	display:inline-block;
+	width: 630px;
+	height: 220px;
+	margin: 20px auto;
+	
+}
+
+.TaxInfo_board2{
+	display:inline-block;
+	width: 270px;
+	height: 120px;
+	margin: 20px auto;
+	
+}
+
+.info_tag_img1{
+	margin-left:-6px;
+	
+}
+
+
+
+.info_tag{
+	width:600px;
+	margin: -26px 0 0 -10px ;
+	text-align: left;
+	
+}
+
+
+.p_title{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #31859C;
+	width: 600px;
+	padding: 0px 23px;
+}
+
+.p_title1{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #AFA89C;
+	width: 600px;
+}
+
+.p_title2
+{
+	font-size: 0.8em;
+    font-weight: bold;
+    color: #AFA89C;
+    width: 470px;
+    padding: 0px 25px;
+}
+
+.p_title3
+{
+	font-size: 0.8em;
+    font-weight: bold;
+    color: #AFA89C;
+    width: 470px;
+   	text-align : center;
+}
+
+.info{
+	display: inline-block;
+	text-align: right;
+}
+
+
+.more_see_btn{
+	cursor:pointer;
+	background-color: #edf3f9;
+	width: 920px;
+	height: 35px;
+	margin: 20px auto;
+	color:#C6D9F1;
+	padding-top: 5px;
+	font-size: 1em;
+	box-shadow: 1px 1px 0.5px #888;
+	border: 1px soild #ffffff;
+	
+}
+
+.more_see_btn:hover{
+	color:#007ACC;
+	font-weight: bold;
+}
+
+
+/*----------------------------------------------------------------------- */
+/*-------------------------세무 정보 게시판 가입완료 화면 끝------------------------------------ */
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------- */
+/*---------------------------Personal_info 영역 시작------------------------*/
+/*----------------------------------------------------------------------- */
+
+
+
+
+
+
+
+
+/* 메뉴아래 사진 배경영역  */
+
+.mid_for_personal {
+	
+	border-top: 2px solid #007ACC;
+	margin: auto;
+	height:96px;
+	background-color: #D3DDE8;
+
+}
+/* 메뉴아래 사진 배경영역 끝 */
+
+
+
+/*Personal information 전체 배경 영역*/ 
+.P_info_bg{
+	margin: auto;
+	height: 100%;
+	/*background-color: #E6E6E6;*/
+}
+
+
+.Person_bd{   /*전체배경 가운데 컨텐츠 영역*/
+	margin: 10px auto;
+	width: 1100px;
+	height: 100%;
+	background-color: #D7D9DB;
+}
+
+
+
+/*----------개인정보 시작 --------------*/
+
+/*스팬요소 비었을때 파란색 바 표현*/
+.p_info_title:empty{
+	display:inline-block;
+	font-size: 2em;
+	width: 8px;
+	height: 28px;
+	background:#007ACC;
+}
+.p_info_title{    /*타이틀 글씨 지정*/
+	vertical-align: text-bottom;
+	font-size: 1.5em;
+	width: 8px;
+	height: 30px;
+}
+
+
+.p_info_revise_btn{     /*정보수정버튼*/
+	border-radius: 3px;
+	cursor:pointer;
+	text-align: center;
+	float: right;
+	width:55px;
+	margin-top: 10px;
+	margin-right: 10px;
+	height: 20px;
+	font-size: 0.8em;
+	background-color:#3E3A39;
+	color:#FFFFFF;
+	padding: 2px 5px;
+}
+.p_info_revise_btn:hover{
+	background-color:#0099FF;
+}
+
+
+
+
+.Person_info_1_bg{    /*개인정보현황 백그라운드*/
+	display: inline-block;
+	width: 1080px;
+	/*height: 250px;*/
+	margin: 10px;
+	background-color: #F2F2F2;
+}
+
+.Person_info_1{   /*개인정보현황 상단 제목*/
+	width: 1050px;
+	margin: 10px auto;
+}
+
+
+.Person_info_1_pic{    /*개인정보현황 사진배경영역*/
+	display:inline-block;
+	margin-left: 20px;
+	width:160px;
+	/*height:188px;*/
+	background-color:#BFBFBF;
+}
+
+.Person_info_1_pic img{  /*개인정보현황 사진영역*/
+	margin: 5px 5px 0px 5px;
+}
+.Person_info_1_pic_revise_btn1{    /*개인정보현황 사진 수정버튼*/
+	border-radius: 3px;
+	cursor:pointer;
+	margin-left: 40px;
+	margin-bottom: 3px;
+	text-align:center;
+	display:inline-block;
+	font-size: 0.8em;
+	height: 20px;
+	width: 35px;
+	background-color:#3E3A39;
+	color:#FFFFFF;
+}
+.Person_info_1_pic_delete_btn2{  /*개인정보현황 사진 삭제버튼*/
+	border-radius: 3px;
+	cursor:pointer;
+	margin-left: 10px;
+	text-align:center;
+	display:inline-block;
+	font-size: 0.8em;
+	height: 20px;
+	width: 35px;
+	background-color:#3E3A39;
+	color:#FFFFFF;
+}
+
+.Person_info_1_pic_revise_btn1:hover ,.Person_info_1_pic_delete_btn2:hover{
+	background-color:#0099FF;
+}
+
+
+ 
+.Person_info_1_con1{      /*개인정보 세부내용배경*/
+	display:inline-block;
+	vertical-align:top;
+	margin-left: 0px;
+	width:700px;
+	/*height:188px;*/
+	background-color:#FFFFFF;
+	text-align: center;
+}
+
+.Person_info_1_con1 table{        /*개인정보 세부내용 테이블*/
+	height: 170px;
+	border-collapse: collapse;
+	border: 1px solid #FFFFFF;
+}
+
+.Person_info_1_tb td {              /*개인정보 세부내용 라인스타일*/
+	border: 1px solid #FFFFFF;
+}
+
+
+.Person_info_1_tb{        /*개인정보 세부내용 테이블 위치, 바탕색*/
+	margin-top: 10px;
+	margin-left: 10px;
+	font-size:0.9em;
+	background-color:#F3F2F2;
+}
+
+.Person_info_1_tb tr td:nth-child(1){   /*개인정보 세부내용 테이블 세로 첫째줄 크기 및 스타일*/
+	width: 100px;
+	text-align:center;
+}
+
+.Person_info_1_tb tr td:nth-child(2){    /*개인정보 세부내용 테이블 세로 둘째줄 크기 및 스타일*/
+	width: 570px;
+	text-align:left;
+}
+
+
+.Person_info_1_con2{           /*회원등급 배경*/
+	display:inline-block;
+	vertical-align:top;
+	margin-left: 0px;
+	width:175px;
+	/*
+	height:188px;
+	*/
+	background-color:#FFFFFF;
+}
+
+.Person_info_1_con2_lv{    /*회원등급 타이틀*/
+	font-size: 0.9em;
+	margin-top:5px;
+	text-align:center;
+}
+
+
+/*----------------개인정보  끝 --------------*/
+
+
+
+
+
+
+
+/*----------------회사정보 시작 --------------*/
+
+.Person_info_2_bg{      
+	display: inline-block;
+	width: 527px;
+	height: 260px;
+	margin: 10px;
+	background-color: #F2F2F2;
+}
+
+.Person_info_2{
+	margin: 10px;
+	width: 515px;
+}
+
+.Person_info_2_con1{
+	vertical-align:middle;
+	display:inline-block;
+	background-color:#FFFFFF;
+	width: 500px;
+	margin-left:15px;
+	height:180px;
+}
+
+
+
+.Person_info_2_con1 table{
+	height: 160px;
+	border-collapse: collapse;
+	border: 1px solid #FFFFFF;
+	background-color:#F3F2F2;
+}
+
+.Person_info_2_tb{	
+	margin-top: 10px;
+	margin-left: 5px;
+	font-size:0.9em;
+	background-color:#F3F2F2;
+}
+
+
+.Person_info_2_tb td {
+	border: 1px solid #FFFFFF;
+}
+
+
+.Person_info_2_tb tr td:nth-child(1){
+	width: 100px;
+	text-align:center;
+}
+
+
+.Person_info_2_tb tr td:nth-child(2){
+	width: 380px;
+	text-align:left;
+}
+
+
+/*----------------회사정보 끝 --------------*/
+
+
+
+
+
+/*----------------납부할 세액 시작 --------------*/
+
+.Person_info_2_con1 select{       /*세무신고 기수선택*/
+	height:22px;
+	font-size:1em;
+}
+
+.kisu{                           /*세무신고 기수위치*/
+   margin-left:75px;
+   margin-top:10px;
+}
+
+.p_info_print_btn{               /*플린트 버튼 스타일*/
+	border-radius: 3px;
+	cursor:pointer;
+	text-align: center;
+	width:55px;
+	margin-top: 10px;
+	margin-right: 10px;
+	height: 20px;
+	font-size: 0.8em;
+	background-color:#0099FF;
+	color:#FFFFFF;
+	padding: 2px 5px;
+}
+.p_info_print_btn:hover{
+	background-color:#0099FF;
+}
+
+
+.Person_info_2_con2{              /*납부할 세액 내용배경*/
+	vertical-align:middle;
+	display:inline-block;
+	background-color:#FFFFFF;
+	width: 500px;
+	margin-left:15px;
+	height:180px;
+	
+}
+
+
+
+.Person_info_2_con2 table{          /*납부할 세액내역 테이블*/
+	border-collapse: collapse;
+	margin: 10px auto;
+	height: 100px;
+	width: 350px;
+	border : 2px solid #385D8A;
+	background-color:#FFFFFF;
+}
+
+.Person_info_2_con2 table tr td{     /*납부할 세액내역 테이블 라인 스타일*/
+	border: 2px solid #385D8A;
+}
+
+.Person_info_2_con2 table tr td:nth-child(1){   /*납부할 세액내역 테이블 라인 1번 세로줄 글씨위치 */
+	text-align:center;
+	
+}
+.Person_info_2_con2 table tr td:nth-child(2){    /*납부할 세액내역 테이블 라인 2번 세로줄 글씨위치 */
+	text-align:right;
+}
+
+
+
+/*----------------납부할 세액 끝--------------*/
+
+
+
+
+
+/*----------------1:1 문의 게시판 시작--------------*/
+
+.Person_info_3_bg{
+	margin:auto;
+	display: inline-block;
+	width: 1080px;
+	margin: 10px;
+	background-color: #F2F2F2;
+}
+
+.Person_info_3{
+	width: 1050px;
+	margin: 10px auto;
+}
+
+
+
+.QNA_wr{
+	background-color:#F2F2F2;
+	height: 130px;
+	width: 800px;
+	margin: 0px auto 0px auto;
+	text-align:left;
+}
+
+
+.QNA_hdtext{
+	background-color:#FFFFFF;
+	padding: 20px;
+	margin: 0px auto;
+	vertical-align: middle;
+	text-align:left;
+	line-height: 150%;
+	font-size: 0.9em;
+}
+
+
+
+.QNA_wrSpace{
+	width: 676px;
+	max-width: 800px;
+	height: 160px;
+	/*max-height: 360px;*/
+	margin: 10px 0 0 0;
+	overflow-y: scroll;
+	font-size: 1.1em;
+	resize: none;
+}
+
+.neyong{
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	vertical-align: text-bottom;
+	text-align: center;
+	font-weight: bold;
+}
+
+.QNA_input .title{
+	display:inline;
+	text-align:left;
+	height: 40px;
+	width:100%;
+	font-size: 1em;
+}
+
+.Qt_title{
+	font-weight:bold;
+}
+
+.QNA1{
+	margin: 10px auto;
+	display: none;
+}
+
+.QNA_input{
+	border-top:1px solid #737373;
+	border-bottom:1px solid #737373;
+	height: 244px;
+	width:800px;
+	text-align:center;
+	margin: 0 auto 10px auto;
+	background-color:#FFFFFF;
+	
+}
+
+.input_1{
+	width:680px;
+	margin: 5px 0 0 0;
+	padding: px 0 0 0;
+}
+
+.input_1_faq{
+	width:580px;
+	margin: 5px 0 0 0;
+	padding: px 0 0 0;
+}
+
+
+.QNA_entrbtn1{
+	border-radius: 3px;
+	margin: 0px 0 0 700px;
+	cursor:pointer;
+	/*display: inline;*/
+	width:70px;
+	background-color:#3E3A39;
+	color: #FFFFFF;
+	padding: 5px;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+
+.QNA_entrbtn1:hover{
+	background-color:#0099FF;
+}
+
+
+.QNA_contx{
+	background-color: #38342E;
+	color: #FFFFFF;
+}
+
+
+
+
+
+.QNA_line tr{
+	height:30px;
+	border-bottom:1px solid #8A8F94;
+	background-color: #FFFFFF;
+}
+
+.QNA_line tr:hover{
+		background-color: #F3F2F2;
+}
+
+
+.QNA_line table{
+	margin: auto;
+	border-collapse:collapse;
+	
+}
+
+
+
+.QNA_line tr td:nth-child(2){
+	text-align: left;
+	cursor:pointer;
+}
+
+
+
+
+.answer{
+	background-color: #F4F3F0;
+	height: 100px;
+
+}
+.QNA_list{
+	width: 900px;
+	margin: 30px auto;
+	text-align: left;
+	
+}
+
+.QNA_tb{
+	width: 800px;
+	margin: auto;
+	border-bottom: 1px solid #007ACC;
+	border-collapse:collapse;
+}
+
+
+
+.Q_btnwrap{
+	margin: 10px 0 0 780px;
+}
+.QNA_preBtn{
+	cursor:pointer;
+	border-radius: 10px 10px;
+    display:inline-block;	
+	height: 20px;
+	width: 20px;
+	background-color:#2D343F;
+	vertical-align: middle;
+	padding-top: 3px;
+	color:#FFFFFF;
+	margin-right: 2px;
+	font-size: 0.8em;
+	text-align: center;
+}
+.QNA_nextBtn{
+	cursor:pointer;
+	border-radius: 10px 10px;
+	display:inline-block;
+	height: 20px;
+	width: 20px;
+	background-color:#2D343F;
+	vertical-align: middle;
+	padding-top: 3px;
+	color:#FFFFFF;
+	margin-right: 2px;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.per_btn1{          /* 동의 버튼 */
+	cursor:pointer;
+	display:inline-block;
+	background-color:#007ACC;
+	color:#FFFFFF;
+	height:27px;
+	width:82px;
+	margin: 5px auto;
+	text-align:center;
+	padding: 5px;
+	font-weight:900;
+	font-size: 1em;
+}
+
+.per_btn2{          /* 동의 안함 버튼 */
+	cursor:pointer;
+	display:inline-block;
+	background-color:#CCCCCC;
+	color:#737373;
+	height:27px;
+	width:82px;
+	margin: 5px auto;
+	text-align:center;
+	padding: 5px;
+	font-weight:900;
+	font-size: 1em;	
+}
+
+/* ------------> 1:1 문의 신규 ---------------------*/
+.QNA_list_contents{width:800px; margin: 30px auto;}
+.text_div_title{padding: 0 5px;font-size: 20px;font-weight: bold;padding: 20px 30px;}
+.bg_gray_style{background-color: #A4A4A4;color: white;	}
+
+ul.qnalist	{list-style:none; margin:0; padding:5px;background-color: white;}
+ul.qnalist li {/*border-radius:10px */width: 100%;border-collapse: collapse;border-bottom: 1px solid #A4A4A4;s}
+ul.qnalist li.header {background-color: #A4A4A4;color: white;width:100%;}
+ul.qnalist li.header .text{font-size: 20px;font-weight: bold;padding: 20px 30px;}
+ul.qnalist li .more {text-align: center;padding: 10px 0;cursor: pointer;}
+ul.qnalist li.none {padding: 10px 5px;text-align: center;}
+/*title*/
+ul.qnalist li span.list_header {margin: 0;line-height: 34px;/*border-radius:1px;border: 1px solid #A4A4A4;*/}
+ul.qnalist li span.list_header .title:HOVER, ul.qnalist li .more:HOVER{cursor: pointer;background-color: #F2F2F2;}
+ul.qnalist li span.list_header .title{vertical-align: middle;padding: 0 0 0 20px;color: black;background-color:white;position: relative;}
+ul.qnalist li span.list_header .title span {display: block; float: left;}
+ul.qnalist li span.list_header .title span:nth-of-type(1){width: 10%;}
+ul.qnalist li span.list_header .title span:nth-of-type(2){width: 60%;}
+ul.qnalist li span.list_header .title span:nth-of-type(3){width: 15%;}
+ul.qnalist li span.list_header .title span:nth-of-type(4){width: 10%;margin: 3px;}
+
+ul.qnalist li span.list_header .title span.noreply{border:1px solid #A4A4A4;border-radius:5px;color: #A4A4A4;text-align: center;font-size: 12px;line-height: 25px}
+ul.qnalist li span.list_header .title span.reply{border:1px solid #00BFFF;border-radius:5px;color: #00BFFF;text-align: center;font-size: 12px;line-height: 25px}
+
+/*contents */
+ul.qnalist li div.list_contents {/*border: 1px solid #A4A4A4;border-radius:1px*/;display: none;border-top: 1px solid #A4A4A4;}
+ul.qnalist li div.list_contents div{border-collapse: collapse;	}
+ul.qnalist li div.list_contents div.words{border: 0; padding: 10px 0 10px 30px;margin-top : 10px;}
+ul.qnalist li div.list_contents div.answer{border-top: 1px solid #A4A4A4;padding: 20px 0 0 60px;background: white;margin-top : 10px;height: 100%;/*border-radius:1px;*/}
+
+ul.qnalist li div.list_contents div.words .icon{border:1px solid #A4A4A4;border-radius:5px;font-size: 12px;color: #A4A4A4;font-weight: bold;display: inline-block;padding: 3px;}
+ul.qnalist li div.list_contents div.answer .icon{border:1px solid #00BFFF;border-radius:5px;font-size: 12px;color: #00BFFF;font-weight: bold;display: inline-block;padding: 3px;}
+
+.QNA_list_footer{background-color: white;padding: 5px 30px 0 0;min-height: 50px;text-align: right;margin: auto;}
+/*
+.QNA_list_footer div.q_footer_left{background-color: white;width: 85%;float: left;padding-left: 25px;}
+.QNA_list_footer div.q_footer_right{background-color: white;width: 10%;float: left;text-align: right;}
+*/
+.QNA_write_btn{float:right; color: #FFFFFF;border-radius: 3px;cursor:pointer;width:70px;background-color:#3E3A39;padding: 5px;font-size: 0.8em;font-weight: bold;text-align: center;}
+.answer_write_btn{color: #FFFFFF;border-radius: 3px;cursor:pointer;width:70px;background-color:#3E3A39;padding: 5px;font-size: 0.8em;font-weight: bold;text-align: center;margin-bottom: 10px;}
+.qna_search_btn{background-color: #3E3A39;color: #FFFFFF;font-weight: bold;border: 0;line-height: 20px;cursor:pointer;width:70px;}
+
+.QNA_write_btn:hover, .qna_search_btn:hover{background-color:#0099FF;}
+.answer_write_btn:hover{background-color:#0099FF;}
+
+.qnalist_search{background-color: white;padding: 5px 2px;text-align: center;display: none;}
+
+/*----------------------------------------------------------------------- */
+/*---------------------------Personal_info 영역 끝------------------------*/
+/*----------------------------------------------------------------------- */
+
+.tax_msg
+{
+	padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+

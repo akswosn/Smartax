@@ -1,0 +1,968 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+
+		<!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+		Remove this if you use the .htaccess -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+		<title>부가세 신고서</title>
+		<meta name="description" content="">
+		<meta name="author" content="Administrator">
+
+		<meta name="viewport" content="width=device-width; initial-scale=1.0">
+
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" href="./print_out_add_tax_claim.css">
+		<style>
+			@page a4sheet { size: 21.0cm 29.7cm }
+			.a4 { page : a4sheet; page-break-after : always; padding: 10px 0px;}
+		</style>
+		<script type="text/javascript" src="../jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="./print_out_add_tax_claim.js?ver=1"></script>
+	</head>
+
+	<body>
+		<div class="a4">
+			<div class="wrap">
+				<div class="title_top">
+					<table>
+						<tr>
+							<th class="title_top_1">■ 부가가치세법 시행규칙 [별지 제12호서식] <br>&#60;개정 2011.6.23&#62;</th>
+							<th class="title_top_2">[전자신고제출분]</th>
+							<th class="title_top_3">홈텍스(www.hometax.go.kr)에서도 <br>신청할 수 있습니다.</th>
+						</tr>
+					</table>
+				</div>
+				<div class="title">
+					<span class="title-text1">일반과세자 부가가치세</span>
+					<div>[ <span id="title1">&nbsp;</span> ] 예정 [  <span id="title2">&nbsp;</span> ] 확정</div>
+					<div>[ <span id="title3">&nbsp;</span> ] 기한후과세표준</div>
+					<div>[ <span id="title4">&nbsp;</span> ] 영세율 등 조기 환급</div>
+					<span class="title-text2">신고서</span>
+				</div>
+				<table class="tbl-1">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 5%;">
+						<col style="width: 10%;">
+						<col style="width: 15%;">
+						<col style="width: 10%;">
+						<col style="width: 10%;">
+						<col style="width: 15%;">
+						<col style="width: 15%;">
+						<col style="width: 15%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td colspan="4" class="tbl-1_top">관리번호</td>
+							<td colspan="4" class="tbl-1_top">처리기간 즉시</td>
+						</tr>
+						<tr>
+							<td colspan="8">
+										□ 신고기간 <span id="yyyy">2011</span>년 <span id="gi">1</span>기
+										(<span id="from_mouth">1</span>월 <span id="from_day">31</span>일 
+										~ <span id="to_mouth">6</span>월 <span id="to_day">30</span>일)
+							</td>
+						</tr>
+						<tr>
+							<th scope="row" rowspan="3" class="alignC">사<br>업<br>자</th>
+							<th scope="row" class="alignC">상호<br>(법인명)</th>
+							<td id="co_nm">(주)포근한세상</td>
+							<th scope="row" class="alignC">성명<br>대표자명</th>
+							<td id="daepyo_nm">박흥서</td>
+							<th scope="row" class="alignC">사업자등록번호</th>
+							<td colspan="2" class="alignC" id="co_no">140-81-06261</td>
+						</tr>
+						<tr>
+							<th scope="row" class="alignC">주민(법인)<br>등록번호</th>
+							<td colspan="2" id="co_reg_no">135511-0156767</td>
+							<th scope="row" class="alignC">전화번호</th>
+							<td class="alignC">사업장<br><span id="tel_co">031-903-8509</span></td>
+							<td class="alignC">주소지<br><span id="tel_home">031-903-8509</span></td>
+							<td class="alignC">휴대전화<br><span id="tel_phone">031-903-8509</span></td>
+						</tr>
+						<tr>
+							<th scope="row" class="alignC">사업장주소</th>
+							<td colspan="3" id="address">충청북도 괴산군 청안면 칠보로 368-63</td>
+							<th scope="row" class="alignC">전자우편주소</th>
+							<td colspan="2" id="email">mizz9697@nate.com</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-1 mgT2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 6%;">
+						<col style="width: 10%;">
+						<col style="width: 25%;">
+						<col style="width: 5%;">
+						<col style="width: 22%;">
+						<col style="width: 10%;">
+						<col style="width: 22%;">
+					</colgroup>
+					<thead>
+						<tr>
+							<th scope="col" colspan="7">①  신고내용</th>
+						</tr>
+						<tr>
+							<th scope="col" colspan="4">구분</th>
+							<th scope="col">금액</th>
+							<th scope="col">세율</th>
+							<th scope="col">세액</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th class="bg-color-2 alignC" scope="row" rowspan="9">과<br>세<br>표<br>준<br>및<br>매<br>출<br>세<br>액</th>
+							<th scope="row" rowspan="4" class="alignC">과세</th>
+							<th scope="row" class="alignC">세금계산서발급분</th>
+							<th class="bg-color-2 alignC" scope="row">(1)</th>
+							<td id="price1" class="alignR">&nbsp;</td>
+							<td class="alignC">10/100</td>
+							<td id="tax1" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" class="alignC">매입자발행세금계산서</th>
+							<th class="bg-color-2 alignC" scope="row">(2)</th>
+							<td id="price2" class="alignR">&nbsp;</td>
+							<td class="alignC">10/100</td>
+							<td id="tax2" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" class="alignC">신용카드 현금영수증발행분</th>
+							<th class="bg-color-2 alignC" scope="row">(3)</th>
+							<td id="price3" class="alignR">&nbsp;</td>
+							<td class="alignC" rowspan="2">10/100</td>
+							<td id="tax3" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" class="alignC">기타(정규영수증외매출분)</th>
+							<th class="bg-color-2 alignC" scope="row">(4)</th>
+							<td id="price4" class="alignR">&nbsp;</td>
+							<td id="tax4" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" rowspan="2" class="alignC">영세율</th>
+							<th scope="row" class="alignC">세금계산서발급분</th>
+							<th class="bg-color-2 alignC" scope="row">(5)</th>
+							<td id="price5" class="alignR">&nbsp;</td>
+							<td class="alignC">0/100</td>
+							<td id="tax5" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" class="alignC">기타</th>
+							<th class="bg-color-2 alignC" scope="row">(6)</th>
+							<td id="price6" class="alignR">&nbsp;</td>
+							<td class="alignC">0/100</td>
+							<td id="tax6" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">예정신고누락분</th>
+							<th class="bg-color-2 alignC" scope="row">(7)</th>
+							<td id="price7" class="alignR">&nbsp;</td>
+							<td class="">&nbsp;</td>
+							<td id="tax7" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">대손세액가감</th>
+							<th class="bg-color-2 alignC" scope="row">(8)</th>
+							<td id="price8" class="alignR">&nbsp;</td>
+							<td class="">&nbsp;</td>
+							<td id="tax8" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">합계</th>
+							<th class="bg-color-2 alignC" scope="row">(9)</th>
+							<td id="price9" class="alignR">&nbsp;</td>
+							<td class="alignC">㉮</td>
+							<td id="tax9" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th class="bg-color-3 alignC" scope="row" rowspan="8">매<br>입<br>세<br>액</th>
+							<th scope="row" rowspan="2" class="alignC">세금계산서<br>수취분</th>
+							<th scope="row" class="alignC">일반매입</th>
+							<th class="bg-color-3 alignC" scope="row">(10)</th>
+							<td id="price10" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax10" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" class="alignC">고정자산매입</th>
+							<th class="bg-color-3 alignC" scope="row">(11)</th>
+							<td id="price11" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax11" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">예정신고누락분</th>
+							<th class="bg-color-3 alignC" scope="row">(12)</th>
+							<td id="price12" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax12" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">매입자발행세금계산서</th>
+							<th class="bg-color-3 alignC" scope="row">(13)</th>
+							<td id="price13" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax13" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">기타공제매입세액</th>
+							<th class="bg-color-3 alignC" scope="row">(14)</th>
+							<td id="price14" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax14" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">합계((10)+(11)+(12)+(13)+(14))</th>
+							<th class="bg-color-3 alignC" scope="row">(15)</th>
+							<td id="price15" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax15" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">공제받지못할매입세액</th>
+							<th class="bg-color-3 alignC" scope="row">(16)</th>
+							<td id="price16" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax16" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">차감계</th>
+							<th class="bg-color-3 alignC" scope="row">(17)</th>
+							<td id="price17" class="alignR">&nbsp;</td>
+							<td class="alignC">㉯</td>
+							<td id="tax17" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th class="bg-color-6 alignC" scope="row" colspan="5">납부(환급)세액(매출세액㉮-매입세액㉯)</th>
+							<td class="alignC">㉰</td>
+							<td id="sum1" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th class="bg-color-4 alignC" scope="row" rowspan="3">경감<br>공제<br>세액</th>
+							<th scope="row" colspan="2" class="alignC">기타경감 · 공제세액</th>
+							<th class="alignC" scope="row">(18)</th>
+							<td id="price18" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax18" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">신용카드매출전표등발행공제등</th>
+							<th class="alignC" scope="row">(19)</th>
+							<td id="price19" class="alignR">&nbsp;</td>
+							<td class="bg-color-7">&nbsp;</td>
+							<td id="tax19" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="2" class="alignC">합계</th>
+							<th class="alignC" scope="row">(20)</th>
+							<td id="price20" class="alignR">&nbsp;</td>
+							<td class="alignC">㉱</td>
+							<td id="tax20" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="3" class="alignC">예정신고미환급세액</th>
+							<th class="alignC" scope="row">(21)</th>
+							<td id="price21" class="alignR">&nbsp;</td>
+							<td class="alignC">㉲</td>
+							<td id="tax21" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="3" class="alignC">예정고지세액</th>
+							<th class="alignC" scope="row">(22)</th>
+							<td id="price22" class="alignR">&nbsp;</td>
+							<td class="alignC">㉳</td>
+							<td id="tax22" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="3" class="alignC">금지금매입자납부특례기납부세액</th>
+							<th class="alignC" scope="row">(23)</th>
+							<td id="price23" class="bg-color-7 alignR">&nbsp;</td>
+							<td class="alignC">㉴</td>
+							<td id="tax23" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="3" class="alignC">가산세액계</th>
+							<th class="alignC" scope="row">(24)</th>
+							<td id="price24" class="alignR">&nbsp;</td>
+							<td class="alignC">㉵</td>
+							<td id="tax24" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th class="bg-color-6 alignC" scope="row" colspan="5">차가감하여 납부할세액(환급받을세액)(㉰-㉱-㉲-㉳-㉴+㉵)</th>
+							<td class="alignC">(25)</td>
+							<td id="sum2" class="alignR">&nbsp;</td>
+						</tr>
+						<tr>
+							<th scope="row" colspan="5" class="alignC">총괄납부사업자 납부할세액(환급받을 세액)</th>
+							<td class="">&nbsp;</td>
+							<td id="sum3" class="alignR">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+	
+				<table class="tbl-1 mgT2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 10%;">
+						<col style="width: 35%;">
+						<col style="width: 10%;">
+						<col style="width: 15%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row" class="alignC">②  국세 환급금 계좌 신고</th>
+							<th scope="row" class="alignC">거래은행</th>
+							<td class="alignC"> <span id="bank_nm">IBK기업은행</span> &nbsp;&nbsp;&nbsp;은행&nbsp;&nbsp;&nbsp; <span id="bank_branch">서시화</span> 지점</td>
+							<th scope="row" class="alignC">계좌번호</th>
+							<td class="alignC" id="bank_num">38804363701017</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-1 mgT2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 20%;">
+						<col style="width: 10%;">
+						<col style="width: 30%;">
+						<col style="width: 10%;">
+						<col style="width: 30%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row" class="alignC">③  폐업신고</th>
+							<th scope="row" class="alignC">폐업일</th>
+							<td id="close_date">&nbsp;</td>
+							<th scope="row" class="alignC">폐업사유</th>
+							<td id="close_reason">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-1 mgT2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 13%;">
+						<col style="width: 14%;">
+						<col style="width: 8%;">
+						<col style="width: 13%;">
+						<col style="width: 30%;">
+						<col style="width: 22%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="col" colspan="4" class="alignC">④  과세표준명세</th>
+							<td rowspan="3" colspan="2">
+								<div class="alignL s_font">
+									&nbsp;&nbsp;<sup>┎</sup>부가가치세법<sub> ┚</sub> 제 18조 제 19조 또는 제 24조와 <sup>┎</sup>국세기본법<sub> ┚</sub> 
+									<br>&nbsp;제 45조의 3에 따라 위의 내용을 신고하며, 위 내용을 충분히 검토하였고 
+									<br>&nbsp;신고인이 알고 있는 사실 그대로를 정확하게 기재하였음을 확인합니다.
+								</div>
+								<div class="alignC"><span id="claim_yyyy">2011</span>&nbsp;년&nbsp; <span id="claim_mm">07</span>&nbsp;월&nbsp; <span id="claim_dd">25</span>&nbsp;일&nbsp;</div>
+								<div class="alignC">&nbsp;신고인&nbsp;&nbsp; <span id="claim_obj">(주)포근한세상</span>&nbsp;&nbsp; (서명 또는 인)</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="col" class="alignC">업태</th>
+							<th scope="col" class="alignC">종목</th>
+							<th scope="col" class="alignC">업종코드</th>
+							<th scope="col" class="alignC">금액</th>
+						</tr>
+						<tr>
+							<th scope="row">(26) <span id="uptea1">제조</span></th>
+							<td class="alignC" id="jong1">면상발열체황토</td>
+							<td class="bg-color-7 alignC" id="up_code1">172109</td>
+							<td class="alignR"  id="amt1">223,070,000</td>
+						</tr>
+						<tr>
+							<th scope="row">(27)  <span id="uptea2">제조</span></th>
+							<td class="alignC"  id="jong2">&nbsp;</td>
+							<td class="bg-color-7 alignC" id="up_code2">&nbsp;</td>
+							<td class="alignR" id="amt2">130,848,598</td>
+							<td rowspan="2" colspan="2">
+								<div class="alignL s_font">
+									&nbsp;&nbsp;세무대리인은 조세전문자격자로서 위 신고서를 성실하게 작성
+									<br>&nbsp;하였음을 확인합니다.
+								</div>
+								<div  class="alignC">세무대리인&nbsp; <span>&nbsp;</span> &nbsp;(서명 또는 인)</div>
+							</td>
+						</tr>
+						<tr>
+							<th scope="row">(28)  <span id="uptea3">제조</span></th>
+							<td class="alignC"  id="jong3">&nbsp;</td>
+							<td class="bg-color-7 alignC" id="up_code3">&nbsp;</td>
+							<td class="alignR" id="amt3">28,921,330</td>
+						</tr>
+						<tr>
+							<th scope="row">(29)  <span id="uptea4">수입금액제외</span></th>
+							<td class="alignC" id="jong4">&nbsp;</td>
+							<td class="bg-color-7 alignC" id="up_code4">&nbsp;</td>
+							<td class="alignR" id="amt4">&nbsp;</td>
+							<td colspan="2" class="alignC"><span id="tax_claim_office">동청주</span> 세무서장 귀하</td>
+						</tr>
+						<tr>
+							<th scope="row">(30) <span>합계</span></th>
+							<td class="bg-color-7 alignC">&nbsp;</td>
+							<td class="bg-color-7 alignC">&nbsp;</td>
+							<td class="alignR" id="amt_sum">382,840,330</td>
+							<td class="alignC">첨&nbsp;부&nbsp;서&nbsp;류</td>
+							<td class="alignC">뒷&nbsp;쪽&nbsp;참&nbsp;조</td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-1 mgT2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 12%;">
+						<col style="width: 8%;">
+						<col style="width: 10%;">
+						<col style="width: 20%;">
+						<col style="width: 15%;">
+						<col style="width: 20%;">
+						<col style="width: 15%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<th scope="row" class="alignC">세무대리인</th>
+							<th scope="row" class="alignC">성명</th>
+							<td id="tax_agent_nm">&nbsp;</td>
+							<th scope="row" class="alignC">사업자등록번호</th>
+							<td id="tax_agent_num">&nbsp;</td>
+							<th scope="row" class="alignC">전화번호</th>
+							<td id="tax_agent_tel">&nbsp;</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl2-bottom">
+					210mm X 297mm (일반용지 60g/m<sup>2</sup>)
+			</div>
+		</div>
+		
+		<!-- 2Page -->
+		<div class="a4">
+			<div class="wrap">
+				<div class="tbl2-top">
+					<table>
+						<tr>
+							<td>(2장앞쪽)</td>
+						</tr>
+					</table>
+				</div>
+				<div>※ 이 쪽은 해당 사항이 있는 사업자만 사용합니다.</div>
+				<div>
+					<table class="bizno-lay" cellspacing="0">
+						<tr>
+							<td class="bizno-text">사업자 등록번호</td>
+							<td class="bizno-val"></td>
+							<td class="bizno-val"></td>
+							<td class="bizno-val"></td>
+							<td class="bizno-temp">-</td>
+							<td class="bizno-val"></td>
+							<td class="bizno-val"></td>
+							<td class="bizno-temp">-</td>
+							<td class="bizno-val"></td>
+							<td class="bizno-val"></td>
+							<td class="bizno-val"></td>
+							<td class="bizno-val"></td>
+							<td class="bizno-val"></td>
+							<td class="bizno-help">＊사업자등록번호는 반드시 기재하시기 바랍니다.</td>
+						</tr>
+					</table>
+				</div>
+				<table class="tbl-2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 13%;">
+						<col style="width: 5%;">
+						<col style="width: 4%;">
+						<col style="width: 23%;">
+						<col style="width: 4%;">
+						<col style="width: 21%;">
+						<col style="width: 8%;">
+						<col style="width: 21%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td rowspan="9">예정신고<br>누 락 분<br>명 세</td>
+							<td rowspan="6">(7)<br><br><br>매<br>출</td>
+							<td colspan="3">구  분</td>
+							<td>금  액</td>
+							<td>세  율</td>
+							<td>세  액</td>
+						</tr>
+						<tr>
+							<td rowspan="2">과<br>세</td>
+							<td>세금계산서</td>
+							<td>(31)</td>
+							<td id="price31"></td>
+							<td>10/100</td>
+							<td id="tax31"></td>
+						</tr>
+						<tr>
+							<td>기  타</td>
+							<td>(32)</td>
+							<td id="price32"></td>
+							<td>10/100</td>
+							<td id="tax32"></td>
+						</tr>
+						<tr>
+							<td rowspan="2">영<br>세<br>율</td>
+							<td>세금계산서</td>
+							<td>(33)</td>
+							<td id="price33"></td>
+							<td>0/100</td>
+							<td class="color-cell" id="tax33"></td>
+						</tr>
+						<tr>
+							<td>기  타</td>
+							<td>(34)</td>
+							<td id="price34"></td>
+							<td>0/100</td>
+							<td class="color-cell" id="tax34"></td>
+						</tr>
+						<tr>
+							<td colspan="2">합  계</td>
+							<td>(35)</td>
+							<td id="price35"></td>
+							<td class="color-cell"></td>
+							<td id="tax35"></td>
+						</tr>
+						<tr>
+							<td rowspan="3">(12)<br>매<br>입</td>
+							<td colspan="2">세금계산서</td>
+							<td>(36)</td>
+							<td id="price36"></td>
+							<td class="color-cell"></td>
+							<td id="tax36"></td>
+						</tr>
+						<tr>
+							<td colspan="2">기타공제매입세액</td>
+							<td>(37)</td>
+							<td id="price37"></td>
+							<td class="color-cell"></td>
+							<td id="tax37"></td>
+						</tr>
+						<tr>
+							<td colspan="2">합  계</td>
+							<td>(38)</td>
+							<td id="price38"></td>
+							<td class="color-cell"></td>
+							<td id="tax38"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 13%;">
+						<col style="width: 17%;">
+						<col style="width: 15%;">
+						<col style="width: 4%;">
+						<col style="width: 21%;">
+						<col style="width: 8%;">
+						<col style="width: 21%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td rowspan="10">(14)<br>기타공제<br>매입세액<br>명세</td>
+							<td colspan="3">구  분</td>
+							<td>금  액</td>
+							<td>세  율</td>
+							<td>세  액</td>
+						</tr>
+						<tr>
+							<td rowspan="2">신용카드매출전표등<br>수명세서 제출분</td>
+							<td>일반매입</td>
+							<td>(39)</td>
+							<td id="price39"></td>
+							<td class="color-cell"></td>
+							<td id="tax39"></td>
+						</tr>
+						<tr>
+							<td>고정자산매입</td>
+							<td>(40)</td>
+							<td id="price40"></td>
+							<td class="color-cell"></td>
+							<td id="tax40"></td>
+						</tr>
+						<tr>
+							<td colspan="2">의제 매입 세액</td>
+							<td>(41)</td>
+							<td id="price41"></td>
+							<td>뒤쪽참조</td>
+							<td id="tax41"></td>
+						</tr>
+						<tr>
+							<td colspan="2">재활용폐자원등매입세액</td>
+							<td>(42)</td>
+							<td id="price42"></td>
+							<td>뒤쪽참조</td>
+							<td id="tax42"></td>
+						</tr>
+						<tr>
+							<td colspan="2">고금의제 매입세액</td>
+							<td>(43)</td>
+							<td id="price43"></td>
+							<td></td>
+							<td id="tax43"></td>
+						</tr>
+						<tr>
+							<td colspan="2">과세사업전환 매입세액</td>
+							<td>(44)</td>
+							<td class="color-cell" id="price44"></td>
+							<td class="color-cell"></td>
+							<td id="tax44"></td>
+						</tr>
+						<tr>
+							<td colspan="2">재고매입세액</td>
+							<td>(45)</td>
+							<td class="color-cell" id="price45"></td>
+							<td class="color-cell"></td>
+							<td id="tax45"></td>
+						</tr>
+						<tr>
+							<td colspan="2">변제대손세액</td>
+							<td>(46)</td>
+							<td class="color-cell" id="price46"></td>
+							<td class="color-cell"></td>
+							<td id="tax46"></td>
+						</tr>
+						<tr>
+							<td colspan="2">합  계</td>
+							<td>(47)</td>
+							<td id="price47"></td>
+							<td class="color-cell"></td>
+							<td id="tax47"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 13%;">
+						<col style="width: 32%;">
+						<col style="width: 4%;">
+						<col style="width: 21%;">
+						<col style="width: 8%;">
+						<col style="width: 21%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td rowspan="5">(16)<br>공제받지<br>못 할<br>매입세액<br>명 세</td>
+							<td colspan="2">구  분</td>
+							<td>금  액</td>
+							<td>세  율</td>
+							<td>세  액</td>
+						</tr>
+						<tr>
+							<td>공제받지 못할 매입세액</td>
+							<td>(48)</td>
+							<td id="price48"></td>
+							<td class="color-cell"></td>
+							<td id="tax48"></td>
+						</tr>
+						<tr>
+							<td>공통매입세액면세사업분</td>
+							<td>(49)</td>
+							<td id="price49"></td>
+							<td class="color-cell"></td>
+							<td id="tax49"></td>
+						</tr>
+						<tr>
+							<td>대손처분받은세액</td>
+							<td>(50)</td>
+							<td id="price50"></td>
+							<td class="color-cell"></td>
+							<td id="tax50"></td>
+						</tr>
+						<tr>
+							<td>합  계</td>
+							<td>(51)</td>
+							<td id="price51"></td>
+							<td class="color-cell"></td>
+							<td id="tax51"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 13%;">
+						<col style="width: 32%;">
+						<col style="width: 4%;">
+						<col style="width: 21%;">
+						<col style="width: 8%;">
+						<col style="width: 21%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td rowspan="7">(18)<br>기타경감<br>공제세액<br>명 세</td>
+							<td colspan="2">구  분</td>
+							<td>금  액</td>
+							<td>세  율</td>
+							<td>세  액</td>
+						</tr>
+						<tr>
+							<td>전자신고 세액공제</td>
+							<td>(52)</td>
+							<td class="color-cell" id="price52"></td>
+							<td class="color-cell"></td>
+							<td id="tax52"></td>
+						</tr>
+						<tr>
+							<td>전자세금계산서 발급세액 공제</td>
+							<td>(53)</td>
+							<td class="color-cell" id="price53"></td>
+							<td class="color-cell"></td>
+							<td id="tax53"></td>
+						</tr>
+						<tr>
+							<td>택시운송사업자경감세액</td>
+							<td>(54)</td>
+							<td class="color-cell" id="price54"></td>
+							<td class="color-cell"></td>
+							<td id="tax54"></td>
+						</tr>
+						<tr>
+							<td>현금영수증사업자세액공제</td>
+							<td>(55)</td>
+							<td class="color-cell" id="price55"></td>
+							<td class="color-cell"></td>
+							<td id="tax55"></td>
+						</tr>
+						<tr>
+							<td>기  타</td>
+							<td>(56)</td>
+							<td class="color-cell" id="price56"></td>
+							<td class="color-cell"></td>
+							<td id="tax56"></td>
+						</tr>
+						<tr>
+							<td>합  계</td>
+							<td>(57)</td>
+							<td class="color-cell" id="price57"></td>
+							<td class="color-cell"></td>
+							<td id="tax57"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 13%;">
+						<col style="width: 15%;">
+						<col style="width: 17%;">
+						<col style="width: 4%;">
+						<col style="width: 21%;">
+						<col style="width: 8%;">
+						<col style="width: 21%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td rowspan="12">(24)<br>가산세 명세</td>
+							<td colspan="3">구  분</td>
+							<td>금  액</td>
+							<td>세  율</td>
+							<td>세  액</td>
+						</tr>
+						<tr>
+							<td colspan="2">사업자미등록</td>
+							<td>(58)</td>
+							<td id="price58"></td>
+							<td></td>
+							<td id="tax58"></td>
+						</tr>
+						<tr>
+							<td rowspan="2">세금계산서</td>
+							<td class="left-cell">지연발급 등</td>
+							<td>(59)</td>
+							<td id="price59"></td>
+							<td></td>
+							<td id="tax59"></td>
+						</tr>
+						<tr>
+							<td class="left-cell">미발급 등</td>
+							<td>(60)</td>
+							<td id="price60"></td>
+							<td></td>
+							<td id="tax60"></td>
+						</tr>
+						<tr>
+							<td rowspan="2">전자세금계산서<br>발급명세서 전송</td>
+							<td class="left-cell">다음달 15일 후</td>
+							<td>(61)</td>
+							<td id="price61"></td>
+							<td></td>
+							<td id="tax61"></td>
+						</tr>
+						<tr>
+							<td class="left-cell s_font">과세기간 다음날 15일 후</td>
+							<td>(62)</td>
+							<td id="price62"></td>
+							<td></td>
+							<td id="tax62"></td>
+						</tr>
+						<tr>
+							<td colspan="2">세금계산서 합계표 제출 불성실</td>
+							<td>(63)</td>
+							<td id="price63"></td>
+							<td></td>
+							<td id="tax63"></td>
+						</tr>
+						<tr>
+							<td colspan="2">신고 불성실</td>
+							<td>(64)</td>
+							<td id="price64"></td>
+							<td></td>
+							<td id="tax64"></td>
+						</tr>
+						<tr>
+							<td colspan="2">납부 불성실</td>
+							<td>(65)</td>
+							<td id="price65"></td>
+							<td></td>
+							<td id="tax65"></td>
+						</tr>
+						<tr>
+							<td colspan="2">영세율과세표준신고 불성실</td>
+							<td>(66)</td>
+							<td id="price66"></td>
+							<td></td>
+							<td id="tax66"></td>
+						</tr>
+						<tr>
+							<td colspan="2">현금매출명세서 미제출등</td>
+							<td>(67)</td>
+							<td id="price67"></td>
+							<td></td>
+							<td id="tax67"></td>
+						</tr>
+						<tr>
+							<td colspan="2">합  계</td>
+							<td>(68)</td>
+							<td class="color-cell" id="price68"></td>
+							<td class="color-cell"></td>
+							<td id="tax68"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 13%;">
+						<col style="width: 4%;">
+						<col style="width: 22%;">
+						<col style="width: 22%;">
+						<col style="width: 3%;">
+						<col style="width: 3%;">
+						<col style="width: 3%;">
+						<col style="width: 3%;">
+						<col style="width: 3%;">
+						<col style="width: 3%;">
+						<col style="width: 21%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td rowspan="5">면세사업<br>수입금액</td>
+							<td colspan="2">업  태</td>
+							<td>종  목</td>
+							<td colspan="6">코드번호</td>
+							<td>금  액</td>
+						</tr>
+						<tr>
+							<td>(69)</td>
+							<td class="left-cell" id="val69_uptea1"></td>
+							<td class="left-cell" id="val69_jong1"></td>
+							<td class="color-cell val69_up_code1"></td>
+							<td class="color-cell val69_up_code1"></td>
+							<td class="color-cell val69_up_code1"></td>
+							<td class="color-cell val69_up_code1"></td>
+							<td class="color-cell val69_up_code1"></td>
+							<td class="color-cell val69_up_code1"></td>
+							<td id="val69_amt1"></td>
+						</tr>
+						<tr>
+							<td>(70)</td>
+							<td class="left-cell" id="val70_uptea2"></td>
+							<td class="left-cell" id="val70_jong2" ></td>
+							<td class="color-cell val70_up_code2"></td>
+							<td class="color-cell val70_up_code2"></td>
+							<td class="color-cell val70_up_code2"></td>
+							<td class="color-cell val70_up_code2"></td>
+							<td class="color-cell val70_up_code2"></td>
+							<td class="color-cell val70_up_code2"></td>
+							<td id="val70_amt2"></td>
+						</tr>
+						<tr>
+							<td class="color-cell">(71)</td>
+							<td class="color-cell"  id="val71_uptea3">수입금액제외</td>
+							<td id="val71_jong3"></td>
+							<td class="color-cell val71_up_code3"></td>
+							<td class="color-cell val71_up_code3"></td>
+							<td class="color-cell val71_up_code3"></td>
+							<td class="color-cell val71_up_code3"></td>
+							<td class="color-cell val71_up_code3"></td>
+							<td class="color-cell val71_up_code3"></td>
+							<td id="val71_amt3"></td>
+						</tr>
+						<tr>
+							<td class="color-cell"></td>
+							<td class="color-cell"></td>
+							<td class="color-cell"></td>
+							<td colspan="6">(72)합 계</td>
+							<td id="price72"></td>
+						</tr>
+					</tbody>
+				</table>
+				
+				<table class="tbl-2">
+					<caption><!-- 테이블 제목 입력해주세요 --></caption>
+					<colgroup>
+						<col style="width: 17%;">
+						<col style="width: 62%;">
+						<col style="width: 21%;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td rowspan="2">계산서 발급<br>및 수취내역</td>
+							<td class="left-cell">(73) 계산서 발급금액</td>
+							<td id="price73"></td>
+						</tr>
+						<tr>
+							<td class="left-cell">(74) 계산서 수취금액</td>
+							<td id="price74"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<div class="tbl2-bottom">
+					210mm X 297mm (일반용지 60g/m<sup>2</sup>)
+			</div>
+		</div>
+		
+		<div class="print_btn_area">
+            <button class="print_btn" onclick="print()">
+                <span>출력하기</span>
+            </button>
+            <button class="close_btn" onclick="self.close();">
+                <span>창닫기</span>
+            </button>
+        </div>
+	</body>
+</html>

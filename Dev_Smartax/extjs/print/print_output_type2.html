@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="keywords" content="태극 회계 온라인" />
+		<meta name="description" content="태극 회계 온라인" />
+		<title>:::거래 명세서:::</title>
+
+		<link href="./print_output_type2.css" type="text/css" rel="stylesheet" />
+		<script type="text/javascript" src="./jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="./print_output_type2.js"></script>
+
+	</head>
+	<body>
+		<div id="print_content_area">
+			<div class="print_btn_area">
+				<button class="print_btn" onclick="print()">
+					<span>출력하기</span>
+				</button>
+				<button class="close_btn" onclick="self.close();">
+					<span>창닫기</span>
+				</button>
+			</div>
+			<html>
+
+				<head>
+					<meta http-equiv=Content-Type content="text/html; charset=ks_c_5601-1987">
+					<meta name=Generator content="Microsoft Word 14 (filtered)">
+					<style>
+						/* Font Definitions */
+						@font-face {
+							font-family: "Cambria Math";
+							panose-1: 2 4 5 3 5 4 6 3 2 4;
+						}
+						@font-face {
+							font-family: "맑은 고딕";
+							panose-1: 2 11 5 3 2 0 0 2 0 4;
+						}
+						@font-face {
+							font-family: "\@맑은 고딕";
+							panose-1: 2 11 5 3 2 0 0 2 0 4;
+						}
+						/* Style Definitions */
+						p.MsoNormal, li.MsoNormal, div.MsoNormal {
+							margin-top: 0cm;
+							margin-right: 0cm;
+							margin-bottom: 10.0pt;
+							margin-left: 0cm;
+							text-align: justify;
+							text-justify: inter-ideograph;
+							line-height: 115%;
+							text-autospace: none;
+							word-break: break-hangul;
+							font-size: 10.0pt;
+							font-family: "맑은 고딕";
+						}
+						.MsoChpDefault {
+							font-family: "맑은 고딕";
+						}
+						.MsoPapDefault {
+							margin-bottom: 10.0pt;
+							text-align: justify;
+							text-justify: inter-ideograph;
+							line-height: 115%;
+						}
+						/* Page Definitions */
+						@page WordSection1 {
+							size: 595.3pt 841.9pt;
+							margin: 3.0cm 72.0pt 72.0pt 72.0pt;
+						}
+						div.WordSection1 {
+							page: WordSection1;
+						}
+					</style>
+
+				</head>
+
+				<body lang=KO>
+
+					<div class=WordSection1>
+
+						<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=614
+						style='width:500.7pt;border-collapse:collapse;border:none'>
+							<tr style='height:22.95pt'>
+								<td width=614 colspan=11 style='width:460.7pt;border:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<b><span style='font-size:12.0pt'>거 래 명
+										세 서<span lang=EN-US> (</span>공급자 보관용<span lang=EN-US>)</span></span></b>
+								</p></td>
+							</tr>
+							<tr style='height:32.7pt'>
+								<td width=61 rowspan=4 style='width:46.05pt;border:solid windowtext 1.0pt;
+								border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>공</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>급</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>자</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>등록</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>번호</span>
+								</p></td>
+								<td width=184 colspan=4 style='width:138.15pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<b><span lang=EN-US style='font-size:12.0pt' id="co_saup_no1">117-06-59868</span></b>
+								</p></td>
+								<td width=61 rowspan=4 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>공</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>급</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>받</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>는</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>자</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>등록</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>번호</span>
+								</p></td>
+								<td width=184 colspan=3 style='width:138.3pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:13.35pt'>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:19.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>상호</span>
+								</p></td>
+								<td width=61 colspan=2 style='width:180.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_nm1"></span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>성명</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:13.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_ceo_nm1"></span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:13.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>상호</span>
+								</p></td>
+								<td width=61 style='width:70pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:13.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="io_tr_cd2">테스트</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:13.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>성명</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:13.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:15.6pt'>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>주소</span>
+								</p></td>
+								<td width=184 colspan=4 style='width:138.15pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_addr1">서울 구로구 구로 2동 고려대부속구로병원</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:15.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>주소</span>
+								</p></td>
+								<td width=184 colspan=3 style='width:138.3pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:18.35pt'>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>업태</span>
+								</p></td>
+								<td width=61 colspan=2 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_up1">소매</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>종목</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_jung2">서비스</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>업태</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>종목</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:23.95pt'>
+								<td width=61 style='width:46.05pt;border:solid windowtext 1.0pt;border-top:
+								none;padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>월 일</span>
+								</p></td>
+								<td width=123 colspan=3 style='width:92.1pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>품명</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>규격</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>수량</span>
+								</p></td>
+								<td width=123 colspan=2 style='width:92.15pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>단가</span>
+								</p></td>
+								<td width=123 colspan=2 style='width:92.2pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>공급가액</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>비고</span>
+								</p></td>
+							</tr>
+							<tr style='height:111.6pt'>
+								<td width=61 valign=top style='width:46.05pt;border:solid windowtext 1.0pt;
+								border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet1_col1"></td>
+								<td width=123 colspan=3 valign=top style='width:92.1pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet1_col2"></td>
+								<td width=61 valign=top style='width:46.05pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet1_col3"></td>
+								<td width=61 valign=top style='width:46.05pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet1_col4"></td>
+								<td width=123 colspan=2 valign=top style='width:92.15pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet1_col5"></td>
+								<td width=123 colspan=2 valign=top style='width:92.2pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet1_col6"></td>
+								<td width=61 valign=top style='width:46.1pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet1_col7"></td>
+							</tr>
+							<tr style='height:20.95pt'>
+								<td width=61 rowspan=2 style='width:46.05pt;border:solid windowtext 1.0pt;
+								border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>합계</span>
+								</p></td>
+								<td width=88 colspan=2 rowspan=2 style='width:65.7pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="total_amt1">7,000</span>
+								</p></td>
+								<td width=97 colspan=2 style='width:72.45pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>이전 잔액</span>
+								</p></td>
+								<td width=184 colspan=3 style='width:138.2pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+								<td width=61 rowspan=2 style='width:46.1pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>인수자</span>
+								</p></td>
+								<td width=123 colspan=2 style='width:92.2pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:22.95pt'>
+								<td width=97 colspan=2 style='width:72.45pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>미수잔액</span>
+								</p></td>
+								<td width=184 colspan=3 style='width:138.2pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+								<td width=123 colspan=2 style='width:92.2pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+						</table>
+
+						<p class=MsoNormal>
+							<span lang=EN-US style='font-size:9.0pt;line-height:115%'>&nbsp;</span>
+						</p>
+
+						<table class=MsoTableGrid border=1 cellspacing=0 cellpadding=0 width=614
+						style='width:500.7pt;border-collapse:collapse;border:none'>
+							<tr style='height:22.95pt'>
+								<td width=614 colspan=12 style='width:460.7pt;border:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<b><span style='font-size:12.0pt'>거 래 명
+										세 서<span lang=EN-US> (</span>공급 받는자 보관용<span lang=EN-US>)</span></span></b>
+								</p></td>
+							</tr>
+							<tr style='height:32.7pt'>
+								<td width=61 rowspan=4 style='width:46.05pt;border:solid windowtext 1.0pt;
+								border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>공</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>급</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>자</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>등록</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>번호</span>
+								</p></td>
+								<td width=184 colspan=4 style='width:138.15pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<b><span lang=EN-US style='font-size:12.0pt' id="co_saup_no2">117-06-59868</span></b>
+								</p></td>
+								<td width=61 rowspan=4 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>공</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>급</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>받</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>는</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>자</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>등록</span>
+								</p>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>번호</span>
+								</p></td>
+								<td width=184 colspan=4 style='width:138.3pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:32.7pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:8.05pt'>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:19.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>상호</span>
+								</p></td>
+								<td width=61 colspan=2 style='width:180.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:8.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_nm2"></span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:8.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>성명</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:8.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_ceo_nm2"></span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:8.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>상호</span>
+								</p></td>
+								<td width=61 style='width:60pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:8.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="io_tr_cd1">테스트</span>
+								</p></td>
+								<td width=61 colspan=2 style='width:90.1pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:8.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt;width: 52px;'>성명</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:8.05pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:15.6pt'>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>주소</span>
+								</p></td>
+								<td width=184 colspan=4 style='width:138.15pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_addr2">서울 구로구 구로 2동 고려대부속구로병원</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:19.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>주소</span>
+								</p></td>
+								<td width=184 colspan=4 style='width:138.3pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:15.6pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:18.35pt'>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>업태</span>
+								</p></td>
+								<td width=61 colspan=2 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'  id="co_up2">소매</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>종목</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="co_jung1">서비스</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>업태</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+								<td width=61 colspan=2 style='width:46.1pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>종목</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:18.35pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:23.95pt'>
+								<td width=61 style='width:46.05pt;border:solid windowtext 1.0pt;border-top:
+								none;padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>월 일</span>
+								</p></td>
+								<td width=123 colspan=3 style='width:92.1pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>품명</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>규격</span>
+								</p></td>
+								<td width=61 style='width:46.05pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>수량</span>
+								</p></td>
+								<td width=123 colspan=2 style='width:92.15pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>단가</span>
+								</p></td>
+								<td width=123 colspan=3 style='width:92.2pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>공급가액</span>
+								</p></td>
+								<td width=61 style='width:46.1pt;border-top:none;border-left:none;border-bottom:
+								solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt;
+								height:23.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>비고</span>
+								</p></td>
+							</tr>
+							<tr style='height:111.6pt'>
+								<td width=61 valign=top style='width:46.05pt;border:solid windowtext 1.0pt;
+								border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet2_col1"></td>
+								<td width=123 colspan=3 valign=top style='width:92.1pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet2_col2"></td>
+								<td width=61 valign=top style='width:46.05pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet2_col3"></td>
+								<td width=61 valign=top style='width:46.05pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet2_col4"></td>
+								<td width=123 colspan=2 valign=top style='width:92.15pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet2_col5"></td>
+								<td width=123 colspan=3 valign=top style='width:92.2pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet2_col6"></td>
+								<td width=61 valign=top style='width:46.1pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:121.6pt' id="sheet2_col7"></td>
+							</tr>
+							<tr style='height:22.95pt'>
+								<td width=61 rowspan=2 style='width:46.05pt;border:solid windowtext 1.0pt;
+								border-top:none;padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>합계</span>
+								</p></td>
+								<td width=88 colspan=2 rowspan=2 style='width:65.7pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt' id="total_amt2">7,000</span>
+								</p></td>
+								<td width=97 colspan=2 style='width:72.45pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>이전 잔액</span>
+								</p></td>
+								<td width=184 colspan=3 style='width:138.2pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+								<td width=80 rowspan=2 style='width:60.25pt;border-top:none;
+								border-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>인수자</span>
+								</p></td>
+								<td width=104 colspan=3 style='width:78.05pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+							<tr style='height:20.95pt'>
+								<td width=97 colspan=2 style='width:72.45pt;border-top:none;border-left:none;
+								border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span style='font-size:9.0pt'>미수잔액</span>
+								</p></td>
+								<td width=184 colspan=3 style='width:138.2pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+								<td width=104 colspan=3 style='width:78.05pt;border-top:none;border-left:
+								none;border-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;
+								padding:0cm 5.4pt 0cm 5.4pt;height:22.95pt'>
+								<p class=MsoNormal align=center style='margin-bottom:0cm;margin-bottom:.0001pt;
+								text-align:center;line-height:normal'>
+									<span lang=EN-US style='font-size:9.0pt'>&nbsp;</span>
+								</p></td>
+							</tr>
+						</table>
+					</div>
+				</body>
+			</html>
+		</div>
+	</body>
+</html>

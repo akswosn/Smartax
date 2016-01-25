@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content="" />
+	<meta name="autdor" content="" />
+	
+	<link rel="stylesheet" type="text/css" href="./add_tax_credit_sum.css" media="screen" />
+	<script src="./add_tax_credit_sum.js"></script>
+</head>
+
+<body>
+	<div class="tbl-wrap">
+		<div class="title_div">
+			<strong id="sum_title1">■ 1. 인적 사항</strong>
+		</div>
+		<table>
+			<colgroup>
+				<col width = "15%"/>
+				<col width = "15%"/>
+				<col width = "15%"/>
+				<col width = "15%"/>
+				<col width = "15%"/>
+				<col width = "15%"/>
+			</colgroup>
+			<tr>
+				<th>상호[법인명]</th>
+				<td id="co_nm"></td>
+				<th>성명[대표자]</th>
+				<td id="co_deapyo"></td>
+				<th>사업등록번호</th>
+				<td id="co_num"></td>
+			</tr>
+			<!-- 1 Row -->
+			<tr>
+				<th>사업장소재지</th>
+				<td colspan="5" id="co_address"></td>
+			</tr>
+		</table>
+	
+	<!--  두번째 테이블 -->
+		<div class="title_div">
+			<strong id="sum_title2">■ 2. 신용카드매출전표 등 발행금액 현황</strong>
+		</div>
+		<table>
+			<colgroup>
+				<col width = "25%"/>
+				<col width = "25%"/>
+				<col width = "25%"/>
+				<col width = "25%"/>
+			</colgroup>
+			<tr>
+				<th>구 분</th>
+				<th>합 계</th>
+				<th>신용.직불.기명식 선불카드</th>
+				<th>현금영수증</th>
+			</tr>
+			<!-- 1 Row -->
+			<tr>
+				<th>합 계</th>
+				<td id="val1_1"></td>
+				<td id="val1_2"></td>
+				<td id="val1_3"></td>
+			</tr>
+			<!-- 2 Row -->
+			<tr>
+				<th>과세 매출분</th>
+				<td id="val2_1"></td>
+				<td id="val2_2"></td>
+				<td id="val2_3" class="white_clr"></td>
+			</tr>
+			<!-- 3 Row -->
+			<tr>
+				<th>면세 매출분</th>
+				<td id="val3_1"></td>
+				<td id="val3_2" class="white_clr"></td>
+				<td id="val3_3" class="white_clr"></td>
+			</tr>
+			<!-- 3 Row -->
+			<tr>
+				<th>봉사료</th>
+				<td id="val4_1"></td>
+				<td id="val4_2" class="white_clr"></td>
+				<td id="val4_3" class="white_clr"></td>
+			</tr>
+		</table>
+	
+	<!--  3번째 테이블 -->
+		<div class="title_div">
+			<strong id="sum_title3">■ 3. 신용카드매출전표 등 발행금액중 세금계산서 교부내역</strong>
+		</div>
+		<table>
+			<colgroup>
+				<col width = "25%"/>
+				<col width = "25%"/>
+				<col width = "25%"/>
+				<col width = "25%"/>
+			</colgroup>
+			<tr>
+				<th>세금계산서교부금액</th>
+				<td id="val5_1" class="white_clr"></td>
+				<th>계산서교부금액</th>
+				<td id="val5_2" class="white_clr"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

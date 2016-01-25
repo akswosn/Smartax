@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<meta name="description" content=""/>
+	<meta name="keywords" content="" />
+	<meta name="autdor" content="" />
+	
+	<link rel="stylesheet" type="text/css" href="./add_sum_page.css" media="screen" />
+	<script src="./add_sum_page.js"></script>
+</head>
+
+<body>
+	<div>
+		<table>
+			<colgroup>
+				<col widtd = "25%">
+				<col widtd = "25%">
+				<col widtd = "10%">
+				<col widtd = "20%">
+				<col widtd = "20%">
+			</colgroup>
+			<tr>
+				<td colspan="2">구분 </td>
+				<td>건수 </td>
+				<td>공급가액 </td>
+				<td>부가세  </td>
+			</tr>
+			<!-- 1 Row -->
+			<tr>
+				<td rowspan="5">전자세금계산서<br/>(과세기간 11일이내)</td>
+				<td class="left_align">사업자번호발급분 </td>
+				<td id="col1_1" class="col_val"> </td>
+				<td id="col1_2" class="col_val"> </td>
+				<td id="col1_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_거래처등록 </td>
+				<td id="col2_1" class="col_val"> </td>
+				<td id="col2_2" class="col_val"> </td>
+				<td id="col2_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_미등록거래처 </td>
+				<td id="col3_1" class="col_val"> </td>
+				<td id="col3_2" class="col_val"> </td>
+				<td id="col3_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">미등록거래처분 </td>
+				<td id="col4_1" class="col_val"> </td>
+				<td id="col4_2" class="col_val"> </td>
+				<td id="col4_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">예정신고누락분 </td>
+				<td id="col5_1" class="col_val"> </td>
+				<td id="col5_2" class="col_val"> </td>
+				<td id="col5_3" class="col_val"> </td>
+			</tr>
+			
+			<!-- 2 Row -->
+			<tr>
+				<td rowspan="5">전자세금계산서<br/>(과세기간 11일후)</td>
+				<td class="left_align">사업자번호발급분 </td>
+				<td id="col6_1" class="col_val"> </td>
+				<td id="col6_2" class="col_val"> </td>
+				<td id="col6_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_거래처등록 </td>
+				<td id="col7_1" class="col_val"> </td>
+				<td id="col7_2" class="col_val"> </td>
+				<td id="col7_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_미등록거래처 </td>
+				<td id="col8_1" class="col_val"> </td>
+				<td id="col8_2" class="col_val"> </td>
+				<td id="col8_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">미등록거래처분 </td>
+				<td id="col9_1" class="col_val"> </td>
+				<td id="col9_2" class="col_val"> </td>
+				<td id="col9_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">예정신고누락분 </td>
+				<td id="col10_1" class="col_val"> </td>
+				<td id="col10_2" class="col_val"> </td>
+				<td id="col10_3" class="col_val"> </td>
+			</tr>
+			
+			<!-- 3 Row -->
+			<tr>
+				<td rowspan="5">종이세금계산서 </td>
+				<td class="left_align">사업자번호발급분 </td>
+				<td id="col11_1" class="col_val"> </td>
+				<td id="col11_2" class="col_val"> </td>
+				<td id="col11_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_거래처등록 </td>
+				<td id="col12_1" class="col_val"> </td>
+				<td id="col12_2" class="col_val"> </td>
+				<td id="col12_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_미등록거래처 </td>
+				<td id="col13_1" class="col_val"> </td>
+				<td id="col13_2" class="col_val"> </td>
+				<td id="col13_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">미등록거래처분 </td>
+				<td id="col14_1" class="col_val"> </td>
+				<td id="col14_2" class="col_val"> </td>
+				<td id="col14_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">예정신고누락분 </td>
+				<td id="col15_1" class="col_val"> </td>
+				<td id="col15_2" class="col_val"> </td>
+				<td id="col15_3" class="col_val"> </td>
+			</tr>
+			
+			<!-- 4 Row -->
+			<tr>
+				<td rowspan="3">세금계산서합계표 <br/>추가분 </td>
+				<td class="left_align">사업자번호발급분 </td>
+				<td id="col16_1" class="col_val"> </td>
+				<td id="col16_2" class="col_val"> </td>
+				<td id="col16_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_거래처등록 </td>
+				<td id="col17_1" class="col_val"> </td>
+				<td id="col17_2" class="col_val"> </td>
+				<td id="col17_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td class="left_align">주민번호발급분_미등록거래처 </td>
+				<td id="col18_1" class="col_val"> </td>
+				<td id="col18_2" class="col_val"> </td>
+				<td id="col18_3" class="col_val"> </td>
+			</tr>
+			
+			<!-- 5 Row -->
+			<tr>
+				<td rowspan="3">합계 </td>
+				<td>사업자발급분 </td>
+				<td id="col19_1" class="col_val"> </td>
+				<td id="col19_2" class="col_val"> </td>
+				<td id="col19_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td>주민번호발급분 </td>
+				<td id="col20_1" class="col_val"> </td>
+				<td id="col20_2" class="col_val"> </td>
+				<td id="col20_3" class="col_val"> </td>
+			</tr>
+			<tr>
+				<td>미등록발급분 </td>
+				<td id="col21_1" class="col_val"> </td>
+				<td id="col21_2" class="col_val"> </td>
+				<td id="col21_3" class="col_val"> </td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>

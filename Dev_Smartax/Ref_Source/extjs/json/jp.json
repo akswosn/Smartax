@@ -1,0 +1,167 @@
+{
+    "11": {
+        "1": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "101", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "2": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "108", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "4": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "5": [
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "12": {
+        "1": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "101", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "2": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "108", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "4": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "5": [
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "13": {
+        "1": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "101", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "2": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "108", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "4": [
+            { "jp_view_gubun": "4", "gycode": "301", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "5": [
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "17": {
+        "3": [
+            { "jp_view_gubun": "4", "gycode": "302", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "112", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "18": {
+        "3": [
+            { "jp_view_gubun": "4", "gycode": "302", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "112", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "19": {
+        "3": [
+            { "jp_view_gubun": "4", "gycode": "302", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "112", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "22": {
+        "1": [
+            { "jp_view_gubun": "4", "gycode": "303", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "208", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "101", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "23": {
+        "1": [
+            { "jp_view_gubun": "4", "gycode": "303", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "101", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "24": {
+        "1": [
+            { "jp_view_gubun": "4", "gycode": "303", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "101", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "51": {
+        "1": [
+            { "jp_view_gubun": "3", "gycode": "127", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "2": [
+            { "jp_view_gubun": "3", "gycode": "127", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "201", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "4": [
+            { "jp_view_gubun": "3", "gycode": "127", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "5": [
+            { "jp_view_gubun": "3", "gycode": "127", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "52": {
+        "1": [
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "2": [
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "201", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "4": [
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "5": [
+            { "jp_view_gubun": "3", "gycode": "127", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "53": {
+        "1": [
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "2": [
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "201", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "4": [
+            { "jp_view_gubun": "3", "gycode": "000", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ],
+        "5": [
+            { "jp_view_gubun": "3", "gycode": "127", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "57": {
+        "3": [
+            { "jp_view_gubun": "3", "gycode": "", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "3", "gycode": "127", "credit": "atax_tax", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "103", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "58": {
+        "3": [
+            { "jp_view_gubun": "3", "gycode": "", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "202", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    },
+    "59": {
+        "3": [
+            { "jp_view_gubun": "3", "gycode": "", "credit": "atax_supply_price", "debit": "", "customer_id": "customer_id", "jp_rem": "jp_rem" },
+            { "jp_view_gubun": "4", "gycode": "202", "credit": "", "debit": "atax_item_sum", "customer_id": "customer_id", "jp_rem": "jp_rem" }
+        ]
+    }
+}

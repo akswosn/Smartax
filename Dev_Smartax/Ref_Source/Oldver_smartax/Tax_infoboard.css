@@ -1,0 +1,459 @@
+
+ ______   ______   __   __   ______
+/\  == \ /\  __ \ /\ \_/\ \ /\  __ \ 
+\ \  __< \ \ \/\ \\ \  \_\ \\ \ \/\ \   __
+ \ \_____\\ \_____\\ \_\-\__\\ \_____\ /\_\
+  \/_____/ \/_____/ \/_/ /__/ \/_____/ \/_/
+
+
+
+
+
+
+@font-face{
+	font-family:"Daum_Regular";
+	src:url("font/Daum_Regular.ttf")format("truetype");
+	font-style:normal;
+	font-weight:normal;
+}
+
+body {
+	margin: 0;
+	A:link {font-family:"Franklin Gothic Heavy" color: white; text-decoration: none}
+	A:visited {text-decoration: none}
+	A:hover {color: #0099ff; text-decoration: none}
+}
+
+.bdwrap {
+	margin: auto;
+	text-align: center;
+}
+
+.menuwrap {
+	margin: auto;
+	text-align: center;
+
+}
+
+.menuwrap_board{
+	margin: auto;
+	text-align: center;
+	background-color:#afa89c;
+}
+
+.ftwrap{
+   margin: auto;
+   vertical-align: center;
+   border: 1px solid #ffffff;
+   width: 1100px;
+   min-height: 20%;
+
+}
+
+
+header{
+	background: #FFFFFF;
+	width: 1100px;
+	height: 70px;
+	color: white;
+	font-family: "Arial Black";
+	font-weight: bold;
+	clear: both;
+	margin: auto;
+	display: block;
+}
+
+
+
+nav{
+	position:relative;
+	/*display: block;*/
+	margin: auto;
+	top: 10px;
+
+}
+
+
+.logo{
+	margin: 13px 100px 0 15px;
+	width:170px;
+}
+
+
+nav ul{
+
+	width:1100px;
+	display: inline;
+	color:#2D343F;
+
+}
+
+nav ul li{
+	float:left;
+	width:150px;
+	/*height:65px;*/
+	margin: 16px 0px 5px 0;
+	color: white;
+	text-align: center;
+	display: inline-block;
+	list-style-type:none;
+	padding: 0px 0px 0px 0;
+}
+
+
+.menu1:hover{
+	content: url("../images/menu/menu1_1.png");
+}
+
+.menu2:hover{
+	content: url("../images/menu/menu2_1.png");
+}
+
+.menu3:hover{
+	content: url("../images/menu/menu3_1.png");
+}
+
+.menu4:hover{
+	content: url("../images/menu/menu4_1.png");
+}
+
+.menu5:hover{
+	content: url("../images/menu/menu5_1.png");
+}
+
+
+/* 메뉴아래 사진 배경영역  */
+
+.mid {
+	
+	border-top: 2px solid #007ACC;
+	margin: auto;
+	height:96px;
+	background-color: #786B62;
+
+}
+/* 메뉴아래 사진 배경영역 끝 */
+
+
+
+
+
+
+
+
+
+
+/* 게시판 해당 제목 영역  */
+
+
+
+
+
+
+/* -------------------------- 포틀렛 영역 ----------------------------  */
+
+/*게시판 위치 중간잡기 영역*/
+
+
+
+/*게시판 중간 보이는 글 영역*/
+
+
+
+/*textarea{
+	resize:none;
+	border: 1px solid #888888;
+	width: 600px;
+	height: 300px;
+	min-width: 800px; 
+	max-width: 800px;
+}*/
+
+
+
+/*--------------------------약관동의 및 개인정보 수집 이용동의----------------------------*/
+
+.TaxCal{
+	margin: auto;
+	background-color:#F2F2F2;
+	height: 200px;
+}
+
+
+
+tr:nth-child(1){
+	height:30px;
+	background-color:#404040;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#FFFFFF;
+
+}
+
+
+tr:nth-child(2) td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+
+tr:nth-child(3) td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+tr:nth-child(4) td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+tr:nth-child(5) td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+tr:nth-child(6) td:nth-child(1) {
+	height:25px;
+	background-color: #DDDDDD;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#000000;
+}
+
+
+
+
+
+.TaxCal2{
+	margin: auto;
+	background-color:#F2F2F2;
+	height: 200px;
+}
+
+
+.cal_4{
+	background-color: #C6D9F1;
+}
+
+
+
+
+
+/*td:nth-child(2){
+	height:30px;
+	background-color:#F2DCDB;
+	font-weight:bold;
+	font-size:0.9em;
+	color:#FFFFFF;
+
+}*/
+
+
+
+.cal_1{
+	background-color: #F4E3E2;
+}
+
+.cal_2{
+	background-color: #CA3A3A;
+	color:#ffffff;		
+}
+.col_3{
+	clear:both;
+	background-color: #F4E3E2;
+}
+
+
+.info_wrap{
+	background-color: #E8F3FE;	
+	width: 920px;
+	height: 240px;
+	margin: 20px auto;
+	box-shadow: 3px 3px 1px #888;
+	border: 1px soild #ffffff;
+}
+
+
+.TaxInfo_board1{
+	display:inline-block;
+	width: 630px;
+	height: 220px;
+	margin: 20px auto;
+	
+}
+
+.TaxInfo_board2{
+	display:inline-block;
+	width: 270px;
+	height: 120px;
+	margin: 20px auto;
+	
+}
+
+.info_tag_img1{
+	margin-left:-6px;
+	
+}
+
+
+
+.info_tag{
+	width:600px;
+	margin: -26px 0 0 -10px ;
+	text-align: left;
+	
+}
+
+
+.p_title{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #31859C;
+	width: 600px;
+}
+
+.p_title1{
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #AFA89C;
+	width: 600px;
+}
+
+.p_title2{
+	
+	font-size: 0.8em;
+	font-weight: bold;
+	color: #AFA89C;
+	width: 480px;
+}
+
+
+.info{
+	display: inline-block;
+	text-align: right;
+}
+/*.Tax_1 tr <td{
+	margin: auto;
+	background-color: #404040;
+	color:#FFFFFF;
+}*/
+
+/*dddddddddddddddddddddddddddddddddd*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------footer------------------------ 영역 */
+
+footer p{
+	margin: 0;
+	padding: 1px;
+	text-decoration: inherit;
+}
+
+footer{
+	font-family:"Daum_Regular";
+	top: 1320px;
+	width: 100%;
+	font-size:0.75em;
+	background-color: #2d343f;
+	height: 200px;
+	color: white;
+	margin: auto;
+	padding: 20px 0 0 0;
+	
+}
+
+.ftFrame {
+	display: inline-block;
+	margin: 0 0 0 -10%;
+
+}
+
+.logo2{
+}
+
+.ft1{
+    display: inline-block;
+	margin: 0px 50px 0 10px;
+	width:30%;
+	font-size: 1em;
+}
+
+.ft2{
+    display: inline-block;
+    width: 100%;
+	margin: 0px 0 0 0;
+	width:13%;
+	font-size: 1em;
+}
+
+.ft3{
+	display: inline-block;
+    width: 100%;
+	margin: 0 10px 0 70px;
+	width:13%;	
+}
+.Face{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Tweet{
+	height: 35px;
+	margin: 5px 5px;
+}
+.Blog{
+	height: 35px;
+	margin: 5px 5px;
+}
+
+.Face:hover{
+	content: url("../images/main/face_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Tweet:hover{
+	content: url("../images/main/tweet_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+.Blog:hover{
+	content: url("../images/main/blog_1.png");
+    height: 35px;
+	margin: 5px 5px;
+}
+
+
+
+.ftR{
+	margin: auto;
+	height: 100px;
+}
+.frlogo{
+    margin: -16px 0 0 15px;
+}
+

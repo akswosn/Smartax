@@ -1,0 +1,268 @@
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+/* MARGIN */
+.mgT6 {margin-top: 6px!important;}
+.mgT10 {margin-top: 10px!important;}
+.mgT20 {margin-top: 20px!important;}
+.mgT30 {margin-top: 30px!important;}
+
+
+/* PADDING */
+.pdT8 {padding-top: 8px!important;}
+.pdB8 {padding-bottom: 8px!important;}
+.pdL10 {padding-left: 10px!important;}
+.pdL20 {padding-left: 20px!important;}
+
+/* ALIGN */
+.alignL {text-align: left!important;}
+.alignR {text-align: right!important;}
+.alignC {text-align: center!important;}
+
+/* FONT */
+.color-01 {color: #0082b3!important;}
+.color-02 {color: #D95576!important;}
+.color-03 {color: #00628C!important;}
+/*
+.content-inner .content-R{
+	float: right;
+	width: 49%;
+	border: 1px solid;
+}
+.content-inner .content-L{
+	float: left;
+	width: 49%;
+	border: 1px solid;
+}
+.content-inner .content-both{
+	clear: both;
+}
+.radio-tab{
+	margin: 10px;
+}
+*/
+.content-tab-1{}
+.content-tab-2{display: none;}
+input.tab_btn{
+    vertical-align: middle;
+    cursor: pointer;
+}
+/* join.php */
+.form-join {}
+.form-join-inner {}
+.form-join legend {
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+.form-table-01 {
+    width: 100%;
+    border-collapse: collapse;
+    border-top: 2px solid #ddd;
+}
+.form-table-01 caption {
+    padding-bottom: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+.form-table-01 th {
+    padding: 10px 0 10px 10px;
+    border-bottom: 1px solid #eee;
+    font-weight: normal;
+    text-align: left;
+    color: #777;
+}
+.form-table-01 th label {
+    display: block;
+    cursor: pointer;
+}
+.form-table-01 .row-large {
+    padding: 42px 0 42px 10px!important;
+}
+.form-table-01 tr{
+	height: 55px;
+}
+
+.form-table-01 td {
+    border-bottom: 1px solid #eee;text-align: left;
+}
+.msg-01 {
+    font-size: 11px;
+    color: #777;
+}
+
+/* login form*/
+.form-login .form-login-inner .form-login-row input[type='text'],
+.form-login .form-login-inner .form-login-row input[type='password'],
+.form-login .form-login-inner .form-login-row select {
+    border: 1px solid #aaa;
+    border-radius: 2px;
+    font-family: '맑은고딕', 'Malgun Gothic', '돋움', 'Dotum';
+    font-size: 14px;
+    vertical-align: middle;
+}
+.form-login .form-login-inner .form-login-row input[type='text'],
+.form-login .form-login-inner .form-login-row input[type='password'] {height: 22px;}
+.form-login .form-login-inner .form-login-row select {
+    height: 26px;
+    cursor: pointer;
+}
+
+.content {
+	height: 100%
+}
+.content-title {
+    border-bottom: 1px solid #ccc;
+    background: #eee;
+}
+.content-title-inner {
+    position: relative;
+    margin: 0 auto;
+    padding-top: 4px;
+    width: 1024px;
+    height: 60px;
+}
+.content-title span {
+    font-size: 22px;
+    letter-spacing: -1px;
+}
+.content-title small {
+    position: absolute;
+    bottom: 8px;
+    left: 0;
+    font-weight: normal;
+    font-size: 14px;
+    letter-spacing: -1px;
+    color: #777;
+}
+.content-inner {
+    margin: 0 auto;
+    padding: 3% 0;
+    width: 1024px;
+    /*min-height: 768px;*/
+    background: #fff;
+}
+
+.form-login {}
+.form-login-inner {
+    position: relative;
+    margin: 68px auto;
+    width: 366px;
+}
+.form-login legend {
+    font-size: 0;
+    line-height: 0;
+    height: 0;
+    text-indent: -9999px;
+}
+.form-login-row {
+    padding-bottom: 4px;
+}
+.form-login-row label {
+    display: inline-block;
+    width: 70px;
+    cursor: pointer;
+    vertical-align: top;
+    color: #777;
+}
+.form-login-row input {
+	height: 20px;
+	vertical-align: top;
+}
+
+.form-login-menu {
+    margin-top: 6px;
+    text-align: right;
+}
+.form-login-menu a {
+    font-size: 12px;
+    text-decoration: none;
+    color: #777;
+}
+.form-login-menu a:before {
+    padding-right: 4px;
+    content: "|";
+    color: #ccc;
+}
+.form-login-menu a:first-child:before {
+    content: "";
+}
+
+.btn-login-01 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 52px;
+    border: 0;
+    background-color: #fff;
+    background-image: url('../images/login/btn_login_01.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-fixed-black-w60 {
+    display: inline-block;
+    width: 60px;
+    height: 24px;
+    border: 0;
+    background-color: #fff;
+    background-image: url('../images/member/btn_black_w60.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-family: 'Dotum';
+    font-weight: bold;
+    font-size: 11px;
+    letter-spacing: -2px;
+    vertical-align: middle;
+    color: #fff;cursor: pointer;
+}
+a.btn-fixed-black-w60 {
+    text-align: center;
+    text-decoration: none;
+    line-height: 26px;
+    cursor: pointer;
+}
+.btn-fixed-black-w80 {
+    display: inline-block;
+    width: 80px;
+    height: 24px;
+    border: 0;
+    background-color: #fff;
+    background-image: url('../images/member/btn_black_w80.png');
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    font-family: 'Dotum';
+    font-weight: bold;
+    font-size: 11px;
+    vertical-align: middle;
+    letter-spacing: -2px;
+    color: #fff;cursor: pointer;
+}
+a.btn-fixed-black-w80 {
+    text-align: center;
+    text-decoration: none;
+    line-height: 26px;cursor: pointer;
+}
+.btn-img-blue-w160 {
+    width: 160px;
+    height: 52px;
+    padding: 0;
+    border: 0;
+    background: #fff no-repeat;
+    background-size: cover;
+    background-image: url('../images/member/btn_blue_w60.png');
+    color: white;
+    font-weight: bold;
+    font-size: 16px;cursor: pointer;
+}

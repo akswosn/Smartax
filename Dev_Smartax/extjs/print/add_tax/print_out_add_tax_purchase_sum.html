@@ -1,0 +1,1547 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>매입처별 세금계산서합계표(갑)</title>
+ 
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="./print_out_add_tax_purchase_sum.css" />
+ 		<script type="text/javascript" src="../jquery-1.6.4.min.js"></script>
+ 		<script src="./print_out_add_tax_purchase_sum.js"></script>
+        <!-- script -->
+        <script>
+        
+        </script>
+
+    </head>
+
+    <body>
+	
+	<div class="print_btn_area">
+        <button class="print_btn" onclick="print()">
+            <span>출력하기</span>
+        </button>
+        <button class="close_btn" onclick="self.close();">
+            <span>창닫기</span>
+        </button>
+    </div>
+    
+	<!--content 시작-->
+	<div class="content0">
+		 <div class="a4">
+
+<!--++++++++++++++++++++++++++++++++-->
+<!-- jQuery로 값이 채워질 부분은 span으로 감싸고 id를 추가할 수 있게 했습니다. -->
+<!--++++++++++++++++++++++++++++++++-->
+
+
+<!--++++++++++++++++++++++++++++++++1페이지  매입처별 세금계산서합계표(갑) 시작 ++++++++++++++++++++++++++++++++-->
+
+	
+	<!--=============================-->
+	<!--상단 타이틀 시작-->
+	<!--=============================-->
+		<div class="overf">
+			<p>
+				<span class="pdr5">■</span>부가가치세법 시행규칙 [별지 제20호의서식(1)] <span class="">&lt;개정 2012.2.28&gt;</span>
+				<span class="sub floatR">홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+			</p>
+		</div>	
+				
+		<div class="title">
+			<h1 class="bold">매입처별 세금계산서합계표(갑)</h1>
+			<p class="bold">
+				&#40;<span class="wid50 disinb title_yyyy"></span> 년 
+				<span class="wid20 disinb"></span> 제
+				<span class="wid20 disinb title_gi"></span> 기&#41;
+				<span class="floatR">(앞 쪽)</span>
+			</p>
+		</div>		
+	<!--=============================-->
+	<!--상단 타이틀 끝-->
+	<!--=============================-->	
+	
+	<div class="tableWrap">	
+	
+	<!--=============================-->
+	<!--1번 테이블 - 제출자 인적사항 시작-->
+	<!--=============================-->
+		<table class="tablePack01 breakPack">
+			<colgroup>
+				<col width="190px">
+				<col width="450px">
+				<col width="190px">
+				<col width="450px">
+			</colgroup>
+			
+			<thead>
+				<tr class="">
+					<th colspan="4" class="thTitle02"><span>1. 제출자 인적사항</span></th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td><span class="num">&#40;1&#41;</span><span>사업자등록번호</span></td>
+					<td>
+						<span class="wid100 disinb txtRight pdr15 co_saup_no1"></span>-
+						<span class="wid50 disinb txtCenter co_saup_no2"></span>-
+						<span class="wid50 disinb txtCenter co_saup_no3"></span>
+					</td>
+					<td><span class="num">&#40;2&#41;</span><span class="letter2">상호(법인명)</span></td>
+					<td><span id="co_nm"> </span></td>
+				</tr>
+
+				<tr>
+					<td><span class="num">&#40;3&#41;</span><span class="letter2">성 명(대표자)</span></td>
+					<td><span id="co_ceo_nm"></span></td>
+					<td><span class="num">&#40;4&#41;</span><span class="letter2">사업장소재지</span></td>
+					<td><span id="co_addr"></span></td>
+				</tr>
+
+				<tr class="line">
+					<td><span class="num">&#40;5&#41;</span><span>거래기간</span></td>
+					<td>
+						<span id="from_yyyy" class="wid35 disinb txtRight"></span>년
+						<span id="from_mouth" class="wid20 disinb txtRight"></span>월
+						<span id="from_day" class="wid20 disinb txtRight"></span><span class="wid30 disinb">일</span>~
+						<span id="to_yyyy" class="wid35 disinb txtRight"></span>년
+						<span id="to_mouth" class="wid20 disinb txtRight"></span>월 
+						<span id=to_day"" class="wid20 disinb txtRight"></span>일
+					</td>
+					<td><span class="num">&#40;6&#41;</span><span class="">작성일</span></td>
+					<td>
+						<span id="yyyy" class="wid50 disinb txtRight"></span>년
+						<span id="mm" class="wid50 disinb txtRight"></span>월 
+						<span id="dd" class="wid50 disinb txtRight"></span>일
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	<!--=============================-->		
+	<!--1번 테이블 - 제출자 인적사항 끝-->
+	<!--=============================-->	
+
+
+
+	<!--=============================-->
+	<!--2번 테이블 - 매입세금계산서 총합계 시작-->
+	<!--=============================-->
+		<table class="tablePack02 breakPack">
+			<colgroup>
+				<col width="100px">
+				<col width="100px">
+				<col width="50px">
+				<col width="50px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+				<col width="70px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="14" class=" thTitle02"><span>2. 매입세금계산서 총합계</span></th>
+				</tr>
+			</thead>
+			<tbody>
+	<!--=============================-->
+	<!--2번 테이블 - 1. 구분-->
+	<!--=============================-->			
+				<tr class="txtCenter lineR">
+					<td colspan="2" class="letter20">구분</td>
+					<td><span class="num disblo">&#40;7&#41;</span><span class="letter4">매입처수</span></td>
+					<td><span class="num disblo">&#40;8&#41;</span><span class="letter4">매수</span></td>
+					<td colspan="5"><span class="num">&#40;9&#41;</span><span class="letter15">공급가액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="70px">
+								<col width="70px">
+								<col width="70px">
+								<col width="70px">
+								<col width="70px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td colspan="5"><span class="num">&#40;10&#41;</span><span class="letter15">세액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="70px">
+								<col width="70px">
+								<col width="70px">
+								<col width="70px">
+								<col width="70px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+				</tr>
+	<!--=============================-->
+	<!--2번 테이블 - 2. 합계-->
+	<!--=============================-->			
+				<tr class="txtRight">
+					<td colspan="2" class="txtCenter letter20 het30">합계</td>
+					<td><span id="sum1" class="num"></span></td>
+					<td><span id="sum2" class="num"></span></td>
+					<td><span id="sum3_1" class="num"></span></td>
+					<td><span id="sum3_2" class="num"></span></td>
+					<td><span id="sum3_3" class="num"></span></td>
+					<td><span id="sum3_4" class="num"></span></td>
+					<td><span id="sum3_5" class="num"></span></td>
+					<td><span id="sum4_1" class="num"></span></td>
+					<td><span id="sum4_2" class="num"></span></td>
+					<td><span id="sum4_3" class="num"></span></td>
+					<td><span id="sum4_4" class="num"></span></td>
+					<td><span id="sum4_5" class="num"></span></td>
+				</tr>
+	<!--=============================-->
+	<!--2번 테이블 - 3. 과세기간종료일 이후 발급분-->
+	<!--=============================-->
+				<tr class="txtRight">
+					<td rowspan="3" class="txtCenter">과세기간</br>종료일 다음달</br>11일까지</br>전송된 전자</br>세금계산서</br>발급받은분</td>
+					<td class="txtCenter ">사업자등록번호<br/> 발급받은분</td>
+					<td><span id="val1_1" class="num"></span></td>
+					<td><span id="val1_2" class="num"></span></td>
+					<td><span id="val1_3_1" class="num"></span></td>
+					<td><span id="val1_3_2" class="num"></span></td>
+					<td><span id="val1_3_3" class="num"></span></td>
+					<td><span id="val1_3_4" class="num"></span></td>
+					<td><span id="val1_3_5" class="num"></span></td>
+					<td><span id="val1_4_1" class="num"></span></td>
+					<td><span id="val1_4_2" class="num"></span></td>
+					<td><span id="val1_4_3" class="num"></span></td>
+					<td><span id="val1_4_4" class="num"></span></td>
+					<td><span id="val1_4_5" class="num"></span></td>
+				</tr> 
+				<tr class="txtRight">
+					<td class="txtCenter ">주민등록번호<br/>발급받은분</td>
+					<td><span id="val2_1" class="num"></span></td>
+					<td><span id="val2_2" class="num"></span></td>
+					<td><span id="val2_3_1" class="num"></span></td>
+					<td><span id="val2_3_2" class="num"></span></td>
+					<td><span id="val2_3_3" class="num"></span></td>
+					<td><span id="val2_3_4" class="num"></span></td>
+					<td><span id="val2_3_5" class="num"></span></td>
+					<td><span id="val2_4_1" class="num"></span></td>
+					<td><span id="val2_4_2" class="num"></span></td>
+					<td><span id="val2_4_3" class="num"></span></td>
+					<td><span id="val2_4_4" class="num"></span></td>
+					<td><span id="val2_4_5" class="num"></span></td>					
+				</tr> 
+				<tr class="txtRight">
+					<td class="txtCenter het30"><span class="letter15">소</span>계</td>
+					<td><span id="val3_1" class="num"></span></td>
+					<td><span id="val3_2" class="num"></span></td>
+					<td><span id="val3_3_1" class="num"></span></td>
+					<td><span id="val3_3_2" class="num"></span></td>
+					<td><span id="val3_3_3" class="num"></span></td>
+					<td><span id="val3_3_4" class="num"></span></td>
+					<td><span id="val3_3_5" class="num"></span></td>
+					<td><span id="val3_4_1" class="num"></span></td>
+					<td><span id="val3_4_2" class="num"></span></td>
+					<td><span id="val3_4_3" class="num"></span></td>
+					<td><span id="val3_4_4" class="num"></span></td>
+					<td><span id="val3_4_5" class="num"></span></td>					
+				</tr> 
+	<!--=============================-->
+	<!--2번 테이블 - 4. 위 전자세금계산서 외의 발급분-->
+	<!--=============================-->
+				<tr class="txtRight">
+					<td rowspan="3" class="txtCenter">위 전자</br>세금계산서</br> 외의</br> 발급받은분</td>
+					<td class="txtCenter ">사업자등록번호<br/> 발급받은분</td>
+					<td><span id="val4_1" class="num"></span></td>
+					<td><span id="val4_2" class="num"></span></td>
+					<td><span id="val4_3_1" class="num"></span></td>
+					<td><span id="val4_3_2" class="num"></span></td>
+					<td><span id="val4_3_3" class="num"></span></td>
+					<td><span id="val4_3_4" class="num"></span></td>
+					<td><span id="val4_3_5" class="num"></span></td>
+					<td><span id="val4_4_1" class="num"></span></td>
+					<td><span id="val4_4_2" class="num"></span></td>
+					<td><span id="val4_4_3" class="num"></span></td>
+					<td><span id="val4_4_4" class="num"></span></td>
+					<td><span id="val4_4_5" class="num"></span></td>					
+				</tr> 
+				<tr class="txtRight">
+					<td class="txtCenter ">주민등록번호<br/>발급받은분</td>
+					<td><span id="val5_1" class="num"></span></td>
+					<td><span id="val5_2" class="num"></span></td>
+					<td><span id="val5_3_1" class="num"></span></td>
+					<td><span id="val5_3_2" class="num"></span></td>
+					<td><span id="val5_3_3" class="num"></span></td>
+					<td><span id="val5_3_4" class="num"></span></td>
+					<td><span id="val5_3_5" class="num"></span></td>
+					<td><span id="val5_4_1" class="num"></span></td>
+					<td><span id="val5_4_2" class="num"></span></td>
+					<td><span id="val5_4_3" class="num"></span></td>
+					<td><span id="val5_4_4" class="num"></span></td>
+					<td><span id="val5_4_5" class="num"></span></td>					
+				</tr> 
+				<tr class="txtRight line">
+					<td class="txtCenter het30"><span class="letter15">소</span>계</td>
+					<td><span id="val6_1" class="num"></span></td>
+					<td><span id="val6_2" class="num"></span></td>
+					<td><span id="val6_3_1" class="num"></span></td>
+					<td><span id="val6_3_2" class="num"></span></td>
+					<td><span id="val6_3_3" class="num"></span></td>
+					<td><span id="val6_3_4" class="num"></span></td>
+					<td><span id="val6_3_5" class="num"></span></td>
+					<td><span id="val6_4_1" class="num"></span></td>
+					<td><span id="val6_4_2" class="num"></span></td>
+					<td><span id="val6_4_3" class="num"></span></td>
+					<td><span id="val6_4_4" class="num"></span></td>
+					<td><span id="val6_4_5" class="num"></span></td>					
+				</tr> 
+			</tbody>
+		</table>
+		<p class="mgt5 mgl10">* 주민등록번호로 발급받은 세금계산서는 사업자등록 전 매입세액 공제를 받을 수 있는 세금계산서만 적습니다.</p>
+	<!--=============================-->
+	<!--2번 테이블 - 매입세금계산서 총합계 끝-->
+	<!--=============================-->
+
+
+	<!--=============================-->
+	<!--3번 테이블 - 과세기간 종료일 다음달 11일까지 전송된 전자세금계산서 외 발급받은 매입처별 명세 시작-->
+	<!--=============================-->
+		<table class="tablePack03 breakPack">
+			<colgroup>
+				<col width="50px">
+				<col width="120px">
+				<col width="150px">
+				<col width="50px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="60px">
+				<col width="70px">
+			</colgroup>
+			<thead>
+				<tr>
+					<th colspan="15" class="thTitle02"><span class="letter2">3. 과세기간 종료일 다음달 11일까지 전송된 전자세금계산서 외 발급받은 매입처별 명세</span></br><span class="mgl30 font14">(합계금액으로 적음)</span></th>
+				</tr>
+			</thead>
+			<tbody>
+	<!--=============================-->
+	<!--3번 테이블 - 1. 구분-->
+	<!--=============================-->			
+				<tr class="txtCenter">
+					<td><span class="num disblo">&#40;11&#41;</span><span class="letter4">번호</span></td>
+					<td><span class="num disblo">&#40;12&#41;</span><span class="letter1m">사업자등록번호</span></td>
+					<td><span class="num disblo">&#40;13&#41;</span><span class="letter4">상호(법인명)</span></td>
+					<td><span class="num disblo">&#40;14&#41;</span><span class="letter4">매수</span></td>
+					<td colspan="5"><span class="num">&#40;15&#41;</span><span class="letter15">공급가액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td colspan="5"><span class="num">&#40;16&#41;</span><span class="letter15">세액</span>
+						<table class="tableN">
+							<colgroup>
+								<col width="">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+								<col width="60px">
+							</colgroup>							
+							<th>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td><span class="letter4">비고</span></td>
+				</tr>
+	<!--=============================-->
+	<!--3번 테이블 - 2. 1번째 줄-->
+	<!--=============================-->		
+				<tr class="txtRight">
+					<td  class="txtCenter"><span class="list_num"></span></td>
+					<td class="txtCenter"><span class="list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no2">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td  class="txtCenter"><span class="list_co_nm"></span></td>
+					<td><span class="num list_cnt"></span></td>
+					<td><span class="num atax_supply_price1"></span></td>
+					<td><span class="num atax_supply_price2"></span></td>
+					<td><span class="num atax_supply_price3"></span></td>
+					<td><span class="num atax_supply_price4"></span></td>
+					<td><span class="num atax_supply_price5"></span></td>
+					<td><span class="num atax_tax1"></span></td>
+					<td><span class="num atax_tax2"></span></td>
+					<td><span class="num atax_tax3"></span></td>
+					<td><span class="num atax_tax4"></span></td>
+					<td><span class="num atax_tax5"></span></td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>
+ 
+	<!--=============================-->
+	<!--3번 테이블 - 3. 2번째 줄-->
+	<!--=============================-->		
+				<tr class="txtRight">
+					<td  class="txtCenter"><span class="list_num"></span></td>
+					<td class="txtCenter"><span class="list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no2">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td  class="txtCenter"><span class="list_co_nm"></span></td>
+					<td><span class="num list_cnt"></span></td>
+					<td><span class="num atax_supply_price1"></span></td>
+					<td><span class="num atax_supply_price2"></span></td>
+					<td><span class="num atax_supply_price3"></span></td>
+					<td><span class="num atax_supply_price4"></span></td>
+					<td><span class="num atax_supply_price5"></span></td>
+					<td><span class="num atax_tax1"></span></td>
+					<td><span class="num atax_tax2"></span></td>
+					<td><span class="num atax_tax3"></span></td>
+					<td><span class="num atax_tax4"></span></td>
+					<td><span class="num atax_tax5"></span></td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>
+	<!--=============================-->
+	<!--3번 테이블 - 4. 3번째 줄-->
+	<!--=============================-->		
+				<tr class="txtRight">
+					<td  class="txtCenter"><span class="list_num"></span></td>
+					<td class="txtCenter"><span class="list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no2">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td  class="txtCenter"><span class="list_co_nm"></span></td>
+					<td><span class="num list_cnt"></span></td>
+					<td><span class="num atax_supply_price1"></span></td>
+					<td><span class="num atax_supply_price2"></span></td>
+					<td><span class="num atax_supply_price3"></span></td>
+					<td><span class="num atax_supply_price4"></span></td>
+					<td><span class="num atax_supply_price5"></span></td>
+					<td><span class="num atax_tax1"></span></td>
+					<td><span class="num atax_tax2"></span></td>
+					<td><span class="num atax_tax3"></span></td>
+					<td><span class="num atax_tax4"></span></td>
+					<td><span class="num atax_tax5"></span></td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr> 
+	<!--=============================-->
+	<!--3번 테이블 - 5. 4번째 줄-->
+	<!--=============================-->		
+ 				<tr class="txtRight">
+					<td  class="txtCenter"><span class="list_num"></span></td>
+					<td class="txtCenter"><span class="list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no2">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td  class="txtCenter"><span class="list_co_nm"></span></td>
+					<td><span class="num list_cnt"></span></td>
+					<td><span class="num atax_supply_price1"></span></td>
+					<td><span class="num atax_supply_price2"></span></td>
+					<td><span class="num atax_supply_price3"></span></td>
+					<td><span class="num atax_supply_price4"></span></td>
+					<td><span class="num atax_supply_price5"></span></td>
+					<td><span class="num atax_tax1"></span></td>
+					<td><span class="num atax_tax2"></span></td>
+					<td><span class="num atax_tax3"></span></td>
+					<td><span class="num atax_tax4"></span></td>
+					<td><span class="num atax_tax5"></span></td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr>
+	<!--=============================-->
+	<!--3번 테이블 - 6. 5번째 줄-->
+	<!--=============================-->		
+				<tr class="txtRight">
+					<td  class="txtCenter"><span class="list_num"></span></td>
+					<td class="txtCenter"><span class="list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no2">&nbsp;&nbsp;&nbsp;</span>-<span class="list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td  class="txtCenter"><span class="list_co_nm"></span></td>
+					<td><span class="num list_cnt"></span></td>
+					<td><span class="num atax_supply_price1"></span></td>
+					<td><span class="num atax_supply_price2"></span></td>
+					<td><span class="num atax_supply_price3"></span></td>
+					<td><span class="num atax_supply_price4"></span></td>
+					<td><span class="num atax_supply_price5"></span></td>
+					<td><span class="num atax_tax1"></span></td>
+					<td><span class="num atax_tax2"></span></td>
+					<td><span class="num atax_tax3"></span></td>
+					<td><span class="num atax_tax4"></span></td>
+					<td><span class="num atax_tax5"></span></td>
+					<td  class="txtCenter"><span id="" ></span></td>
+				</tr> 
+	<!--=============================-->
+	<!--3번 테이블 - 7. ( ) 쪽표시-->
+	<!--=============================-->		
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="15" class="txtRight font16 ">&#40;<span id="" class="font16 disinb wid30 txtCenter page_num"></span>&#41;쪽</td>		
+				</tr>
+			</tfoot>
+		</table>
+	<!--=============================-->
+	<!--3번 테이블 - 과세기간 종료일 다음달 11일까지 전송된 전자세금계산서 외 발급받은 매입처별 명세 끝-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->
+	<!--4번 테이블 - 관리번호(매입) 시작-->
+	<!--=============================-->
+		<table class="tablePack04">
+			<colgroup>
+				<col width="330px">
+				<col width="900px">
+			</colgroup>
+			<tbody>
+				<tr>
+					<td><span class="num">&#40;17&#41;</span><span class="letter4 bold">관리번호(매입)</span></td>
+					<td class="txtCenter"><span id=""></span> - <span id=""></span></td>
+				</tr>
+			</tbody>
+		</table>
+	<!--=============================-->
+	<!--4번 테이블 - 관리번호(매입) 끝-->
+	<!--=============================-->
+
+		<div>
+			<p class="txtRight mgt10">
+				<span>210mm x 297mm [백상지 80g/m<sup>2</sup> 또는 중질지 80g/m<sup>2</sup>]</span>
+			</p>
+		</div>	
+	</div> <!-- a4 -->
+</div> <!-- content -->
+<!--++++++++++++++++++++++++++++++++1페이지  매입처별 세금계산서합계표(갑) 끝 ++++++++++++++++++++++++++++++++-->
+
+
+<!--++++++++++++++++++++++++++++++++2페이지  매입처별 세금계산서합계표(을) 시작 ++++++++++++++++++++++++++++++++-->
+<div class="content1">
+		<div class="a4">
+	<!--=============================-->
+	<!--상단 타이틀 시작-->
+	<!--=============================-->
+		<div class="mgt100">
+			<p class="font16">
+				[별지 제20호의3서식(2)]&lt;개정 2009.3.26&gt;</span>
+			</p>
+		</div>	
+
+		<div class="paperBorder">
+				
+		<div class="title ">
+			<h1 class="bold">매입처별세금계산서합계표(을)</h1>
+			<p class="bold">
+				&#40;<span id=" " class="wid70 disinb title_yyyy"></span> 년 
+				<span id=" " class="wid50 disinb title_gi"></span> 기&#41;
+			</p>
+		</div>		
+	<!--=============================-->
+	<!--상단 타이틀 끝-->
+	<!--=============================-->	
+
+
+
+	<!--=============================-->
+	<!--상단 사업자등록번호 시작-->
+	<!--=============================-->	
+	<table class="tablePack05 ">
+		<colgroup>
+			<col width="300px">
+			<col width="200px">
+			<col width="150px">
+			<col width="250px">
+		</colgroup>
+		<tbody>
+			<tr class="txtCenter">
+				<td class="none1">blank</td>	
+				<td class="none1">blank</td>	
+				<td class="bold">사업자등록번호</td>
+				<td>
+					<span id=" " class="wid70 disinb co_saup_no1"></span>-
+					<span id=" " class="wid70 disinb co_saup_no2"></span>-
+					<span id=" " class="wid70 disinb co_saup_no3"></span>
+				</td>
+			</tr>		
+		</tbody>
+	</table>
+	<!--=============================-->
+	<!--5번 테이블 - 매출처별계산서합계표)갑) 초과분 테이블 시작-->
+	<!--=============================-->
+		<table class="tablePack03 mgt10  lineL lineR ">
+			<colgroup>
+				<col width="60px">
+				<col width="150px">
+				<col width="200px">
+				<col width="60px">
+				<col width="1px">
+				<col width="50px">
+				<col width="50px">
+				<col width="50px">
+				<col width="50px">
+				<col width="50px">
+				<col width="1px">
+				<col width="50px">
+				<col width="50px">
+				<col width="50px">
+				<col width="50px">
+				<col width="50px">
+				<col width="50px">
+			</colgroup>
+			<thead class="hidden">
+				<tr>
+					<th colspan="17" class="thTitle02"><span class="letter2">매출처별세금계산서합계표(을)</span></th>
+				</tr>
+			</thead>
+			<tbody class="mgt10">
+	<!--=============================-->
+	<!--5번 테이블 - 1. 제목-->
+	<!--=============================-->			
+				<tr class="txtCenter">
+					<td><span class="letter4">일련번호</span></td>
+					<td><span class="letter4">사업자등록번호</span></td>
+					<td><span class="letter4">상호(법인명)</span></td>
+					<td><span class="letter4">매수</span></td>
+					<td colspan="6"><span class="letter15">공급가액</span>
+						<table class="tableN width100">
+							<colgroup>
+								<col width="">
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="19%">
+								<col width="18%">
+							</colgroup>							
+							<th>
+								<td class="none1">blank</td>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td colspan="6"><span class="letter15">세액</span>
+						<table class="tableN width100">
+							<colgroup>
+								<col width="">
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="19%">
+								<col width="18%">
+							</colgroup>							
+							<th>
+								<td class="none1">blank</td>
+								<td>조</td>
+								<td>십억</td>
+								<td>백만</td>
+								<td>천</td>
+								<td>일</td>
+							</th>
+						</table>
+					</td>
+					<td><span class="letter4">비고</span></td>
+				</tr>
+	<!--=============================-->
+	<!--5번 테이블 - 2. 1번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+ 
+	<!--=============================-->
+	<!--5번 테이블 - 3. 2번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 4. 3번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 5. 4번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr>   
+	<!--=============================-->
+	<!--5번 테이블 - 6. 5번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 7. 6번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 8. 7번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 9. 8번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 10. 9번째 줄-->
+	<!--=============================-->		
+ 				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 11. 10번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 12. 11번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 13. 12번째 줄-->
+	<!--=============================-->		
+ 				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 14. 13번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 15. 14번째 줄-->
+	<!--=============================-->		
+				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+	<!--=============================-->
+	<!--5번 테이블 - 16. 15번째 줄-->
+	<!--=============================-->		
+ 				<tr class="txtCenter ">
+					<td rowspan="2" class="pad10"><span class="list_num"></span></td>
+					<td rowspan="2" class="letter3"><span class="disinb list_co_saup_no1">&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no2" >&nbsp;&nbsp;&nbsp;</span>-<span class="disinb list_co_saup_no3">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></td>
+					<td rowspan="2"><span class="list_co_nm"></span></td>
+					<td rowspan="2"><span class="num list_cnt"></span></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td colspan="6" class="tableN02 borderN pad2e"></td>
+					<td rowspan="2"  class="lineL"><span id="" ></span></td>
+				</tr>
+				<tr class="txtRight">
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_supply_price1"></span></td>
+								<td><span class="atax_supply_price2"></span></td>
+								<td><span class="atax_supply_price3"></span></td>
+								<td><span class="atax_supply_price4"></span></td>
+								<td><span class="atax_supply_price5"></span></td>
+							</tr>
+						</table>
+					</td>
+					<td colspan="6" class="tableN02">
+						<table class="width100">
+							<colgroup>
+								<col width="1%">
+								<col width="11%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+								<col width="20%">
+							</colgroup>						
+							<tr>
+								<td class="borderWr"><span class="none1">blank</span></td>							
+								<td><span class="atax_tax1"></span></td>
+								<td><span class="atax_tax2"></span></td>
+								<td><span class="atax_tax3"></span></td>
+								<td><span class="atax_tax4"></span></td>
+								<td><span class="atax_tax5"></span></td>
+							</tr>
+						</table>
+					</td>
+				</tr> 
+				
+				
+				<tr>
+					<td colspan="17" class="font14 borderW pdl10">*  이 서식은 매입처가 6개 이상으로서 매입처별세금계산서합계표(갑)을 초과하는 경우에 사용합니다.</td>
+				</tr>
+	<!--=============================-->
+	<!--5번 테이블 - 17. ( ) 쪽표시-->
+	<!--=============================-->		
+			</tbody>
+			<tfoot>
+				<tr>
+					<td colspan="17" class="txtRight font16 pdr5">&#40;<span id="" class="font16 disinb wid30 txtCenter"></span>&#41;쪽</td>		
+				</tr>
+			</tfoot>
+		</table>
+	<!--=============================-->
+	<!--5번 테이블 - 매출처별계산서합계표)갑) 초과분 테이블 끝-->
+	<!--=============================-->
+
+</div> <!--paperBorder 페이지 테두리 끝-->
+
+ 	<!--=============================-->
+	<!--하단 관리번호 시작-->
+	<!--=============================-->	
+	<table class="tablePack41 ">
+		<colgroup>
+			<col width="300px">
+			<col width="200px">
+			<col width="200px">
+			<col width="400px">
+		</colgroup>
+		
+		<tbody>
+			<tr class="txtCenter">
+				<td class="bold letter3 lineL">관리번호 (매입)</td>
+				<td>
+					<span id=" " class="wid70 disinb"></span>-
+					<span id=" " class="wid70 disinb"></span>
+				</td>
+				<td class="none1">blank</td>	
+				<td class="borderWa txtRight"><span>210mm x 297mm (보존용지 (1종) 70g/m<sup>2</sup>)</span></td>	
+			</tr>		
+		</tbody>
+	</table>
+
+
+<!--++++++++++++++++++++++++++++++++2페이지  매입처별 계산서합계표(을) 끝 ++++++++++++++++++++++++++++++++-->
+
+	
+	</div><!--end of table -->
+
+
+				
+
+	</div>	<!--a4 끝-->
+	</div>		
+	<!--content 끝-->
+ 
+    </body>
+</html>

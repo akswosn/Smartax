@@ -1,0 +1,54 @@
+@charset "euc-kr";
+
+/* Base Layout Style */
+body { width:100%; margin:0 auto; padding:0; }
+
+body, input, select, textarea { color:#666666; font:12px/1.2 Dotum, 돋움, Gulim, 굴림, AppleGothic, sans-serif; }
+input, textarea { outline:none; }
+ol, ul, li, p { padding:0; margin:0; list-style:none; }
+h1, h2, h3, h4, h5, h6 { padding:0; margin:0; }
+a, a:hover, a:active, a:link { text-decoration:none; color:#666666; }
+fieldset, a img, button { border:0; padding:0; margin:0; }
+iframe.overflow { overflow:hidden; }
+.image_cursor { cursor:pointer; }
+
+/* Mail Style */
+#popupNews { width:440px; margin:10px 0;}
+form { margin:20px 60px 0 60px; }
+form fieldset { margin:5px auto; }
+form p.write { font-size:13px; font-weight:bold; color:#333;}
+form div.input_box p { margin:5px 0;}
+form div.input_box p.mail_title span { display:inline-block; width:90px; }
+form div.input_box input { width:200px;}
+form div.btn_box { margin:10px 0; }
+
+p.mail_ex { width:250px; margin:0 0 10px 150px;}
+div.mail_btn01 { text-align:center; }
+div.mail_btn01 button { margin:0 10px; width:74px; height:22px; cursor:pointer; }
+button span { visibility:hidden; }
+button.mail_send { background:transparent url('http://img.etnews.com/201109/images/article/btn/btn_send01.jpg') no-repeat left top; }
+button.mail_cancel { background:transparent url('http://img.etnews.com/201109/images/article/btn/btn_cancel01.jpg') no-repeat left top; }
+button.mail_close { background:transparent url('http://img.etnews.com/201109/images/article/btn/btn_close01.jpg') no-repeat left top; }
+button.mail_print { background:transparent url('http://img.etnews.com/201109/images/article/btn/btn_print01.jpg') no-repeat left top; }
+
+#popupNews h2 { font-size:13px; font-weight:bold; text-align:center; margin:10px 0; padding:10px 0; letter-spacing:-1px; border-top:2px dotted #ddd; border-bottom:2px dotted #ddd; }
+div.mail_content { margin:20px 0; }
+div.mail_content img { display:block; margin:15px auto; }
+div.mail_content p { margin:0 10px; color:#333; font-size:13px; line-height:1.6; }
+
+p.copy { padding:10px 0; margin:20px 0; background-color:#eee; text-align:center; border-top:1px solid #aaa; border-bottom:1px solid #aaa; }
+
+/* Print Style */
+#popupPrint { width:640px; margin:10px 0;}
+#popupPrint h2 { font-size:16px; font-weight:bold; color:#d91a5d; text-align:center; margin:10px 0; padding:10px 0; }
+p.date { padding:10px 0; border-top:2px dotted #ddd; border-bottom:2px dotted #ddd; }
+
+
+
+
+
+
+
+
+
+

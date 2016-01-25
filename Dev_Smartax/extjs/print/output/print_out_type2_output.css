@@ -1,0 +1,161 @@
+/*이 페이지에서 필요한 부분만 리셋합니다.*/
+
+@page a4sheet { size: 21.0cm 29.7cm }
+.a4 { page: a4sheet; page-break-after: always }
+
+body {
+display: block;
+margin: 0px;
+}
+
+* {
+	margin:0; 
+	padding:0;
+	font:14px "돋움",Dotum,sans-serif;
+	line-height: 1.302343;
+    /* 1.18
+        line-height: 1.1;
+    
+    line-height: 1.428571429;
+    */
+    color: #333333;
+     
+	}
+
+h1 {
+	margin:.67em 0;
+	font-size:2em
+	}
+
+
+sup {
+	top:-.5em
+	}
+
+sub {
+	bottom:-.25em
+	}
+ 
+
+table {
+	border-spacing:0;
+	border-collapse:collapse
+	}
+
+td,th {
+	padding:0
+	}
+
+/*custom style*/
+
+
+.content  {
+	width:920px;
+	margin:50px auto;
+	background1:#f4f4f4;
+	}
+
+.print_btn_area {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    padding: 5px;
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    text-align: center;
+}
+.print_btn_area button {
+    width: 66px;
+    font-family: 'Malgun Gothic', 'Dotum';
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+@media print {
+    .print_btn_area {
+       display:none;
+    }
+}
+
+
+.title
+{
+	font-size : 20px;
+}
+
+
+.val 
+{
+	font-weight: 900;
+}
+
+
+#top_div
+{
+	width : 95%;
+	margin : 10px;
+	padding : 10px;
+}
+
+
+#top_div table
+{
+	width : 100%;
+}
+
+#top_div tr 
+{
+	height: 45px;
+}
+
+#top_div th
+{
+	border : 1px solid black;
+}
+
+#top_div td
+{
+	border : 1px solid black;
+	text-align: center;
+}
+
+#top_div p
+{
+	line-height : 30px;
+}
+
+
+#bottom_div
+{
+	width : 95%;
+	margin : 10px;
+	padding : 10px;
+}
+
+
+#bottom_div table
+{
+	width : 100%;
+}
+
+#bottom_div tr 
+{
+	height: 45px;
+}
+
+#bottom_div th
+{
+	border : 1px solid black;
+}
+
+#bottom_div td
+{
+	border : 1px solid black;
+	text-align: center;
+}
+
+#bottom_div p
+{
+	line-height : 30px;
+}

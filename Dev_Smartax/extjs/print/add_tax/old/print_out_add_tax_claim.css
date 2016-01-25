@@ -1,0 +1,260 @@
+body {
+display: block;
+margin: 0px;
+}
+
+
+.mgT2 {margin-top: 2px!important;}
+
+.alignL {text-align: left!important;}
+.alignR {text-align: right!important;}
+.alignC {text-align: center!important;}
+
+.s_font {
+		font-size: 10px;!important;
+		line-height: 11px;
+}
+
+.bg-color-7
+{
+	background : #cdcdcd;
+}
+
+.wrap {
+	font-family: "돋움", "Dotum";
+	font-size: 12px;
+}
+
+.title_top table
+{
+	width:100%;
+}
+
+.title_top_1
+{
+	font-size: 10px;
+	text-align: left;
+	width: 45%;
+}
+
+.title_top_2
+{
+	font-size: 13px;
+	text-align: left;
+	width: 20%;
+}
+
+.title_top_3
+{
+	font-size: 10px;
+	text-align: left;
+	width: 30%;
+}
+
+
+.title {
+	position: relative;
+	padding: 2px 15%;
+	font-size: 16px;
+	font-weight: 900;
+}
+.title-text1 {
+	position: absolute;
+	top: 19px;
+	left: 15%;
+}
+.title div {padding-left: 200px;}
+.title-text2 {
+	position: absolute;
+	top: 19px;
+	left: 569px;
+}
+
+
+
+.tbl-1 {
+	table-layout: fixed;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.tbl-1 tbody td.tbl_center 
+{
+	text-align : center;
+}
+
+.tbl-1 tbody td.tbl-1_top {
+	border: 0px solid #000;
+	background-color: #cdcdcd;
+}
+
+.tbl-1 caption {
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
+
+.tbl-1 thead th {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	font-weight: normal;
+}
+.tbl-1 thead th:first-child {border-left: 0;}
+.tbl-1 tbody th {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	font-weight: normal;
+	text-align: left;
+	white-space: nowrap;
+}
+
+.tbl-1 tbody th:first-child {border-left: 0;}
+.tbl-1 tbody td {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	font-weight: normal;
+	text-align: left;
+	white-space: nowrap;
+}
+.tbl-1 tbody td:first-child {	border-left: 0;}
+
+.tbl-1 tbody td.tbl_center 
+{
+	text-align : center;
+}
+
+
+
+.print_btn_area {
+    position: absolute;
+    top: -8px;
+    left: -8px;
+    padding: 5px;
+    background: #eee;
+    border: 1px solid #aaa;
+    border-radius: 3px;
+    text-align: center;
+}
+.print_btn_area button {
+    width: 66px;
+    font-family: 'Malgun Gothic', 'Dotum';
+    font-weight: bold;
+    font-size: 12px;
+    cursor: pointer;
+}
+@media print {
+    .print_btn_area {
+       display:none;
+    }
+}
+
+/* 2Page */
+.mgT2 {margin-top: 2px!important;}
+
+.alignL {text-align: left!important;}
+.alignR {text-align: right!important;}
+.alignC {text-align: center!important;}
+
+.wrap {
+	font-family: "돋움", "Dotum";
+	font-size: 12px;
+}
+
+.bizno-lay{
+	width:100%;
+	border-collapse:collapse;
+	height: 15px;
+}
+
+.bizno-text{
+	width:150px;
+}
+
+.bizno-text{
+	width:100px;
+}
+
+.bizno-val{
+	width:15px;
+	text-align:center;
+	border: 1px solid #000;
+}
+
+.bizno-temp{
+	width:20px;
+	text-align:center;
+}
+
+.bizno-help{
+	text-align:right;
+}
+
+.color-cell{
+	background : #cdcdcd;
+}
+
+
+.left-cell{
+	text-align:left !important;
+}
+
+.tbl-2 {
+	table-layout: fixed;
+	margin-top:1px;
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.tbl-2 caption {
+	height: 0;
+	font-size: 0;
+	line-height: 0;
+	text-indent: -9999px;
+}
+.tbl-2 thead th {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	font-weight: normal;
+}
+.tbl-2 thead th:first-child {border-left: 0;}
+.tbl-2 tbody th {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	font-weight: normal;
+	text-align: left;
+}
+.tbl-2 tbody th:first-child {border-left: 0;}
+.tbl-2 tbody td {
+	border-top: 1px solid #000;
+	border-bottom: 1px solid #000;
+	border-left: 1px solid #000;
+	font-weight: normal;
+	text-align: center;
+}
+.tbl-2 tbody td:first-child {	border-left: 0;}
+
+.tbl2-top table 
+{
+	width : 100%;
+}
+
+.tbl2-top table td
+{
+	border-bottom: 3px double #000;
+	text-align: right;
+	padding-right : 10px;
+	font-size: 10px;
+}
+
+.tbl2-bottom
+{
+	text-align: right;
+	padding-right : 20px;
+	font-size: 10px;
+}

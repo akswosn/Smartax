@@ -1,0 +1,1572 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>일반과세자 부가가치세 신고서</title>
+ 
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+        <!-- stylesheets -->
+        <link rel="stylesheet" href="./print_out_add_tax_claim2.css" />
+ 		<script type="text/javascript" src="../jquery-1.6.4.min.js"></script>
+		<script type="text/javascript" src="./print_out_add_tax_claim2.js?ver=1"></script>
+        <!-- script -->
+        <script>
+        
+        </script>
+    </head>
+
+    <body>
+	
+	<!--content 시작-->
+	<div class="content1">
+	
+
+<!--++++++++++++++++++++++++++++++++-->
+<!-- jQuery로 값이 채워질 부분은 span으로 감싸고 id를 추가할 수 있게 했습니다. -->
+<!--++++++++++++++++++++++++++++++++-->
+
+
+<!--++++++++++++++++++++++++++++++++1페이지  일반과세자 부가가치세 신고서 시작 ++++++++++++++++++++++++++++++++-->
+
+	
+	<!--=============================-->
+	<!--상단 타이틀 시작-->
+	<!--=============================-->
+		<div class="overf">
+			<p>
+				<span class="pdr5">■</span>부가가치세법 시행규칙 [별지 제21호서식]
+				<span class="sub floatR">홈택스(www.hometax.go.kr)에서도 신청할 수 있습니다.</span>
+			</p>
+		</div>	
+				
+		<div class="title01">
+			<ul>
+				<li class="pdt30">일반과세자 부가가치세</li>
+			</ul>
+			<ul>
+				<li>[<span id="title1"></span>  ]예정 [<span id="title2"></span>  ]확정 </li>
+				<li>[<span id="title3"></span>  ]기한후과세표준</li>
+				<li>[<span id="title4"></span>  ]영세율 등 조기환급</li>
+			</ul>
+			<ul>
+				<li class="pdt30">신고서</li>
+			</ul>
+		</div>		
+				
+		<div class="overf">
+			<p class="bold">
+				<span class="floatR">(제1장 앞 쪽)</span>
+			</p>
+		</div>		
+	<!--=============================-->
+	<!--상단 타이틀 끝-->
+	<!--=============================-->	
+	
+	<div class="tableWrap01">	
+
+	<table class="title02">
+		<colgroup>
+			<col width="250px">
+			<col width="700px">
+			<col width="150px">
+			<col width="150px">
+		</colgroup>
+		<tr class="bgG">
+			<td class="borderWrno">관리번호</td>
+			<td><span id=" "></span></td>
+			<td class="borderWrno">처리기간</td>
+			<td>즉시</td>
+		</tr>
+	</table>
+
+	<div>
+		<p class="mgl7">신고기간
+			<span id="yyyy" class="wid30 disinb txtRight"></span>년
+			<span id=" " class="wid20 disinb txtRight"></span>제
+			<span id="gi" class="wid20 disinb txtRight"></span>기(
+			<span id="from_mouth" class="wid20 disinb txtRight"></span>월 
+			<span id="from_day" class="wid20 disinb txtRight"></span><span class="">일</span>~
+			<span id="to_mouth" class="wid10 disinb txtRight"></span>월 
+			<span id="to_day" class="wid20 disinb txtRight"></span>일)
+	</div>
+
+	<!--=============================-->		
+	<!--1번 테이블 - 사업자  시작								-->
+	<!--=============================-->
+
+	<table class="txtCenter line breakPack">
+		<colgroup>
+			<col width="70px">
+			<col width="70px">
+			<col width="200px">
+			<col width="70px">
+			<col width="180px">
+			<col width="120px">
+			
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+		</colgroup>
+		<tbody>
+			<tr>
+				<td rowspan="4">사업자</td>
+				<td><span class="letter7">상 호</span></br><span class=" lineHt5">( 법인명)</span></td>
+				<td><span id="co_nm"></span></td>																																		<!--상호(법인명) 입력-->
+				<td><span class="letter7">성 명</span></br><span class=" lineHt5">( 대표자명)</span></td>
+				<td><span id="daepyo_nm"></span></td>																																		<!--성명(대표자명) 입력-->
+				<td>사업자등록번호</td>
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td>-</td>
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td>-</td>
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+				<td><span class="co_no"></span></td>																																		<!--사업자등록번호 입력-->
+			</tr>
+			
+			<tr>
+				<td rowspan="2"><span class="letter1m">주민(법 인)</span></br><span class=" lineHt5">등록번호</span></td>
+				<td colspan="2" rowspan="2">
+					<span id="co_reg_no1" class="wid70 disinb"></span>-																										<!--주민(법인)번호 앞자리 입력-->
+					<span id="co_reg_no2" class="wid70 disinb"></span>																											<!--주민(법인)번호 뒷자리 입력-->
+				</td>																																		
+				<td valign="middle" rowspan="2">전화번호</td>
+				<td>사업장</td>																																		
+				<td colspan="6">주소지</td>																																		
+				<td colspan="6">휴대전화</td>																																	
+			</tr>
+			
+			<tr>
+			<!-- 
+				<td ><span class="none1">1</span><span id="tel_co"></span></td>																		<!--전화번호 입력 *******숫자1삭제금지 -->
+				<td><span id="tel_co"></span></td>																																		<!--사업장 입력-->
+				<td colspan="6" class="txtLeft"><span id="tel_home" class="lineHt12"></span></td>											<!--주소지 입력-->																						
+				<td colspan="6"><span id="tel_phone"></span></td>																												<!--휴대전화 입력-->												
+			</tr>
+			
+			<tr>
+				<td class="letter1m"><span>사업장 주소</span></td>																																		
+				<td colspan="3"><span id="address"></span></td>												<!--사업장 주소 입력 *******숫자1삭제금지-->																																
+				<td class="letter1m">전자우편 주소</td>																																		
+				<td colspan="12"><span id="email"></span></td>																											<!--전자우편 주소 입력-->																																
+			</tr>
+		</tbody>
+	</table>
+
+	<!--=============================-->		
+	<!--1번 테이블 - 사업자  끝									-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--2번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt5 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			
+			<col width="50px">
+			<col width="100px">
+			<col width="200px">
+			
+			<col width="50px">
+			
+			<col width="300px">
+			<col width="70px">
+			<col width="300px">
+			
+			<!-- 
+			<col width="9%">
+			
+			<col width="4%">
+			<col width="9%">
+			<col width="17%">
+			
+			<col width="4%">
+			
+			<col width="25%">
+			<col width="7%">
+			<col width="25%">
+			 -->
+		</colgroup>
+		
+		<thead>
+			<th>
+				<td colspan="8" class="bold">&#9312;신고내용</td>
+			</th>
+		</thead>
+		<tbody>
+			<tr>
+				<td colspan="5" >구<span class="wid50 disinb"></span>분</td>
+				<td>금<span class="wid50 disinb"></span>액</td>
+				<td>세율</td>
+				<td>세<span class="wid50 disinb"></span>액</td>
+			</tr>
+
+
+	<!--=============================-->		
+	<!--2번 테이블  - 1. 과세표준 및 매출 세액	   	-->
+	<!--=============================-->
+	
+<!-- 구분 1-->			
+			<tr>
+				<td rowspan="9" class="tdTitle">과세</br>표준</br>및</br>매출</br>세액</td>
+				<td rowspan="4">과세</td>
+				<td colspan="2" class="txtLeft10"><span>세금계산서 발급분</span></td>
+				<td>&#40;1&#41;</td>
+				<td><span id="price1"></span></td>																											<!--구분1 금액 입력-->
+				<td>10/100</td>																											
+				<td><span id="tax1"></span></td>																											<!--구분1 세액 입력-->
+			</tr>
+			
+<!-- 구분 2-->			
+			<tr>
+				<td colspan="2"  class="txtLeft10"><span>매입자발행 세금계산서</span></td>
+				<td>&#40;2&#41;</td>
+				<td><span id="price2"></span></td>																											<!--구분2 금액 입력-->
+				<td>10/100</td>																											
+				<td><span id="tax2"></span></td>																											<!--구분2 세액 입력-->
+			</tr>
+			
+<!-- 구분 3-->			
+			<tr>
+				<td colspan="2"  class="txtLeft10"><span>신용카드ㆍ현금영수증 발행분</span></td>
+				<td>&#40;3&#41;</td>
+				<td><span id="price3"></span></td>																											<!--구분3 금액 입력-->
+				<td rowspan="2">10/100</td>																											
+				<td><span id="tax3"></span></td>																											<!--구분3 세액 입력-->
+			</tr>
+			
+<!-- 구분 4-->			
+			<tr>
+				<td colspan="2"  class="txtLeft10"><span>기타(정규영수증 외 매출분)</span></td>
+				<td>&#40;4&#41;</td>
+				<td><span id="price4"></span></td>																											<!--구분4 금액 입력-->
+				<td><span id="tax4"></span></td>																											<!--구분4 세액 입력-->
+			</tr>
+			
+<!-- 구분 5-->			
+			<tr>
+				<td rowspan="2">영세율</td>
+				<td colspan="2"  class="txtLeft10"><span>세금계산서 발급분</span></td>
+				<td>&#40;5&#41;</td>
+				<td><span id="price5"></span></td>																											<!--구분5 금액 입력-->
+				<td>0/100</td>																											
+				<td><span id="tax5"></span></td>																											<!--구분5 세액 입력-->
+			</tr>			
+			
+<!-- 구분 6-->			
+			<tr>
+				<td colspan="2"  class="txtLeft10"><span>기</span><span class="wid50 disinb"></span>타</td>
+				<td>&#40;6&#41;</td>
+				<td><span id="price6"></span></td>																											<!--구분6 금액 입력-->
+				<td>0/100</td>																											
+				<td><span id="tax6"></span></td>																											<!--구분6 세액 입력-->
+			</tr>			
+			
+<!-- 구분 7-->			
+			<tr>
+				<td colspan="3" class="letter15 txtLeft10"><span>예정신고 누락분</span></td>
+				<td>&#40;7&#41;</td>
+				<td><span id="price7"></span></td>																											<!--구분7 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분7 세율 입력-->
+				<td><span id="tax7"></span></td>																											<!--구분7 세액 입력-->
+			</tr>			
+			
+<!-- 구분 8-->			
+			<tr>
+				<td colspan="3" class="letter25 txtLeft10"><span>대손세액가감</span></td>
+				<td>&#40;8&#41;</td>
+				<td><span id="price8"></span></td>																											<!--구분8 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분8 세율 입력-->
+				<td><span id="tax8"></span></td>																											<!--구분8 세액 입력-->
+			</tr>			
+
+<!-- 구분 9-->			
+			<tr>
+				<td colspan="3" class="letter50"><span>합계</span></td>
+				<td>&#40;9&#41;</td>
+				<td><span id="price9"></span></td>																											<!--구분9 금액 입력-->
+				<td>&#40;가&#41;</td>																								 
+				<td><span id="tax9"></span></td>																											<!--구분9 세액 입력-->
+			</tr>	
+			
+			
+					
+	<!--=============================-->		
+	<!--2번 테이블  - 2. 매입세액							   	-->
+	<!--=============================-->
+	
+<!-- 구분 10-->			
+			<tr>
+				<td rowspan="8" class="tdTitle">매입</br>세액</td>
+				<td  colspan="2"  rowspan="2" class="letter2"><span>세금계산서</br>수취분</span></td>
+				<td class="txtLeft10"><span>일반매입</span></td>
+				<td><span>&#40;10&#41;</span></td>
+				<td><span id="price10"></span></td>																											<!--구분10 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분10 세율 입력-->
+				<td><span id="tax10"></span></td>																											<!--구분10 세액 입력-->
+			</tr>
+
+<!-- 구분 11-->			
+			<tr>
+				<td class="txtLeft10"><span>고정자산 매입</span></td>
+				<td><span>&#40;11&#41;</span></td>
+				<td><span id="price11"></span></td>																											<!--구분11 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분11 세율 입력-->
+				<td><span id="tax11"></span></td>																											<!--구분11 세액 입력-->
+			</tr>			
+			
+<!-- 구분 12-->			
+			<tr>
+				<td colspan="3" class="letter15 txtLeft10"><span>예정신고 누락분</span></td>
+				<td>&#40;12&#41;</td>
+				<td><span id="price12"></span></td>																											<!--구분12 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분12 세율 입력-->
+				<td><span id="tax12"></span></td>																											<!--구분12 세액 입력-->
+			</tr>		
+			
+<!-- 구분 13-->			
+			<tr>
+				<td colspan="3" class=" txtLeft10"><span>매입자발행 세금계산서</span></td>
+				<td>&#40;13&#41;</td>
+				<td><span id="price13"></span></td>																											<!--구분13 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분13 세율 입력-->
+				<td><span id="tax13"></span></td>																											<!--구분13 세액 입력-->
+			</tr>		
+			
+<!-- 구분 14-->			
+			<tr>
+				<td colspan="3" class=" txtLeft10"><span>그 밖의 공제매입세액</span></td>
+				<td>&#40;14&#41;</td>
+				<td><span id="price14"></span></td>																											<!--구분14 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분14 세율 입력-->
+				<td><span id="tax14"></span></td>																											<!--구분14 세액 입력-->
+			</tr>		
+			
+<!-- 구분 15-->			
+			<tr>
+				<td colspan="3" class=" txtLeft10"><span>합계 (10)+(11)+(12)+(13)+(14)</span></td>
+				<td>&#40;15&#41;</td>
+				<td><span id="price15"></span></td>																											<!--구분15 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분15 세율 입력-->
+				<td><span id="tax15"></span></td>																											<!--구분15 세액 입력-->
+			</tr>		
+			
+<!-- 구분 16-->			
+			<tr>
+				<td colspan="3" class=" txtLeft10"><span>공제받지 못할 매입세액</span></td>
+				<td>&#40;16&#41;</td>
+				<td><span id="price16"></span></td>																											<!--구분16 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분16 세율 입력-->
+				<td><span id="tax16"></span></td>																											<!--구분16 세액 입력-->
+			</tr>		
+			
+<!-- 구분 17-->			
+			<tr>
+				<td colspan="3" class=" txtLeft10"><span class="letter20">차 감 계</span>(15)-(16)</td>
+				<td>&#40;17&#41;</td>
+				<td><span id="price17"></span></td>																											<!--구분17 금액 입력-->
+				<td>&#40;나&#41;</td>																														<!--구분17 세율 입력-->
+				<td><span id="tax17"></span></td>																											<!--구분17 세액 입력-->
+			</tr>		
+			
+<!-- 구분 -->			
+			<tr>
+				<td colspan="6"><span class="letter1">납부(환급)세액 (매출세액(가) - 매입세액(나))</span></td>
+				<td>&#40;다&#41;</td>																														 
+				<td><span id="sum1"></span></td>																											<!--구분  세액 입력-->
+			</tr>		
+			
+			
+					
+	<!--=============================-->		
+	<!--3번 테이블  - 3. 경감,공제세액				   	-->
+	<!--=============================-->
+	
+<!-- 구분 18-->			
+			<tr>
+				<td rowspan="3" class="tdTitle">경감</br>ㆍ</br>공제</br>세액</td>
+				<td colspan="3" class="txtLeft10"><span>그 밖의 경감ㆍ공제세액</span></td>
+				<td><span>&#40;18&#41;</span></td>
+				<td class="bgG"><span id="price18"></span></td>																					<!--구분18 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분18 세율 입력-->
+				<td><span id="tax18"></span></td>																											<!--구분18 세액 입력-->
+			</tr>
+ 		
+			
+<!-- 구분 19-->			
+			<tr>
+				<td colspan="3" class=" txtLeft10"><span>신용카드매출전표등 발행공제 등</span></td>
+				<td>&#40;19&#41;</td>
+				<td><span id="price19"></span></td>																											<!--구분19 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분19 세율 입력-->
+				<td><span id="tax19"></span></td>																											<!--구분19 세액 입력-->
+			</tr>		
+			
+<!-- 구분 20-->			
+			<tr class="">
+				<td colspan="3" class="letter50"><span>합계</span></td>
+				<td>&#40;20&#41;</td>
+				<td><span id="price20"></span></td>																											<!--구분20 금액 입력-->
+				<td>&#40;라&#41;</td>																													 
+				<td><span id="tax20"></span></td>																											<!--구분20 세액 입력-->
+			</tr>		
+			
+ 	<!--=============================-->		
+	<!--4번 테이블  - 4. 예정신고 미환급 세액 	   	-->
+	<!--=============================-->
+
+<!-- 구분 21-->			
+			<tr>
+				<td colspan="4" class="tdTitle txtLeft25 letter2">예 정 신 고  미 환 급  세 액</td>
+				<td>&#40;21&#41;</td>
+				<td><span id="price21"></span></td>																											<!--구분21 금액 입력-->
+				<td>&#40;마&#41;</td>
+				<td><span id="tax21"></span></td>																											<!--구분21 세액 입력-->
+			</tr>		
+
+<!-- 구분 22-->			
+			<tr>
+				<td colspan="4" class="tdTitle txtLeft25 letter2">예 정 고 지 세 액</td>
+				<td>&#40;22&#41;</td>
+				<td><span id="price22"></span></td>																											<!--구분22 금액 입력-->
+				<td>&#40;바&#41;</td>
+				<td><span id="tax22"></span></td>																											<!--구분22 세액 입력-->
+			</tr>		
+
+<!-- 구분 23-->			
+			<tr>
+				<td colspan="4" class="tdTitle txtLeft25 letter2">사업양수자의 대리납부 기납부세액</td>
+				<td>&#40;23&#41;</td>
+				<td class="bgG"><span id="price23"></span></td>																					<!--구분23 금액 입력-->
+				<td>&#40;사&#41;</td>
+				<td><span id="tax23"></span></td>																											<!--구분23 세액 입력-->
+			</tr>		
+
+<!-- 구분 24-->			
+			<tr>
+				<td colspan="4" class="tdTitle txtLeft25 letter2">매입자 납부특례 기납부세액</td>
+				<td>&#40;24&#41;</td>
+				<td class="bgG"><span id="price24"></span></td>																					<!--구분24 금액 입력-->
+				<td>&#40;아&#41;</td>
+				<td><span id="tax24"></span></td>																											<!--구분24 세액 입력-->
+			</tr>		
+
+<!-- 구분 25-->			
+			<tr>
+				<td colspan="4" class="tdTitle txtLeft25 letter2">가 산 세 액 계</td>
+				<td>&#40;25&#41;</td>
+				<td><span id="price25"></span></td>																											<!--구분25 금액 입력-->
+				<td>&#40;자&#41;</td>
+				<td><span id="tax25"></span></td>																											<!--구분25 세액 입력-->
+			</tr>		
+
+<!-- 구분 26-->	
+			<tr>
+				<td colspan="6" class="tdTitle txtLeft25 ">차감ㆍ가감하여 납부할 세액(환급받을 세액)((다)-(라)-(마)-(바)-(사)-(아)+(자))</td>
+				<td>&#40;26&#41;</td>
+				<td><span id="sum2"></span></td>																											 	<!--구분26 세액 입력-->																										
+			</tr>		
+
+<!-- 구분 -->			
+			<tr>
+				<td colspan="7" class="tdTitle  ">총괄 납부 사업자가 납부할 세액(환급받을 세액)</td>
+				<td><span id="sum3">123123</span></td>																											<!--구분  세액 입력-->
+			</tr>
+		</tbody>
+	</table>
+
+	<!--=============================-->		
+	<!--2번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--3번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt5 txtCenter line breakPack">
+		<colgroup>
+			<col width="300px">
+			<col width="100px">
+			<col width="250px">
+			<col width="100px">
+			<col width="170px">
+		</colgroup>
+ 
+		<tbody>
+
+	<!--=============================-->		
+	<!--3번 테이블  - 1. 국세환급금 계좌신고	   	-->
+	<!--=============================-->
+			<tr>
+				<td class="bold">&#9313;국세환급금 계좌신고</br><span class="lineHt5">(환급세액이 2천만원 미만인 경우)</span></td>			
+				<td>거래은행</td>
+				<td>
+					<span id="bank_nm" class="wid100 disinb txtRight"></span>														<!--구분 은행명 입력-->
+					<span>은행</span>
+					<span id="bank_branch" class="wid80 disinb txtRight"></span>															<!--구분 지점 입력-->
+					<span class="">지점</span>
+				</td>																											
+				<td>계좌번호</td>																								 
+				<td><span id="bank_num"></span></td>																											<!--구분 계좌번호 입력-->																										
+			</tr>	
+		</tbody>
+	</table>
+	<!--=============================-->		
+	<!--3번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--4번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt5 txtCenter line breakPack">
+		<colgroup>
+			<col width="300px">
+			<col width="100px">
+			<col width="100px">
+			<col width="100px">
+			<col width="320px">
+		</colgroup>
+ 
+		<tbody>
+
+	<!--=============================-->		
+	<!--4번 테이블  - 1. 폐업신고							   	-->
+	<!--=============================-->
+			<tr>
+				<td class="bold">&#9314;<span class="bold letter20">폐업신고</span></td>			
+				<td>폐업일</td>
+				<td><span id="close_date"></span></td>																											<!--구분 폐업일 입력-->
+				<td>폐업사유</td>																								 
+				<td class="txtLeft10"><span id="close_reason"></span></td>																		<!--구분 계좌번호 입력-->																										
+			</tr>	
+		</tbody>
+	</table>
+	<!--=============================-->		
+	<!--4번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--5번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt5 txtCenter line breakPack">
+		<colgroup>
+			<col width="150px">
+			<col width="150px">
+			<col width="150px">
+			
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			<col width="20px">
+			
+			<col width="150px">
+
+			<col width="32%">
+			<col width="100px">
+		</colgroup>
+		
+		<tbody>
+	<!--=============================-->		
+	<!--5번 테이블  - 1. 과세표준명세					   	-->
+	<!--=============================-->
+			<tr>
+				<td colspan="10" class="bold">&#9315;<span class="bold letter10">과세표준 명세</span></td>			
+				<td colspan="2" rowspan="3" class="txtJusti signBox ">
+					<p class="lineHt11 font11 pdl10 pdr5">
+						「부가가치세법」 제48조ㆍ제49조 또는 제59조와 「국세기본법」 제45조의3에 따라 위의 내용을 신고하며,
+						<span class="bold">위 내용을 충분히 검토하였고 신고인이 알고 있는 사실 그대로를 정확하게 적었음을 확인합니다.</span>
+                	</p>
+                    <p class="txtRight">
+                        <span id="claim_yyyy" class="wid50 disinb  "></span>년																	<!--구분 년 입력-->	
+                        <span id="claim_mm" class="wid50 disinb "></span>월																	<!--구분 월 입력-->	
+                        <span id="claim_dd" class="wid50 disinb "></span>일																	<!--구분 일 입력-->
+                    </p>
+                    <p class="txtRight">
+                        신고인: <span id="claim_obj" class="wid100 disinb "></span>(서명 또는 인)							<!--구분 신고인 입력-->
+            	</td>			
+			</tr>	
+ 
+<!-- 구분 제목-->				
+			<tr class="borderR1">
+				<td>업태</td>	
+				<td>종목</td>	
+				<td>생산요소</td>	
+				<td colspan="6">업종코드</td>	
+				<td>금액</td>	
+			</tr>	
+			
+<!-- 구분 27-->				
+			<tr class="borderR1">
+				<td class="txtLeft10">&#40;27&#41;<span id="uptea1" class="letter2m"></td>				<!--구분27 업태 입력-->	
+				<td><span id="jong1"></span></td>																											<!--구분27 종목 입력-->
+				<td><span id=" "></span></td>																											<!--구분27 생산요소 입력-->		
+				<td><span class="up_code1"></span></td>																											<!--구분27 업종코드 입력-->		
+				<td><span class="up_code1"></span></td>																											<!--구분27 업종코드 입력-->		
+				<td><span class="up_code1"></span></td>																											<!--구분27 업종코드 입력-->		
+				<td><span class="up_code1"></span></td>																											<!--구분27 업종코드 입력-->		
+				<td><span class="up_code1"></span></td>																											<!--구분27 업종코드 입력-->		
+				<td><span class="up_code1"></span></td>																											<!--구분27 업종코드 입력-->		
+				<td><span id="amt1"></span></td>																											<!--구분27 금액 입력-->		
+			</tr>	
+			
+<!-- 구분 28-->				
+			<tr>
+				<td class="txtLeft10">&#40;28&#41;<span id="uptea2" class="letter2m"></td>				<!--구분28 업태 입력-->	
+				<td><span id="jong2"></span></td>																											<!--구분28 종목 입력-->
+				<td><span id=" "></span></td>																											<!--구분28 생산요소 입력-->		
+				<td><span class="up_code2"></span></td>																											<!--구분28 업종코드 입력-->		
+				<td><span class="up_code2"></span></td>																											<!--구분28 업종코드 입력-->		
+				<td><span class="up_code2"></span></td>																											<!--구분28 업종코드 입력-->		
+				<td><span class="up_code2"></span></td>																											<!--구분28 업종코드 입력-->		
+				<td><span class="up_code2"></span></td>																											<!--구분28 업종코드 입력-->		
+				<td><span class="up_code2"></span></td>																											<!--구분28 업종코드 입력-->		
+				<td><span id="amt2"></span></td>																											<!--구분28 금액 입력-->		
+				<td colspan="2" rowspan="2" class="txtJusti signBox ">
+					<p class="lineHt11 font11 pdl10 pdr5 bold ">
+						세무대리인은 조세전문자격자로서 위 신고서를 성실하고 공정하게 작성하였음을 확인합니다.
+                	</p>
+                    <p class="txtRight">
+                        세무대리인: <span id=" " class="wid100 disinb "></span>(서명 또는 인)							<!--구분 세무대리인 입력-->
+            		</p>
+            	</td>									
+			</tr>	
+			
+<!-- 구분 29-->				
+			<tr class="borderR1">
+				<td class="txtLeft10">&#40;29&#41;<span id="uptea3" class="letter2m"></span></td><!--구분29 업태 입력-->	
+				<td><span id="jong3"></span></td>																											<!--구분29 종목 입력-->
+				<td><span id=" "></span></td>																											<!--구분29 생산요소 입력-->		
+				<td><span class="up_code3"></span></td>																											<!--구분29 업종코드 입력-->		
+				<td><span class="up_code3"></span></td>																											<!--구분29 업종코드 입력-->		
+				<td><span class="up_code3"></span></td>																											<!--구분29 업종코드 입력-->		
+				<td><span class="up_code3"></span></td>																											<!--구분29 업종코드 입력-->		
+				<td><span class="up_code3"></span></td>																											<!--구분29 업종코드 입력-->		
+				<td><span class="up_code3"></span></td>																											<!--구분29 업종코드 입력-->		
+				<td><span id="amt3"></span></td>																											<!--구분29 금액 입력-->		
+			</tr>	
+			
+<!-- 구분 30-->				
+			<tr>
+				<td class="txtLeft10">&#40;30&#41;<span id="uptea4" class="letter2m">수입금액제외</span></td> <!--구분30 업태 입력-->	
+				<td><span id="jong4"></span></td>																											<!--구분30 종목 입력-->
+				<td><span id=" "></span></td>																											<!--구분30 생산요소 입력-->		
+				<td><span class="up_code4"></span></td>																											<!--구분30 업종코드 입력-->		
+				<td><span class="up_code4"></span></td>																											<!--구분30 업종코드 입력-->		
+				<td><span class="up_code4"></span></td>																											<!--구분30 업종코드 입력-->		
+				<td><span class="up_code4"></span></td>																											<!--구분30 업종코드 입력-->		
+				<td><span class="up_code4"></span></td>																											<!--구분30 업종코드 입력-->		
+				<td><span class="up_code4"></span></td>																											<!--구분30 업종코드 입력-->		
+				<td><span id="amt4"></span></td>																											<!--구분30 금액 입력-->		
+				<td colspan="2" class="txtLeft10 ">
+					<span class="bold ">세무서장</span>
+					<span id=" "class="wid50 disinb txtRight"></span></span>귀하</span>					<!--구분30 세무서장 입력-->
+				</td>																													
+			</tr>	
+			
+<!-- 구분 31-->				
+			<tr>
+				<td class="txtLeft10">&#40;31&#41;<span id=" " class="letter10">합계</span></td> <!--구분31 합계 입력-->	
+				<td><span id=" "></span></td>																											<!--구분31 종목 입력-->
+				<td><span id=" "></span></td>																											<!--구분31 생산요소 입력-->		
+				<td colspan="6"><span id=" "></span></td>																					<!--구분31 업종코드 입력-->		
+				<td><span id="amt_sum"></span></td>																											<!--구분31 금액 입력-->		
+				<td class="txtLeft10">첨부서류</td>																									
+				<td class="txtLeft10">뒤쪽참조</td>																									
+			</tr>	
+			
+		</tbody>
+	</table>
+	<!--=============================-->		
+	<!--5번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--6번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt5 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			<col width="100px">
+			<col width="100px">
+			<col width="200px">
+			<col width="200px">
+			<col width="200px">
+			<col width="200px">
+		</colgroup>
+ 
+		<tbody>
+			<tr>
+				<td><span>세무대리인</span></td> 				
+				<td><span class="letter10">성명</span></td> 				
+				<td><span id=" "></span></td>																										<!--구분 이름 입력-->
+				<td><class="letter3">사업자등록번호</span></td> 				 
+				<td>						
+					<span id=" " class="wid50 disinb  ">&nbsp;&nbsp;&nbsp;</span>-																<!--구분 사업자등록번호 입력-->
+					<span id=" " class="wid20 disinb ">&nbsp;&nbsp;</span>-																<!--구분 사업자등록번호 입력-->
+					<span id="" class="wid50 disinb txtLeft">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>												<!--구분 사업자등록번호 입력-->
+				</td>																											
+				<td><span id=" " class="">전화번호</span></td> 											
+				<td><span id=" "></span></td>																										<!--구분 전화번호 입력-->		
+			</tr>	
+		</tbody>
+	</table>
+	<!--=============================-->		
+	<!--6번 테이블 끝		 												-->
+	<!--=============================-->
+
+		<div>
+			<p class="txtRight mgt10">
+				<span>210mm x 297mm [백상지 80g/m<sup>2</sup>(재활용품)]</span>
+			</p>
+		</div>	
+	</div> <!-- tableWrap01 -->
+	</div> <!-- content -->
+<!--++++++++++++++++++++++++++++++++1페이지  일반과세자 부가가치세 신고서 끝 ++++++++++++++++++++++++++++++++-->
+
+
+<!--++++++++++++++++++++++++++++++++2페이지  일반과세자 부가가치세 신고서 시작 ++++++++++++++++++++++++++++++++-->
+
+
+ 	<div class="content2">
+ 		<div class="tableWrap01">
+	<!--=============================-->
+	<!--상단 타이틀 시작-->
+	<!--=============================-->
+	<!-- <div class="mgt100">  -->
+		<div class="">
+			<p class="txtRight font10 line ">
+				(제2장 앞쪽)
+			</p>
+		</div>	
+				
+		<div class="title02">
+			<p class="">&#042; 이 쪽은 해당 사항이 있는 사업자만 사용합니다.</p>
+			<ul>
+				<li>사업자등록번호</li>
+				<li>
+					<ul class="box pdl10">
+						<li><span id=" " class="bizno-val"></span></li>
+						<li><span id=" " class="bizno-val"></span></li>
+						<li class="borderWrg"><span id=" " class="bizno-val"></span></li>
+						<li class="dash">-</li>
+						<li><span id=" " class="bizno-val"></span></li>
+						<li class="borderWrg"><span id=" " class="bizno-val"></span></li>
+						<li class="dash">-</li>
+						<li><span id=" " class="bizno-val"></span></li>
+						<li><span id=" " class="bizno-val"></span></li>
+						<li><span id=" " class="bizno-val"></span></li>
+						<li><span id=" " class="bizno-val"></span></li>
+						<li class="borderWrg"><span id=" " class="bizno-val"></span></li>
+					</ul>
+				</li>
+				<li class="pdl10">&#042;  사업자등록번호는 반드시 적으시기 바랍니다.</li>
+			</ul>
+		</div>		
+	<!--=============================-->
+	<!--상단 타이틀 끝-->
+	<!--=============================-->	
+
+
+
+	<!--=============================-->		
+	<!--1번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt3 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			
+			<col width="70px">
+			<col width="50px">
+			<col width="230px">
+			
+			<col width="50px">
+			<col width="300px">
+			<col width="70px">
+			<col width="300px">
+		</colgroup>
+		
+		<tbody>
+			<tr>
+				<td rowspan="9" class="tdTitle letter1">예정신고</br>누 락 분</br>명 세</td>
+				<td rowspan="6"><span>&#40;7&#41;</span>매출</td>
+				<td colspan="3" >구<span class="wid50 disinb"></span>분</td>
+				<td>금<span class="wid50 disinb"></span>액</td>
+				<td>세율</td>
+				<td>세<span class="wid50 disinb"></span>액</td>
+			</tr>
+ 
+			
+					
+	<!--=============================-->		
+	<!--1번 테이블  - 1. 그 밖의 공제매입세액 명세-->
+	<!--=============================-->
+	
+<!-- 구분32-->			
+			<tr>
+				<td rowspan="2"><span>과세</span></td>
+				<td class="txtLeft10"><span>세금계산서</span></td>
+				<td><span>&#40;32&#41;</span></td>
+				<td><span id="price32"></span></td>																											<!--구분32 금액 입력-->
+				<td>10/100</td>																
+				<td><span id="tax32"></span></td>																											<!--구분32 세액 입력-->
+			</tr>
+
+<!-- 구분33-->			
+			<tr>
+				<td class="txtLeft10"><span>기 타</span></td>
+				<td><span>&#40;33&#41;</span></td>
+				<td><span id="price33"></span></td>																											<!--구분33 금액 입력-->
+				<td>10/100</td>																
+				<td><span id="tax33"></span></td>																											<!--구분33 세액 입력-->
+			</tr>
+	
+<!-- 구분34-->			
+			<tr>
+				<td rowspan="2"><span>영세율</span></td>
+				<td class="txtLeft10"><span>세금계산서</span></td>
+				<td><span>&#40;34&#41;</span></td>
+				<td><span id="price34"></span></td>																											<!--구분34 금액 입력-->
+				<td>0/100</td>																
+				<td class="bgG"><span id="tax34"></span></td>																					<!--구분34 세액 입력-->
+			</tr>
+
+<!-- 구분35-->			
+			<tr>
+				<td class="txtLeft10"><span>기 타</span></td>
+				<td><span>&#40;35&#41;</span></td>
+				<td><span id="price35"></span></td>																											<!--구분35 금액 입력-->
+				<td>0/100</td>																
+				<td class="bgG"><span id="tax35"></span></td>																					<!--구분35 세액 입력-->
+			</tr>
+
+<!-- 구분36-->			
+			<tr>
+				<td colspan="2" class="letter10"><span>합계</span></td>
+				<td><span>&#40;36&#41;</span></td>
+				<td><span id="price36"></span></td>																											<!--구분36 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분36 세율 입력-->						
+				<td><span id="tax36"></span></td>																											<!--구분36 세액 입력-->
+			</tr>
+
+<!-- 구분37-->			
+			<tr>
+				<td rowspan="3"><span>&#40;12&#41;</span>매입</td>
+				<td colspan="2" class="letter10"><span>세금계산서</span></td>				
+				<td><span>&#40;37&#41;</span></td>
+				<td><span id="price37"></span></td>																											<!--구분37 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분37 세율 입력-->						
+				<td><span id="tax37"></span></td>																											<!--구분37 세액 입력-->
+			</tr>
+
+<!-- 구분38-->			
+			<tr>
+				<td colspan="2"><span>그 밖의 공제매입세액</span></td>				
+				<td><span>&#40;38&#41;</span></td>
+				<td><span id="price38"></span></td>																											<!--구분38 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분38 세율 입력-->						
+				<td><span id="tax38"></span></td>																											<!--구분38 세액 입력-->
+			</tr>
+
+<!-- 구분39-->			
+			<tr>
+				<td colspan="2" class="letter10"><span>합계</span></td>				
+				<td><span>&#40;39&#41;</span></td>
+				<td><span id="price39"></span></td>																											<!--구분39 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분39 세율 입력-->						
+				<td><span id="tax39"></span></td>																											<!--구분39 세액 입력-->
+			</tr>
+ 
+		</tbody>
+	</table>
+
+	<!--=============================-->		
+	<!--1번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--2번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt3 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			
+			<col width="200px">
+			<col width="150px">
+			
+			<col width="50px">
+			<col width="300px">
+			<col width="70px">
+			<col width="300px">
+		</colgroup>
+		
+		
+		
+		<tbody>
+			<tr>
+				<td rowspan="10" class="tdTitle letter2m">&#40;14&#41;</br>그 밖의 공제</br>매 입 세 액</br>명 세</td>
+				<td colspan="3" >구<span class="wid50 disinb"></span>분</td>
+				<td>금<span class="wid50 disinb"></span>액</td>
+				<td>세율</td>
+				<td>세<span class="wid50 disinb"></span>액</td>
+			</tr>
+ 
+			
+					
+	<!--=============================-->		
+	<!--2번 테이블  - 1. 그 밖의 공제매입세액 명세-->
+	<!--=============================-->
+	
+<!-- 구분40-->			
+			<tr>
+				<td rowspan="2" class="letter2"><span>신용카드매출전표등</br>수령명세서 제출분</span></td>
+				<td class="txtLeft10"><span>일반매입</span></td>
+				<td><span>&#40;40&#41;</span></td>
+				<td><span id="price40"></span></td>																											<!--구분40 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분40 세율 입력-->
+				<td><span id="tax40"></span></td>																											<!--구분40 세액 입력-->
+			</tr>
+
+<!-- 구분41-->			
+			<tr>
+				<td class="txtLeft10"><span>고정자산매입</span></td>
+				<td><span>&#40;41&#41;</span></td>
+				<td><span id="price41"></span></td>																											<!--구분41 금액 입력-->
+				<td><span id=" "></span>/<span id=" "></span></td>																<!--구분41 세율 입력-->
+				<td><span id="tax41"></span></td>																											<!--구분41 세액 입력-->
+			</tr>			
+			
+<!--구분42-->			
+			<tr>
+				<td colspan="2" class="letter15 txtLeft10"><span>의제매입세액</span></td>
+				<td>&#40;42&#41;</td>
+				<td><span id="price42"></span></td>																											<!--구분42 금액 입력-->
+				<td>뒤쪽참조</td>																 
+				<td><span id="tax42"></span></td>																											<!--구분42 세액 입력-->
+			</tr>		
+			
+<!-- 구분43-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10"><span>재활용폐자원등 매입세액</span></td>
+				<td>&#40;43&#41;</td>
+				<td><span id="price43"></span></td>																											<!--구분43 금액 입력-->
+				<td>뒤쪽참조</td>																 
+				<td><span id="tax43"></span></td>																											<!--구분43 세액 입력-->
+			</tr>		
+			
+<!-- 구분44-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10"><span>과세사업전환 매입세액</span></td>
+				<td>&#40;44&#41;</td>
+				<td class="bgG"><span id="price44"></span></td>																					<!--구분44 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분44 세율 입력-->
+				<td><span id="tax44"></span></td>																											<!--구분44 세액 입력-->
+			</tr>		
+			
+<!-- 구분45-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10 letter2"><span>재고매입세액</span></td>
+				<td>&#40;45&#41;</td>
+				<td class="bgG"><span id="price45"></span></td>																											<!--구분45 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>																<!--구분45 세율 입력-->
+				<td><span id="tax45"></span></td>																											<!--구분45 세액 입력-->
+			</tr>		
+			
+<!-- 구분46-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10 letter2"><span>변제대손세액</span></td>
+				<td>&#40;46&#41;</td>
+				<td class="bgG"><span id="price46"></span></td>																					<!--구분46 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분46 세율 입력-->
+				<td><span id="tax46"></span></td>																											<!--구분46 세액 입력-->
+			</tr>		
+			
+<!-- 구분47-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10"><span class="">외국인 관광객에 대한 환급세액</span></td>
+				<td>&#40;47&#41;</td>
+				<td class="bgG"><span id="price47"></span></td>																					<!--구분47 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분47 세율 입력-->
+				<td><span id="tax47"></span></td>																											<!--구분47 세액 입력-->
+			</tr>		
+ 
+			
+<!-- 구분48-->			
+			<tr>
+				<td colspan="2" class="letter10"><span class="">합계</span></td>
+				<td>&#40;48&#41;</td>
+				<td><span id="price48"></span></td>																											<!--구분48 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분48 세율 입력-->
+				<td><span id="tax48"></span></td>																											<!--구분48 세액 입력-->
+			</tr>		
+ 
+		</tbody>
+	</table>
+
+	<!--=============================-->		
+	<!--2번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--3번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt3 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			
+			<col width="350px">
+			
+			<col width="50px">
+			<col width="300px">
+			<col width="70px">
+			<col width="300px">
+		</colgroup>
+		
+		<tbody>
+			<tr>
+				<td rowspan="5" class="tdTitle letter2m">&#40;16&#41;</br>공제받지</br>못할</br>매입세액</br>명 세</td>
+				<td colspan="2" >구<span class="wid50 disinb"></span>분</td>
+				<td>금<span class="wid50 disinb"></span>액</td>
+				<td>세율</td>
+				<td>세<span class="wid50 disinb"></span>액</td>
+			</tr>
+ 
+			
+					
+	<!--=============================-->		
+	<!--3번 테이블  - 1. 공제받지못할 매입세액 명세-->
+	<!--=============================-->
+	
+ 
+<!--구분49-->			
+			<tr>
+				<td class=" txtLeft10"><span>공제받지 못할 매입세액</span></td>
+				<td>&#40;49&#41;</td>
+				<td><span id="price49"></span></td>																											<!--구분49 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>									<!--구분49 세율 입력-->							 
+				<td><span id="tax49"></span></td>																											<!--구분49 세액 입력-->
+			</tr>		
+			
+<!-- 구분50-->			
+			<tr>
+				<td class=" txtLeft10"><span>공통매입세액 면세사업등분</span></td>
+				<td>&#40;50&#41;</td>
+				<td><span id="price50"></span></td>																											<!--구분50 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분50 세율 입력-->
+				<td><span id="tax50"></span></td>																											<!--구분50 세액 입력-->
+			</tr>		
+			
+<!-- 구분51-->			
+			<tr>
+				<td class=" txtLeft10"><span>대 손 처 분 받 은  세 액</span></td>
+				<td>&#40;51&#41;</td>
+				<td><span id="price51"></span></td>																											<!--구분51 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분51 세율 입력-->
+				<td><span id="tax51"></span></td>																											<!--구분51 세액 입력-->
+			</tr>		
+			
+<!-- 구분52-->			
+			<tr>
+				<td class="letter10"><span class="">합계</span></td>
+				<td>&#40;52&#41;</td>
+				<td><span id="price52"></span></td>																											<!--구분52 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분52 세율 입력-->
+				<td><span id="tax52"></span></td>																											<!--구분52 세액 입력-->
+			</tr>		
+ 
+		</tbody>
+	</table>
+ 
+	<!--=============================-->		
+	<!--3번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--4번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt3 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			<col width="350px">
+			
+			<col width="50px">
+			<col width="300px">
+			<col width="70px">
+			<col width="300px">
+		</colgroup>
+		
+		<tbody>
+			<tr>
+				<td rowspan="7" class="tdTitle letter2m">&#40;18&#41;</br>그 밖의</br>경감ㆍ공제</br>세액 명세</td>
+				<td colspan="2" >구<span class="wid50 disinb"></span>분</td>
+				<td>금<span class="wid50 disinb"></span>액</td>
+				<td>세율</td>
+				<td>세<span class="wid50 disinb"></span>액</td>
+			</tr>
+ 
+			
+					
+	<!--=============================-->		
+	<!--4번 테이블  - 1. 그 밖의 경감,공제세액 명세-->
+	<!--=============================-->
+	
+ 
+<!--구분53-->			
+			<tr>
+				<td class=" txtLeft10"><span>전자신고 세액공제</span></td>
+				<td>&#40;53&#41;</td>
+				<td class="bgG"><span id="price53"></span></td>																					<!--구분53 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분53 세율 입력-->						 
+				<td><span id="tax53"></span></td>																											<!--구분53 세액 입력-->
+			</tr>		
+			
+<!-- 구분54-->			
+			<tr>
+				<td class=" txtLeft10"><span>전자세금계산서 발급세액 공제</span></td>
+				<td>&#40;54&#41;</td>
+				<td class="bgG"><span id="price54"></span></td>																					<!--구분54 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분54 세율 입력-->
+				<td><span id="tax54"></span></td>																											<!--구분54 세액 입력-->
+			</tr>		
+			
+<!-- 구분55-->			
+			<tr>
+				<td class=" txtLeft10"><span>택시운송사업자 경감세액</span></td>
+				<td>&#40;55&#41;</td>
+				<td class="bgG"><span id="price55"></span></td>																					<!--구분55 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분55 세율 입력-->
+				<td><span id="tax55"></span></td>																											<!--구분55 세액 입력-->
+			</tr>		
+			
+<!-- 구분56-->			
+			<tr>
+				<td class="txtLeft10"><span class="">현금영수증사업자 세액공제</span></td>
+				<td>&#40;56&#41;</td>
+				<td class="bgG"><span id="price562"></span></td>																					<!--구분56 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분56 세율 입력-->
+				<td><span id="tax56"></span></td>																											<!--구분56 세액 입력-->
+			</tr>		
+ 
+			
+<!-- 구분57-->			
+			<tr>
+				<td class=" txtLeft10"><span>기 타</span></td>
+				<td>&#40;57&#41;</td>
+				<td class="bgG"><span id="price57"></span></td>																					<!--구분57 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분57 세율 입력-->
+				<td><span id="tax57"></span></td>																											<!--구분57 세액 입력-->
+			</tr>		
+			
+<!-- 구분58-->			
+			<tr>
+				<td class="letter10"><span class="">합계</span></td>
+				<td>&#40;58&#41;</td>
+				<td class="bgG"><span id="price58"></span></td>																					<!--구분58 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분58 세율 입력-->
+				<td><span id="tax58"></span></td>																											<!--구분58 세액 입력-->
+			</tr>		
+ 
+		</tbody>
+	</table>
+ 
+	<!--=============================-->		
+	<!--4번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--5번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt3 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			
+			<col width="150px">
+			<col width="200px">
+			
+			<col width="50px">
+			<col width="300px">
+			<col width="70px">
+			<col width="300px">
+		</colgroup>
+		
+		<tbody class="pd0">
+			<tr>
+				<td rowspan="20" class="tdTitle letter2m">&#40;25&#41;</br>가산세 명세</td>
+				<td colspan="3" >구<span class="wid50 disinb"></span>분</td>
+				<td>금<span class="wid50 disinb"></span>액</td>
+				<td>세율</td>
+				<td>세<span class="wid50 disinb"></span>액</td>
+			</tr>
+ 
+			
+					
+	<!--=============================-->		
+	<!--5번 테이블  - 1. 그 밖의 공제매입세액 명세-->
+	<!--=============================-->
+	
+<!-- 구분59-->			
+			<tr>
+				<td colspan="2" class="txtLeft10 letter10"><span>사업자미등록등</span></td>
+				<td><span>&#40;59&#41;</span></td>
+				<td><span id="price59"></span></td>																											<!--구분59 금액 입력-->
+				<td>1/100</td>																
+				<td><span id="tax59"></span></td>																											<!--구분59 세액 입력-->
+			</tr>
+	
+<!-- 구분60-->			
+			<tr>
+				<td  rowspan="3" class="letter3">세금계산서</td>
+				<td class="txtLeft10">지연발급 등</td>
+				<td><span>&#40;60&#41;</span></td>
+				<td><span id="price60"></span></td>																											<!--구분60 금액 입력-->
+				<td>1/100</td>
+				<td><span id="tax60"></span></td>																											<!--구분60 세액 입력-->
+			</tr>
+
+<!-- 구분61-->			
+			<tr>
+				<td class="txtLeft10">지연수취</td>
+				<td><span>&#40;61&#41;</span></td>
+				<td><span id="price61"></span></td>																											<!--구분61 금액 입력-->
+				<td>1/100</td>																
+				<td><span id="tax61"></span></td>																											<!--구분61 세액 입력-->
+			</tr>			
+
+<!-- 구분62-->			
+			<tr>
+				<td class="txtLeft10">미발급 등</td>
+				<td><span>&#40;62&#41;</span></td>
+				<td><span id="price62"></span></td>																											<!--구분62 금액 입력-->
+				<td>2/100</td>																
+				<td><span id="tax62"></span></td>																											<!--구분62 세액 입력-->
+			</tr>		
+	
+<!-- 구분63-->			
+			<tr>
+				<td  rowspan="2">전자세금계산서</br>발급명세 전송</td>
+				<td class="txtLeft10">지연전송</td>
+				<td><span>&#40;63&#41;</span></td>
+				<td><span id="price63"></span></td>																											<!--구분63 금액 입력-->
+				<td>1/1,000</td>
+				<td><span id="tax63"></span></td>																											<!--구분63 세액 입력-->
+			</tr>
+
+<!-- 구분64-->			
+			<tr>
+				<td class="txtLeft10">미전송</td>
+				<td><span>&#40;64&#41;</span></td>
+				<td><span id="price64"></span></td>																											<!--구분64 금액 입력-->
+				<td>3/1,000</td>																
+				<td><span id="tax64"></span></td>																											<!--구분64 세액 입력-->
+			</tr>			
+	
+<!-- 구분65-->			
+			<tr>
+				<td  rowspan="2">세금계산서</br>합계표</td>
+				<td class="txtLeft10">제출 불성실</td>
+				<td><span>&#40;65&#41;</span></td>
+				<td><span id="price65"></span></td>																											<!--구분65 금액 입력-->
+				<td>1/100</td>
+				<td><span id="tax65"></span></td>																											<!--구분65 세액 입력-->
+			</tr>
+
+<!-- 구분66-->			
+			<tr>
+				<td class="txtLeft10">지연제출</td>
+				<td><span>&#40;66&#41;</span></td>
+				<td><span id="price66"></span></td>																											<!--구분66 금액 입력-->
+				<td>5/1,000</td>																
+				<td><span id="tax66"></span></td>																											<!--구분66 세액 입력-->
+			</tr>			
+	
+<!-- 구분67-->			
+			<tr>
+				<td  rowspan="4">신고 불성실</td>
+				<td class="txtLeft10">무신고(일반)</td>
+				<td><span>&#40;67&#41;</span></td>
+				<td><span id="price67"></span></td>																											<!--구분67 금액 입력-->
+				<td>뒤쪽참조</td>
+				<td><span id="tax67"></span></td>																											<!--구분67 세액 입력-->
+			</tr>
+
+<!-- 구분68-->			
+			<tr>
+				<td class="txtLeft10">무신고(부당)</td>
+				<td><span>&#40;68&#41;</span></td>
+				<td><span id="price68"></span></td>																											<!--구분68 금액 입력-->
+				<td>뒤쪽참조</td>
+				<td><span id="tax68"></span></td>																											<!--구분68 세액 입력-->
+			</tr>			
+
+<!-- 구분69-->			
+			<tr>
+				<td class="txtLeft10 letter3m">과소ㆍ초과환급신고(일반)</td>
+				<td><span>&#40;69&#41;</span></td>
+				<td><span id="price69"></span></td>																											<!--구분69 금액 입력-->
+				<td>뒤쪽참조</td>
+				<td><span id="tax69"></span></td>																											<!--구분69 세액 입력-->
+			</tr>			
+
+<!-- 구분70-->			
+			<tr>
+				<td class="txtLeft10 letter3m">과소ㆍ초과환급신고(부당)</td>
+				<td><span>&#40;70&#41;</span></td>
+				<td><span id="price70"></span></td>																											<!--구분70 금액 입력-->
+				<td>뒤쪽참조</td>
+				<td><span id="tax70"></span></td>																											<!--구분70 세액 입력-->
+			</tr>			
+
+<!-- 구분71-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10"><span>납부 불성실</span></td>
+				<td>&#40;71&#41;</td>
+				<td><span id="price71"></span></td>																											<!--구분71 금액 입력-->
+				<td>뒤쪽참조</td>
+				<td><span id="tax71"></span></td>																											<!--구분71 세액 입력-->
+			</tr>		
+
+<!-- 구분72-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10"><span>영세율 과세표준신고 불성실</span></td>
+				<td>&#40;72&#41;</td>
+				<td><span id="price72"></span></td>																											<!--구분72 금액 입력-->
+				<td>5/1,000</td>
+				<td><span id="tax72"></span></td>																											<!--구분72 세액 입력-->
+			</tr>		
+
+<!-- 구분73-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10"><span>현금매출명세서 불성실</span></td>
+				<td>&#40;73&#41;</td>
+				<td><span id="price73"></span></td>																											<!--구분73 금액 입력-->
+				<td>1/100</td>
+				<td><span id="tax73"></span></td>																											<!--구분73 세액 입력-->
+			</tr>		
+
+<!-- 구분74-->			
+			<tr>
+				<td colspan="2" class=" txtLeft10"><span>부동산임대공급가액명세서 불성실</span></td>
+				<td>&#40;74&#41;</td>
+				<td><span id="price74"></span></td>																											<!--구분74 금액 입력-->
+				<td>1/100</td>
+				<td><span id="tax74"></span></td>																											<!--구분74 세액 입력-->
+			</tr>		
+			
+<!-- 구분75-->			
+			<tr>
+				<td  rowspan="2">매입자</br>납부특례</td>
+				<td class="txtLeft10">거래계좌 미사용</td>
+				<td><span>&#40;75&#41;</span></td>
+				<td><span id="price75"></span></td>																											<!--구분75 금액 입력-->
+				<td>뒤쪽참조</td>
+				<td><span id="tax75"></span></td>																											<!--구분75 세액 입력-->
+			</tr>
+
+<!-- 구분76-->			
+			<tr>
+				<td class="txtLeft10">거래계좌 지연입금</td>
+				<td><span>&#40;76&#41;</span></td>
+				<td><span id="price76"></span></td>																											<!--구분76 금액 입력-->
+				<td>뒤쪽참조</td>																
+				<td><span id="tax76"></span></td>																											<!--구분76 세액 입력-->
+			</tr>	 
+			
+<!-- 구분77-->			
+			<tr>
+				<td colspan="2" class="letter10"><span class="">합계</span></td>
+				<td>&#40;77&#41;</td>
+				<td class="bgG"><span id="price77"></span></td>																					<!--구분77 금액 입력-->
+				<td class="bgG"><span id=" "></span>/<span id=" "></span></td>										<!--구분77 세율 입력-->
+				<td><span id="tax77"></span></td>																											<!--구분77 세액 입력-->
+			</tr>		
+ 
+		</tbody>
+	</table>
+
+	<!--=============================-->		
+	<!--5번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+ 
+	<!--=============================-->		
+	<!--6번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt3 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			
+			<col width="50px">
+			<col width="280px">
+			<col width="340px">
+			
+			<col width="30px">
+			<col width="30px">
+			<col width="30px">
+			<col width="30px">
+			<col width="30px">
+			<col width="30px">
+			
+			<col width="230px">
+			
+		</colgroup>
+		
+		<tbody>
+		
+	<!--=============================-->		
+	<!--6번 테이블  - 1. 면세사업수입금액					-->
+	<!--=============================-->
+			<tr>
+				<td rowspan="5" class="tdTitle letter2m">면세사업</br>수입금액</td>
+				<td colspan="2" class="letter50">업태</td>
+				<td>종목</td>
+				<td colspan="6">코드번호</td>
+				<td>금액</td>
+			</tr>
+
+<!-- 구분78-->
+ 			<tr>
+				<td><span>&#40;78&#41;</span></td>
+				<td class="letter1"><span id="val78_uptea"></span></td>																			<!--구분78 업태 입력--> 
+				<td><span id="val78_jong"></span></td>																											<!--구분78 종목 입력-->
+				<td class="bgG"><span class="val78_up_code"></span></td>																					<!--구분78 코드번호 입력-->
+				<td class="bgG"><span class="val78_up_code"></span></td>																					<!--구분78 코드번호 입력-->
+				<td class="bgG"><span class="val78_up_code"></span></td>																					<!--구분78 코드번호 입력-->
+				<td class="bgG"><span class="val78_up_code"></span></td>																					<!--구분78 코드번호 입력-->
+				<td class="bgG"><span class="val78_up_code"></span></td>																					<!--구분78 코드번호 입력-->
+				<td class="bgG"><span class="val78_up_code"></span></td>																					<!--구분78 코드번호 입력-->
+				<td><span id="val78_amt"></span></td>																											<!--구분78 금액 입력-->
+			</tr>		
+			
+<!-- 구분79-->
+ 			<tr>
+				<td><span>&#40;79&#41;</span></td>
+				<td class="letter1"><span id="val79_uptea"></span></td>																			<!--구분79 업태 입력--> 
+				<td><span id="val79_jong"></span></td>																											<!--구분79 종목 입력-->
+				<td class="bgG"><span id="val79_up_code"></span></td>																					<!--구분79 코드번호 입력-->
+				<td class="bgG"><span id="val79_up_code"></span></td>																					<!--구분79 코드번호 입력-->
+				<td class="bgG"><span id="val79_up_code"></span></td>																					<!--구분79 코드번호 입력-->
+				<td class="bgG"><span id="val79_up_code"></span></td>																					<!--구분79 코드번호 입력-->
+				<td class="bgG"><span id="val79_up_code"></span></td>																					<!--구분79 코드번호 입력-->
+				<td class="bgG"><span id="val79_up_code"></span></td>																					<!--구분79 코드번호 입력-->
+				<td><span id="val79_amt"></span></td>																											<!--구분79 금액 입력-->
+			</tr>		
+			
+<!-- 구분80-->
+ 			<tr>
+				<td><span>&#40;80&#41;</span></td>
+				<td class="letter1"> 수입금액 제외 </td>																	 
+				<td><span id="val80_jong3"></span></td>																											<!--구분80 종목 입력-->
+				<td><span id="val80_up_code"></span></td>																											<!--구분80 코드번호 입력-->
+				<td><span id="val80_up_code"></span></td>																											<!--구분80 코드번호 입력-->
+				<td><span id="val80_up_code"></span></td>																											<!--구분80 코드번호 입력-->
+				<td><span id="val80_up_code"></span></td>																											<!--구분80 코드번호 입력-->
+				<td><span id="val80_up_code"></span></td>																											<!--구분80 코드번호 입력-->
+				<td><span id="val80_up_code"></span></td>																											<!--구분80 코드번호 입력-->
+				<td><span id="val80_amt"></span></td>																											<!--구분80 금액 입력-->
+			</tr>		
+
+<!-- 구분81 -->			
+			<tr>
+				<td colspan="2" class="letter1"><span id=" "></span></td>													<!--구분81 업태 입력-->
+				<td class="letter1"><span id=" "></span></td>																			<!--구분81 종목 입력-->
+				<td colspan="6"><span>&#40;81&#41;합 계</span></td>
+				<td><span id="price81"></span></td>																											<!--구분81 금액 입력-->
+			</tr>			
+			
+			
+		</tbody>
+	</table>
+ 
+	<!--=============================-->		
+	<!--6번 테이블 끝		 												-->
+	<!--=============================-->
+
+
+
+	<!--=============================-->		
+	<!--7번 테이블 시작 												-->
+	<!--=============================-->
+	<table class="mgt3 txtCenter line breakPack">
+		<colgroup>
+			<col width="100px">
+			
+			<col width="250px">
+			
+			<col width="850px">
+		</colgroup>
+		
+		<tbody>
+		
+<!-- 구분82-->
+			<tr>
+				<td rowspan="2" class="tdTitle letter2m">계산서 발급</br>및 수취 명세</td>
+				<td class="txtLeft10"><span>&#40;82&#41; 계산서 발급금액</span></td>
+				<td><span id="price82"></span></td>																											<!--구분82 발급금액 입력-->
+			</tr>
+
+<!-- 구분83-->
+			<tr>
+				<td class="txtLeft10"><span>&#40;83&#41; 계산서 수취금액</span></td>
+				<td><span id="price83"></span></td>																											<!--구분83 발급금액 입력-->
+			</tr>
+ 
+		</tbody>
+	</table>
+ 
+	<!--=============================-->		
+	<!--7번 테이블 끝		 												-->
+	<!--=============================-->
+
+		
+		
+<!--++++++++++++++++++++++++++++++++2페이지  일반과세자 부가가치세 신고서 끝 ++++++++++++++++++++++++++++++++-->
+
+	</div><!--end of table -->
+	</div>		
+	<!--content 끝-->
+ 	<div class="print_btn_area">
+            <button class="print_btn" onclick="print()">
+                <span>출력하기</span>
+            </button>
+            <button class="close_btn" onclick="self.close();">
+                <span>창닫기</span>
+            </button>
+        </div>
+    </body>
+</html>

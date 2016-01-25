@@ -1,0 +1,7 @@
+# 피디에프 뷰어
+
+http://pdfobject.com/generator.php
+http://pdfobject.com/
+
+sudo yum install qpdf
+qpdf --password='630115' --decrypt 630115.pdf no630115.pdf

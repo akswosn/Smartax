@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>신용카드매출전표 등 발행금액 집계표</title>
+ 
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, width=device-width">
+
+        <!-- stylesheets -->
+       <link rel="stylesheet" href="./print_out_add_tax_credit_sum.css" />
+ 		 <script type="text/javascript" src="../jquery-1.6.4.min.js"></script>
+ 		<script src="./print_out_add_tax_credit_sum.js"></script>
+        <!-- script -->
+        <script>
+        
+        </script>
+
+    </head>
+
+    <body>
+	<div class="print_btn_area">
+        <button class="print_btn" onclick="print()">
+            <span>출력하기</span>
+        </button>
+        <button class="close_btn" onclick="self.close();">
+            <span>창닫기</span>
+        </button>
+    </div>
+	<!--content 시작-->
+	<div class="content">
+	
+
+<!--++++++++++++++++++++++++++++++++-->
+<!-- jQuery로 값이 채워질 부분은 span으로 감싸고 id를 추가할 수 있게 했습니다. -->
+<!--++++++++++++++++++++++++++++++++-->
+ 
+
+<!--++++++++++++++++++++++++++++++++1페이지  신용카드매출전표 등 발행금액 집계표 시작 ++++++++++++++++++++++++++++++++-->
+
+	<!--=============================-->
+	<!--상단 타이틀 시작-->
+	<!--=============================-->
+		<div class="mgt100">
+			<p class="font16">
+				[별지 제12호의5서식]&lt;개정 2010.3.31&gt;</span>
+			</p>
+		</div>	
+
+		<div class="paperBorder01">
+				
+		<div class="title pdt20 pdb20">
+			<h1 class="bold ">신용카드매출전표 등 발행금액 집계표</h1>
+			<p class="bold">
+				&#40;<span id=" " class="wid70 disinb title_yyyy"></span> 년 
+				<span id=" " class="wid50 disinb title_gi"></span> 기
+				<span id=" " class="wid10 disinb"></span>예정&#183;확정&#41;
+			</p>
+		</div>		
+	<!--=============================-->
+	<!--상단 타이틀 끝-->
+	<!--=============================-->	
+
+ 
+	<!--=============================-->
+	<!--1번 테이블 - 인적사항 시작-->
+	<!--=============================-->
+		<table class="tablePack01 breakPack">
+			<colgroup>
+				<col width="190px">
+				<col width="450px">
+				<col width="190px">
+				<col width="450px">
+			</colgroup>
+			
+			<thead>
+				<tr>
+					<th colspan="4" class="thTitle02 het50"><span>1. 인적사항</span></th>
+				</tr>
+			</thead>
+			
+			<tbody>
+				<tr>
+					<td class="het50"><span class="num font16">&#9312;</span><span class="font16">상호 (법인명)</span></td>
+					<td><span id="co_nm" class="font16"></span></td>
+					<td><span class="num font16">&#9313;</span><span class="font16">성명 (대표자)</span></td>
+					<td><span id="co_ceo_nm"> </span></td>
+				</tr>
+
+				<tr>
+					<td class="het50"><span class="num font16">&#9314;</span><span class="font16">사업장소재지</span></td>
+					<td><span id="co_addr" class="font16"></span></td>
+					<td><span class="num font16">&#9315;</span><span class="font16 letter2m">사업자등록번호</span></td>
+					<td>
+						<span id="co_saup_no1" class="wid100 disinb txtRight pdr15 font16"></span>-
+						<span id="co_saup_no2" class="wid50 disinb txtCenter font16"></span>-
+						<span id="co_saup_no3" class="wid50 disinb txtCenter font16"></span>
+					</td>
+				</tr>
+
+			</tbody>
+		</table>
+	<!--=============================-->		
+	<!--1번 테이블 - 인적사항 끝-->
+	<!--=============================-->	
+ 
+
+ 
+	<!--=============================-->
+	<!--2번 테이블 - 신용카드매출전표 등 발행금액 현황 시작-->
+	<!--=============================-->
+		<table class="tablePack01 breakPack">
+			<colgroup>
+				<col width="140px">
+				<col width="260px">
+				<col width="260px">
+				<col width="260px">
+			</colgroup>
+			
+			<thead>
+				<tr>
+					<th colspan="4" class="thTitle02 het50"><span>2. 신용카드매출전표 등 발행금액 현황</span></th>
+				</tr>
+			</thead>
+			
+			<tbody class="txtCenter">
+				<tr>
+					<td class="het50"><span class="letter20 font16">구분</span></td>
+					<td><span class="num font16">&#9316;</span><span class="letter20 font16">합계</span></td>
+					<td><span class="num font16">&#9317;</span><span class="letter2 font15">신용&#183;직불&#183;기명식 선불카드</span></td>
+					<td><span class="num font16">&#9318;</span><span class="letter2 font16">현금영수증</span></td>
+				</tr>
+
+				<tr>
+					<td class="het50"><span class="letter20 font16">합계</span></td>
+					<td><span id="val1_1" class="font16"></span></td>
+					<td><span id="val1_2" class="font16"></span></td>
+					<td><span id="val1_3" class="font16"></span></td>
+				</tr>
+
+				<tr>
+					<td class="het50"><span class="letter5 font16">과세 매출분</span></td>
+					<td><span id="val2_1" class="font16"></span></td>
+					<td><span id="val2_2" class="font16"></span></td>
+					<td><span id="val2_3" class="font16"></span></td>
+				</tr>
+
+				<tr>
+					<td class="het50"><span class="letter5 font16">면세 매출분</span></td>
+					<td><span id="val3_1" class="font16"></span></td>
+					<td><span id="val3_2" class="font16"></span></td>
+					<td><span id="val3_3" class="font16"></span></td>
+				</tr>
+
+				<tr>
+					<td class="het50"><span class="letter5 font16">봉사료</span></td>
+					<td><span id="val4_1" class="font16"></span></td>
+					<td><span id="val4_2" class="font16"></span></td>
+					<td><span id="val4_3" class="font16"></span></td>
+				</tr>
+
+			</tbody>
+		</table>
+	<!--=============================-->		
+	<!--2번 테이블 - 신용카드매출전표 등 발행금액 현황 끝-->
+	<!--=============================-->	
+ 
+	<!--=============================-->
+	<!--3번 테이블 - 신용카드매출전표 등 발행금액 중 세금계산서 발급내역 시작-->
+	<!--=============================-->
+		<table class="tablePack01 breakPack">
+			<colgroup>
+				<col width="140px">
+				<col width="260px">
+				<col width="260px">
+				<col width="260px">
+			</colgroup>
+			
+			<thead>
+				<tr>
+					<th colspan="4" class="thTitle02 het50">
+						<span>3. 신용카드매출전표 등 발행금액(&#9316;합계) 중 세금계산서(계산서) 발급내역</span>
+					</th>
+				</tr>
+			</thead>
+			
+			<tbody class="txtCenter">
+				<tr class="line">
+					<td class="het50"><span class="num font16">&#9319;</span><span class="font16">세금계산서</br>발급금액</span></td>
+					<td><span id="val5_1" class="font16"></span></td>
+					<td><span class="num font16">&#9320;</span><span class="font16">계산서</br>발급금액</span></td>
+					<td><span id="va5_2" class="font16"></span></td>
+				</tr>
+			</tbody>
+		</table>
+	<!--=============================-->		
+	<!--3번 테이블 - 신용카드매출전표 등 발행금액 중 세금계산서 발급내역 끝-->
+	<!--=============================-->	
+ 
+		</div> <!--paperBorder01 페이지 테두리 끝-->
+
+<!--++++++++++++++++++++++++++++++++1페이지  신용카드매출전표 등 발행금액 집계표 끝 ++++++++++++++++++++++++++++++++-->
+ 
+
+<!--++++++++++++++++++++++++++++++++2페이지  작성방법 시작 ++++++++++++++++++++++++++++++++-->
+
+		<div class="paperBorder mgt10">
+			<h2 class="font16">&#8727; 작성방법</h2>
+			<ol class="pdl20 ">
+				<li class="font16 lineHt28">
+					신용카드매출전표 등 발행금액 현황(&#9316;~&#9318;) : 부가가치세 과세 매출분,면세매출분 및 봉사료로 각각 구분하여 기입하고,
+					과세 매출분란은 공급대가(부가가치세를 포함합니다)를 기입합니다.
+				</li>
+				<li class="font16 lineHt28">
+					신용카드매출전표 등 발행금액(&#9316;합계) 중 세금계산서(계산서) 발급내역 (&#9319;&#183;&#9320;) : &#9319;세금계산서란은 
+					&#9316;합계란의 과세 매출분 합계금액 중 세금계산서를 발급한 금액을 기입하고, &#9320;계산서 발급금액란은 &#9316;합계란의 
+					면세 매출분 합계금액 중 계산서를 발급한 금액을 각각 기입합니다.
+				</li>
+			</ol>
+ 
+		</div> <!--paperBorder01 페이지 테두리 끝-->
+
+		<div>
+			<p class="txtRight">
+				<span>가로210mm x 297mm [신문용지 54g/m<sup>2</sup>(재활용품)]</span>
+			</p>
+		</div>			
+
+<!--++++++++++++++++++++++++++++++++2페이지  작성방법 끝 ++++++++++++++++++++++++++++++++-->
+
+
+	</div>		
+	<!--content 끝-->
+ 
+    </body>
+</html>

@@ -1,0 +1,140 @@
+/*이 페이지에서 필요한 부분만 리셋합니다.
+.a4 { page: a4sheet; page-break-after: always }
+*/
+
+
+body {
+	display: block;
+	margin: 0px;
+	padding:0px;
+	
+}
+
+* {
+	margin:0; 
+	padding:0;
+	/*font:14px "돋움",Dotum,sans-serif;*/
+    /* 1.18
+	line-height: 1.302343;
+        line-height: 1.1;
+    
+    line-height: 1.428571429;
+    */
+    
+     
+	}
+input 
+{ 
+	width : 90% ;
+	text-align : left;
+}
+
+
+table {
+	border-spacing:0;
+	border-collapse:collapse;
+}
+
+td,th {
+	padding:0
+	}
+
+/*custom style*/
+
+
+.content  {
+	
+	margin:auto;
+	background1:#f4f4f4;
+	}
+
+/*
+@media print {
+    .print_btn_area {
+       display:none;
+    }
+}
+*/
+
+
+.title
+{
+	font-size : 20px;
+}
+
+
+.val 
+{
+	font-weight: 900;
+}
+
+
+p
+{
+	line-height : 30px;
+}
+
+
+
+.semi-title{
+	font-size: 0.7em;
+}
+.top_table
+{
+	width : 100%;
+	border: 5px double #E41A31;
+}
+
+.mid_table 
+{
+	width : 100%;
+	border-left: 5px double #E41A31;
+	border-right: 5px double #E41A31;
+	border-bottom: 5px double #E41A31;
+}
+
+.bottom_table{
+	width : 100%;
+	border-bottom: 5px double #E41A31;
+	border-left: 5px double #E41A31;
+	border-right: 5px double #E41A31;
+}
+
+.mid_table tr td{
+	border : 2px solid #E41A31;
+	text-align: center;
+	color:#E41A31;
+	font-weight: bold;
+}
+
+.top_table tr td.insert_font, .mid_table tr td.insert_font
+, .bottom_table tr td.insert_font{
+	color: black;
+	font-weight: normal;
+}
+
+.top_table  tr.summay{
+	height: 60px;
+}
+
+.top_table tr , .bottom_table tr, .mid_table tr{
+	height: 25px;
+}
+
+.top_table tr td, .bottom_table tr td{
+	border : 2px solid #E41A31;
+	text-align: center;
+	color:#E41A31;
+	font-weight: bold;
+}
+
+.top_table tr th{
+	border : 2px solid #E41A31;
+	color:#E41A31;
+	font-weight: bold;
+}
+
+.mid_table tr.mid_top_tr td, .bottom_table tr.bottom_top_tr td{
+	border-top : 0px;
+}
+
